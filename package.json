@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "static": "next build && next export"
   },
   "dependencies": {
     "@next/font": "13.1.3",
@@ -18,6 +19,11 @@
     "next": "13.1.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "4.9.4"
+    "react-tsparticles": "^2.8.0",
+    "sass": "^1.57.1",
+    "the-new-css-reset": "^1.8.2",
+    "tsparticles": "^2.8.0",
+    "typescript": "4.9.4",
+    "typewriter-effect": "^2.19.0"
   }
 }

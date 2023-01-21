@@ -1,0 +1,65 @@
+// fonts
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/Raleway_Regular.ttf") format("truetype");
+  size-adjust: 110%;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brutal Type";
+  src: url("/fonts/Brutal_Type_Regular.ttf") format("truetype");
+  unicode-range: U+30-39;
+  size-adjust: 105%;
+  font-display: swap;
+}
+
+// main
+html,
+body {
+  font-family: "Brutal Type", "Raleway";
+  background-color: #000000;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+footer {
+  padding: 1rem 3rem;
+  width: 100%;
+  font-size: 100%;
+  background-color: #1a1a1a;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button {
+  border-radius: 0.35rem;
+  background-color: rgba($color: #020e34, $alpha: 0.8);
+  transition: 0.1s background-color ease-out;
+
+  &:hover {
+    background-color: rgba($color: #042c4f, $alpha: 0.9);
+  }
+}
+
+img {
+  position: relative;
+  top: 3px;
+  filter: invert(1);
+}
+
+h1 {
+  font-size: 450%;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 165%;
+}
+
+strong {
+  font-weight: bold;
+}
