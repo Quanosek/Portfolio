@@ -1,50 +1,9 @@
+// parallax effect definition
 .parallax {
   perspective: 1px;
   min-height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-
-  .titleMenu {
-    width: 100%;
-    height: 100vh;
-  }
-
-  .navbar {
-    padding: 0.6rem 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    backdrop-filter: blur(2px);
-    font-size: 90%;
-    font-weight: bold;
-
-    button {
-      margin: 6px 8px;
-      padding: 6px 20px;
-      height: 3rem;
-    }
-  }
-
-  .title {
-    margin: 10% 8rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    .subtitle {
-      font-size: 200%;
-    }
-
-    .name {
-      position: relative;
-      right: 15px;
-    }
-
-    h2 {
-      color: #c3e9ff;
-    }
-  }
 }
 
 .parallax_layer {
@@ -55,6 +14,7 @@
   left: 0;
 }
 
+// parallax background
 .layer_back {
   z-index: -1;
   transform: translateZ(-1px) scale(2);
@@ -65,7 +25,25 @@
   }
 }
 
+// parallax front
+.layer_base {
+  z-index: 2;
+  top: 100vh;
+  min-height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  transform: translateZ(0);
+
+  div {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 3rem;
+  }
+}
+
+// scroll down
 .scroll_snipped {
+  z-index: -1;
   opacity: 0.8;
   position: relative;
   bottom: 3rem;
@@ -81,26 +59,14 @@
   }
 }
 
-.layer_base {
-  top: 100vh;
-  min-height: 100vh;
-  background-color: #000000;
-  color: #ffffff;
-  transform: translateZ(0);
-
-  div {
-    width: 100%;
-    height: 100%;
-    padding: 1rem 3rem;
-  }
-}
-
+// contrast div
 .bright {
   background-color: #ffffff;
   color: #000000;
 }
 
-.scrollButton {
+// scroll to top
+.scroll_button {
   // hidden by default
   visibility: hidden;
   opacity: 0;
