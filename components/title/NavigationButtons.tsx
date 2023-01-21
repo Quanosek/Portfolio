@@ -20,7 +20,7 @@ export default function NavigationButtons() {
         </Link>
 
         <Link href="">
-          <button>Wesprzyj moją twórczość</button>
+          <button>Wesprzyj mnie</button>
         </Link>
       </div>
 
@@ -28,6 +28,7 @@ export default function NavigationButtons() {
         <Link title="Github" href="https://github.com/Quanosek" target="_blank">
           <button>
             <Image
+              className="icon"
               alt="github"
               src="/icons/github.svg"
               width={25}
@@ -43,6 +44,7 @@ export default function NavigationButtons() {
         >
           <button>
             <Image
+              className="icon"
               alt="facebook"
               src="/icons/facebook.svg"
               width={25}
@@ -58,6 +60,7 @@ export default function NavigationButtons() {
         >
           <button>
             <Image
+              className="icon"
               alt="twitter"
               src="/icons/twitter.svg"
               width={25}
@@ -68,7 +71,13 @@ export default function NavigationButtons() {
 
         <Link title="E-Mail" href="mailto:kubaklalo@gmail.com" target="_blank">
           <button>
-            <Image alt="email" src="/icons/email.svg" width={25} height={25} />
+            <Image
+              className="icon"
+              alt="email"
+              src="/icons/email.svg"
+              width={25}
+              height={25}
+            />
           </button>
         </Link>
       </div>

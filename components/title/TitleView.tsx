@@ -14,7 +14,9 @@ export default function TitleView() {
   return (
     <>
       <div className={styles.title_view}>
-        <div className={styles.navbar}>
+        <div
+          className={`${styles.navbar} ${isActive ? `${styles.active}` : ""}`}
+        >
           <NavigationButtons />
 
           <button className={styles.hamburger} onClick={handleClick}>
@@ -36,12 +38,14 @@ export default function TitleView() {
                 strings: [
                   'Programowanie to moja <span style="color: #ffffff;">pasja</span>',
                   "Pomysłowość to moje drugie imię",
+                  "Zawsze służę chętnie pomocą!",
                   "Sprawdź wszystkie moje projekty",
                   "Daj znać, jak działa strona",
                   'Kreatywny, <span style="color: #ffffff;">twórczy</span>, niebanalny',
                   "Nic nie jest mi straszne!",
                   "Jestem tylko studentem...",
                   'Moim zdaniem to nie ma tak,<br/>że <span style="color: #20e22d;">dobrze</span> albo że <span style="color: #eb3030;">nie dobrze</span>.<br/>Gdybym miał powiedzieć, co cenię<br/>w życiu najbardziej, powiedziałbym,<br/>że ludzi. <strong>Ekhm...</strong> Ludzi, którzy<br/>podali mi pomocną dłoń...',
+                  "Czy potrzebujesz pomocy<br/>przy serwerze Discord?",
                 ],
               }}
             />

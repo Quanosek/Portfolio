@@ -7,6 +7,8 @@ import styles from "@/styles/home.module.scss";
 
 import TitleView from "@/components/title/TitleView";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import AboutView from "@/components/about/AboutView";
+import ProjectsView from "@/components/projects/ProjectsView";
 
 export default function Home() {
   useEffect(() => {
@@ -40,31 +42,83 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main id="parallax" className={`${styles.parallax}`}>
-        <TitleView />
-
-        <div className={`${styles.parallax_layer} ${styles.layer_back}`}>
-          <ParticlesBackground />
-        </div>
-
-        <div className={`${styles.parallax_layer} ${styles.layer_base}`}>
-          <p
-            className={styles.scroll_snipped}
-            onClick={() => {
-              const element = document.getElementById("about") as HTMLElement;
-              element.scrollIntoView({ behavior: "smooth" });
-            }}
+      <div id="parallax" className={`${styles.parallax}`}>
+        <div id="title" className={`${styles.title} ${styles.parallax_group}`}>
+          <div
+            className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
           >
-            Kliknij, aby zjechać w dół.
-          </p>
-          <div id="about" className={styles.bright}>
-            Jestem studentem Inżynierii Multimediów.
+            <TitleView />
           </div>
-          <div id="projects">I to jest moja piękna strona internetowa.</div>
 
-          <footer>Wszelkie prawa zastrzeżone 2023</footer>
+          <div
+            className={`${styles.parallax_layer} ${styles.parallax_layer_back}`}
+          >
+            <ParticlesBackground />
+          </div>
         </div>
-      </main>
+
+        <div id="about" className={`${styles.about} ${styles.parallax_group}`}>
+          <div
+            className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
+          >
+            <p
+              className={styles.scroll_snipped}
+              onClick={() => {
+                const element = document.getElementById("about") as HTMLElement;
+                element.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Kliknij, aby zjechać w dół.
+            </p>
+
+            <AboutView />
+          </div>
+        </div>
+
+        <div id="motto" className={`${styles.motto} ${styles.parallax_group}`}>
+          <div
+            className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
+          >
+            <p>Nie daj na siebie czekać!</p>
+          </div>
+          <div
+            className={`${styles.parallax_layer} ${styles.parallax_layer_back}`}
+          >
+            <Image
+              alt="wallpaper"
+              src="/wallpaper.jpg"
+              width={1920}
+              height={1080}
+            />
+          </div>
+        </div>
+
+        <div
+          id="projects"
+          className={`${styles.projects} ${styles.parallax_group}`}
+        >
+          <div
+            className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
+          >
+            <ProjectsView />
+          </div>
+        </div>
+
+        {/* FOOTER */}
+        <div
+          id="footer"
+          className={`${styles.footer} ${styles.parallax_group}`}
+        >
+          <div
+            className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
+          >
+            <p>
+              Stworzone z 💙 przez Jakuba Kłało | Wszelkie prawa zastrzeżone
+              &#169; 2023
+            </p>
+          </div>
+        </div>
+      </div>
 
       <button
         onClick={() => {
@@ -75,7 +129,13 @@ export default function Home() {
         className={styles.scroll_button}
         title="Wróć na samą górę."
       >
-        <Image src="/icons/arrow.svg" height={30} width={30} alt="up" />
+        <Image
+          className="icon"
+          src="/icons/arrow.svg"
+          height={30}
+          width={30}
+          alt="up"
+        />
       </button>
     </>
   );

@@ -20,14 +20,8 @@ body {
   font-family: "Brutal Type", "Raleway";
   background-color: #000000;
   color: #ffffff;
+  overflow: hidden;
   scroll-behavior: smooth;
-}
-
-footer {
-  padding: 1rem 3rem;
-  width: 100%;
-  font-size: 100%;
-  background-color: #1a1a1a;
 }
 
 a,
@@ -45,7 +39,7 @@ button {
   }
 }
 
-img {
+.icon {
   position: relative;
   top: 3px;
   filter: invert(1);
@@ -62,4 +56,10 @@ h2 {
 
 strong {
   font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  button {
+    background-color: rgba($color: #042c4f, $alpha: 0.9);
+  }
 }
