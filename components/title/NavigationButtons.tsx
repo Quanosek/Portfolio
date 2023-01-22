@@ -6,6 +6,7 @@ import styles from "./title.module.scss";
 export default function NavigationButtons() {
   return (
     <>
+      {/* big buttons */}
       <div className={styles.main}>
         <Link href="">
           <button>CV</button>
@@ -24,6 +25,7 @@ export default function NavigationButtons() {
         </Link>
       </div>
 
+      {/* small buttons */}
       <div className={styles.icons}>
         <Link title="Github" href="https://github.com/Quanosek" target="_blank">
           <button>

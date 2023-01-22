@@ -14,6 +14,7 @@ export default function Home() {
   useEffect(() => {
     const parallax = document.getElementById("parallax") as HTMLElement;
 
+    // scroll-to-top
     parallax.addEventListener("scroll", () => {
       const scrollButton = document.getElementById(
         "scrollButton"
@@ -39,10 +40,10 @@ export default function Home() {
           name="keywords"
           content="klalo, piesni.klalo.pl, metrum.klalo.pl, fonetyka.klalo.pl, Fonetyka, Quanosek, Jakub Kłało, Polska, Lublin, Politechnika Lubelska, pollub.tv, WEiI, Wydział Elektrotechniki i Informatyki, Multimedia.to, Inżynieria Multimediów, JavaScript, TypeScript, HTML, CSS, Python, frontend, deweloper, web developer, github, kontakt"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div id="parallax" className={`${styles.parallax}`}>
+        {/* TITLE */}
         <div id="title" className={`${styles.title} ${styles.parallax_group}`}>
           <div
             className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
@@ -57,6 +58,7 @@ export default function Home() {
           </div>
         </div>
 
+        {/* ABOUT */}
         <div id="about" className={`${styles.about} ${styles.parallax_group}`}>
           <div
             className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
@@ -75,6 +77,7 @@ export default function Home() {
           </div>
         </div>
 
+        {/* MOTTOM */}
         <div id="motto" className={`${styles.motto} ${styles.parallax_group}`}>
           <div
             className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
@@ -93,6 +96,7 @@ export default function Home() {
           </div>
         </div>
 
+        {/* PROJECTS */}
         <div
           id="projects"
           className={`${styles.projects} ${styles.parallax_group}`}
@@ -120,6 +124,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* scroll-to-top */}
       <button
         onClick={() => {
           const parallax = document.getElementById("parallax") as HTMLElement;
@@ -132,8 +137,8 @@ export default function Home() {
         <Image
           className="icon"
           src="/icons/arrow.svg"
-          height={30}
           width={30}
+          height={30}
           alt="up"
         />
       </button>

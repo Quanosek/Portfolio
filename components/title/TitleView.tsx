@@ -14,6 +14,7 @@ export default function TitleView() {
   return (
     <>
       <div className={styles.title_view}>
+        {/* navbar */}
         <div
           className={`${styles.navbar} ${isActive ? `${styles.active}` : ""}`}
         >
@@ -26,6 +27,7 @@ export default function TitleView() {
           </button>
         </div>
 
+        {/* animated title */}
         <div className={styles.title}>
           <h1 className={styles.subtitle}>Hej, nazywam się</h1>
           <h1 className={styles.name}>Jakub Kłało</h1>
@@ -53,6 +55,7 @@ export default function TitleView() {
         </div>
       </div>
 
+      {/* mobile-only menu-buttons */}
       <div
         className={`${styles.mobile_menu} ${
           isActive ? `${styles.active}` : ""
