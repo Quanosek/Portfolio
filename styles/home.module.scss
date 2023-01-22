@@ -33,6 +33,8 @@
 }
 
 .parallax_layer_back {
+  display: flex;
+  justify-content: center;
   transform: translateZ(-1px) scale(2);
 
   div {
@@ -40,12 +42,17 @@
     width: 100%;
     height: 100%;
   }
+
+  img {
+    max-inline-size: unset;
+    // max-block-size: unset;
+  }
 }
 
 // sections
 .title {
   z-index: 3;
-  height: 100vh;
+  height: max(38rem, 100vh);
 
   .parallax_layer_base {
     padding: 0;
@@ -54,6 +61,10 @@
       font-size: 160%;
       font-weight: normal;
     }
+  }
+
+  .parallax_layer_back {
+    z-index: -1;
   }
 }
 
@@ -79,13 +90,15 @@
   transition: 0.2s opacity ease-in-out;
   cursor: pointer;
 
-  &:hover {
-    opacity: 1;
+  @media (min-width: 480px) {
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
 .motto {
-  z-index: 2;
+  z-index: 3;
   height: 20rem;
 
   .parallax_layer_base {
@@ -117,7 +130,7 @@
 }
 
 .footer {
-  z-index: 3;
+  z-index: 10;
   height: 4rem;
 
   .parallax_layer_base {
@@ -135,7 +148,6 @@
   visibility: hidden;
   opacity: 0;
 
-  z-index: 1;
   height: 3.5rem;
   width: 3.5rem;
   position: fixed;
@@ -152,9 +164,11 @@
     scale: 0.6;
   }
 
-  &:hover {
-    opacity: 1;
-    background-color: #042c4f;
+  @media (min-width: 480px) {
+    &:hover {
+      opacity: 1;
+      background-color: #042c4f;
+    }
   }
 }
 

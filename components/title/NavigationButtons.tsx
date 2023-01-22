@@ -8,26 +8,31 @@ export default function NavigationButtons() {
     <>
       {/* big buttons */}
       <div className={styles.main}>
-        <Link href="">
+        <Link href="" tabIndex={-1}>
           <button>CV</button>
         </Link>
 
-        <Link href="#about">
+        <Link href="#about" tabIndex={-1}>
           <button>Informacje o mnie</button>
         </Link>
 
-        <Link href="#projects">
+        <Link href="#projects" tabIndex={-1}>
           <button>Wszystkie projekty</button>
         </Link>
 
-        <Link href="">
+        <Link href="https://ko-fi.com/Quanosek" target="_blank" tabIndex={-1}>
           <button>Wesprzyj mnie</button>
         </Link>
       </div>
 
       {/* small buttons */}
       <div className={styles.icons}>
-        <Link title="Github" href="https://github.com/Quanosek" target="_blank">
+        <Link
+          title="Github"
+          href="https://github.com/Quanosek"
+          target="_blank"
+          tabIndex={-1}
+        >
           <button>
             <Image
               className="icon"
@@ -43,6 +48,7 @@ export default function NavigationButtons() {
           title="Facebook"
           href="https://www.facebook.com/Quanosek/"
           target="_blank"
+          tabIndex={-1}
         >
           <button>
             <Image
@@ -59,6 +65,7 @@ export default function NavigationButtons() {
           title="Twitter"
           href="https://twitter.com/Quanosek"
           target="_blank"
+          tabIndex={-1}
         >
           <button>
             <Image
@@ -71,7 +78,12 @@ export default function NavigationButtons() {
           </button>
         </Link>
 
-        <Link title="E-Mail" href="mailto:kubaklalo@gmail.com" target="_blank">
+        <Link
+          title="E-Mail"
+          href="mailto:kubaklalo@gmail.com"
+          target="_blank"
+          tabIndex={-1}
+        >
           <button>
             <Image
               className="icon"

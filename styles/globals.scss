@@ -1,3 +1,13 @@
+// dark-mode by default
+:root {
+  color-scheme: dark only;
+}
+
+// keyboard navigation highlight
+*:focus-visible {
+  box-shadow: 0px 0px 18px 5px rgba($color: #ededed, $alpha: 0.65);
+}
+
 // fonts
 @font-face {
   font-family: "Raleway";
@@ -20,8 +30,9 @@ body {
   font-family: "Brutal Type", "Raleway";
   background-color: #000000;
   color: #ffffff;
-  overflow: hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a,
@@ -34,8 +45,10 @@ button {
   background-color: rgba($color: #020e34, $alpha: 0.8);
   transition: 0.1s background-color ease-out;
 
-  &:hover {
-    background-color: rgba($color: #042c4f, $alpha: 0.9);
+  @media (min-width: 480px) {
+    &:hover {
+      background-color: rgba($color: #042c4f, $alpha: 0.9);
+    }
   }
 }
 
@@ -58,6 +71,7 @@ strong {
   font-weight: bold;
 }
 
+// only on mobile
 @media (max-width: 480px) {
   button {
     background-color: rgba($color: #042c4f, $alpha: 0.9);

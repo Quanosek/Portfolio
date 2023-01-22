@@ -7,20 +7,19 @@ import NavigationButtons from "./NavigationButtons";
 export default function TitleView() {
   const [isActive, setIsActive] = useState(false);
 
-  function handleClick() {
-    setIsActive((current) => !current);
-  }
-
   return (
     <>
       <div className={styles.title_view}>
         {/* navbar */}
-        <div
-          className={`${styles.navbar} ${isActive ? `${styles.active}` : ""}`}
-        >
+        <div className={styles.navbar}>
           <NavigationButtons />
 
-          <button className={styles.hamburger} onClick={handleClick}>
+          <button
+            className={styles.hamburger}
+            onClick={() => {
+              setIsActive((current) => !current);
+            }}
+          >
             <div
               className={`${styles.bar} ${isActive ? `${styles.active}` : ""}`}
             ></div>
@@ -60,6 +59,9 @@ export default function TitleView() {
         className={`${styles.mobile_menu} ${
           isActive ? `${styles.active}` : ""
         }`}
+        onClick={() => {
+          setIsActive((current) => !current);
+        }}
       >
         <NavigationButtons />
       </div>
