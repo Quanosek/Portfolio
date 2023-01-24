@@ -1,11 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 
 import styles from "./title.module.scss";
 import NavigationButtons from "./NavigationButtons";
 
 export default function TitleView() {
-  const [isActive, setIsActive] = useState(false);
+  let [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    const parallax = document.getElementById("parallax") as HTMLElement;
+
+    // scroll-to-top
+    parallax.addEventListener("scroll", () => {
+      setIsActive((current) => {
+        if (current) current = !current;
+        return current;
+      });
+    });
+  });
 
   return (
     <>
@@ -38,6 +50,7 @@ export default function TitleView() {
                 loop: true,
                 strings: [
                   'Programowanie to moja <span style="color: #ffffff;">pasja</span>',
+                  "Front-End Developer",
                   "Pomysłowość to moje drugie imię",
                   "Zawsze służę chętnie pomocą!",
                   "Sprawdź wszystkie moje projekty",

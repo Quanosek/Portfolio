@@ -12,13 +12,18 @@ export default function ParticlesBackground() {
     await loadFull(engine);
   }, []);
 
+  // https://particles.js.org/docs/classes/Options_Classes_Options.Options.html
+
   return (
     <Particles
       id="tsparticles"
       className={styles.particles}
       init={particlesInit}
       options={{
-        fpsLimit: 90,
+        background: {
+          color: "#000000",
+        },
+        fpsLimit: 120,
         fullScreen: {
           enable: false,
           zIndex: 0,

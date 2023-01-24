@@ -42,7 +42,7 @@ export default function Home() {
         />
       </Head>
 
-      <div id="parallax" className={`${styles.parallax}`}>
+      <div id="parallax" className={`${styles.parallax}`} onScroll={() => {}}>
         {/* TITLE */}
         <div id="title" className={`${styles.title} ${styles.parallax_group}`}>
           <div
@@ -117,8 +117,8 @@ export default function Home() {
             className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
           >
             <p>
-              Stworzone z 💙 przez Jakuba Kłało | Wszelkie prawa zastrzeżone
-              &#169; 2023
+              Stworzone z 💙 przez Jakuba Kłało &#169; 2023 Wszelkie Prawa
+              Zastrzeżone.
             </p>
           </div>
         </div>

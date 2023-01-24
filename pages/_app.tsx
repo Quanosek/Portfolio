@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }, 500);
       }
     }
-  }, []);
+  });
 
   return (
     <>
