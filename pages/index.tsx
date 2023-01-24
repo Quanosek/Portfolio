@@ -43,7 +43,6 @@ export default function Home() {
       </Head>
 
       <div id="parallax" className={`${styles.parallax}`} onScroll={() => {}}>
-        {/* TITLE */}
         <div id="title" className={`${styles.title} ${styles.parallax_group}`}>
           <div
             className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
@@ -58,7 +57,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* ABOUT */}
         <div id="about" className={`${styles.about} ${styles.parallax_group}`}>
           <div
             className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
@@ -77,7 +75,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* MOTTOM */}
         <div id="motto" className={`${styles.motto} ${styles.parallax_group}`}>
           <div
             className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
@@ -89,14 +86,13 @@ export default function Home() {
           >
             <Image
               alt="wallpaper"
-              src="/wallpaper.jpg"
+              src="/images/wallpaper.jpg"
               width={1920}
               height={1080}
             />
           </div>
         </div>
 
-        {/* PROJECTS */}
         <div
           id="projects"
           className={`${styles.projects} ${styles.parallax_group}`}
@@ -108,7 +104,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* FOOTER */}
         <div
           id="footer"
           className={`${styles.footer} ${styles.parallax_group}`}

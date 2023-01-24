@@ -8,7 +8,7 @@
 
 .parallax_group {
   position: relative;
-  height: 110vh;
+  // height: 110vh;
   transition: transform 0.5s;
   transform-style: preserve-3d;
 }
@@ -23,7 +23,7 @@
 
 .parallax_layer_base {
   z-index: 3;
-  padding: 3rem 5rem;
+  padding: 3rem 2rem;
   transform: translateZ(0);
 
   h2 {
@@ -52,7 +52,7 @@
 
 // sections
 .title {
-  z-index: 3;
+  z-index: 1;
   height: max(38rem, 100vh);
 
   .parallax_layer_base {
@@ -67,6 +67,7 @@
 
 .about {
   z-index: 3;
+  height: max(28rem, 50vh);
 
   .parallax_layer_base {
     background-color: #ffffff;
@@ -124,6 +125,7 @@
 
 .projects {
   z-index: 2;
+  height: 50rem;
 
   .parallax_layer_base {
     background-color: #000000;
@@ -139,7 +141,6 @@
     padding: 0 5rem 0 2rem;
     display: flex;
     align-items: center;
-    font-size: 90%;
     background-color: #1a1a1a;
   }
 }
