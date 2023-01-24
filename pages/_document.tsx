@@ -8,6 +8,13 @@ export default function Document() {
       </Head>
 
       <body>
+        <div id={"globalLoader"} className="globalLoader">
+          <div className="loader">
+            <div />
+            <div />
+          </div>
+        </div>
+
         <Main />
         <NextScript />
       </body>

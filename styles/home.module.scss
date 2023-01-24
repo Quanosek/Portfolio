@@ -107,7 +107,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    backdrop-filter: blur(3px);
 
     p {
       font-size: 300%;
@@ -118,6 +117,10 @@
 
   .parallax_layer_back {
     height: 100vh;
+
+    img {
+      filter: blur(3px);
+    }
   }
 }
 
