@@ -85,9 +85,9 @@ export default function Home() {
 
           <ParallaxBannerLayer className={styles.parallax_content} speed={-2}>
             <h2>
-              ❝&nbsp;Bardziej niż cokolwiek innego – przygotowywanie się jest
+              ❝&nbsp;Bardziej niż cokolwiek innego – przygotowywanie się
               <br />
-              sekretem do sukcesu.&nbsp;❞
+              jest sekretem do sukcesu.&nbsp;❞
             </h2>
             <p>~ Henry Ford</p>
           </ParallaxBannerLayer>
