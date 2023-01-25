@@ -33,8 +33,35 @@ body {
   background-color: #000000;
   color: #ffffff;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+}
+
+footer {
+  padding: 0 5rem 0 2rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  font-size: 85%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 450%;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+strong {
+  font-weight: bold;
 }
 
 a,
@@ -45,12 +72,21 @@ button {
 button {
   border-radius: 0.35rem;
   background-color: rgba($color: #020e34, $alpha: 0.8);
-  transition: 0.1s background-color ease-out;
+  transition: 0.1s background-color ease-in-out;
+
+  $background-color: rgba(
+    $color: #042c4f,
+    $alpha: 0.9,
+  );
 
   @media (min-width: 480px) {
     &:hover {
-      background-color: rgba($color: #042c4f, $alpha: 0.9);
+      background-color: $background-color;
     }
+  }
+
+  @media (max-width: 480px) {
+    background-color: $background-color;
   }
 }
 
@@ -58,24 +94,4 @@ button {
   position: relative;
   top: 3px;
   filter: invert(1);
-}
-
-h1 {
-  font-size: 450%;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 165%;
-}
-
-strong {
-  font-weight: bold;
-}
-
-// only on mobile
-@media (max-width: 480px) {
-  button {
-    background-color: rgba($color: #042c4f, $alpha: 0.9);
-  }
 }

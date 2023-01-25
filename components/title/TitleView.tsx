@@ -8,10 +8,8 @@ export default function TitleView() {
   let [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    const parallax = document.getElementById("parallax") as HTMLElement;
-
     // scroll-to-top
-    parallax.addEventListener("scroll", () => {
+    document.addEventListener("scroll", () => {
       setIsActive((current) => {
         if (current) current = !current;
         return current;

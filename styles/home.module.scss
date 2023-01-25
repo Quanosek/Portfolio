@@ -1,44 +1,4 @@
-// parallax effect
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.parallax_group {
-  position: relative;
-  // height: 110vh;
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-}
-
-.parallax_layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.parallax_layer_base {
-  z-index: 3;
-  padding: 3rem 2rem;
-  transform: translateZ(0);
-
-  h2 {
-    font-size: 250%;
-    font-weight: bold;
-  }
-}
-
-.parallax_layer_back {
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateZ(-1px) scale(2);
-
+.parallax_background {
   div {
     width: 100%;
     height: 100%;
@@ -46,47 +6,35 @@
 
   img {
     max-inline-size: unset;
-    // max-block-size: unset;
   }
 }
 
-// sections
 .title {
-  z-index: 1;
   height: max(38rem, 100vh);
 
-  .parallax_layer_base {
-    padding: 0;
-
-    h2 {
-      font-size: 160%;
-      font-weight: normal;
-    }
+  h2 {
+    font-size: 165%;
+    font-weight: normal;
   }
 }
 
 .about {
-  z-index: 3;
-  height: max(28rem, 50vh);
-
-  .parallax_layer_base {
-    background-color: #ffffff;
-    color: #000000;
-  }
+  padding: 2rem 3rem;
+  height: 30rem;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .scroll_snipped {
-  z-index: 10;
   opacity: 0.8;
-  position: relative;
-  bottom: 6rem;
   height: 0;
-  width: 100%;
+  position: relative;
+  bottom: 5.5rem;
   text-align: center;
   color: #ffffff;
   font-size: 90%;
-  transition: 0.2s opacity ease-in-out;
   cursor: pointer;
+  transition: 0.2s opacity ease-in-out;
 
   @media (min-width: 480px) {
     &:hover {
@@ -96,58 +44,60 @@
 }
 
 .motto {
-  z-index: 2;
-  height: max(25rem, 30vh);
+  height: 16rem;
 
-  .parallax_layer_base {
+  .parallax_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 5px;
+    text-shadow: 1px 1px 16px #000000;
+
+    h2 {
+      font-size: 265%;
+      font-weight: bold;
+    }
 
     p {
-      font-size: 300%;
-      font-weight: bold;
-      text-shadow: 1px 1px 20px #000000;
+      font-size: 115%;
+      position: relative;
+      left: 10rem;
+    }
+
+    @media (max-width: 480px) {
+      gap: 1rem;
+
+      p {
+        position: unset;
+      }
     }
   }
 
-  .parallax_layer_back {
-    height: auto !important;
-    scale: 2;
-
-    img {
-      filter: blur(2px);
-    }
+  .parallax_background {
+    display: flex;
+    justify-content: center;
+    filter: blur(2px);
   }
 }
 
 .projects {
-  z-index: 2;
-  height: 50rem;
+  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 
-  .parallax_layer_base {
-    background-color: #000000;
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 3rem 0 4rem;
   }
 }
 
-.footer {
-  z-index: 2;
-  height: 4rem;
-  font-size: 85%;
-
-  .parallax_layer_base {
-    padding: 0 5rem 0 2rem;
-    display: flex;
-    align-items: center;
-    background-color: #1a1a1a;
-  }
-}
-
-// scroll to top
 .scroll_button {
-  // hidden by default
   visibility: hidden;
   opacity: 0;
 
@@ -162,9 +112,10 @@
   background-color: #020e34;
   transition: 0.1s ease-in-out;
 
-  img {
-    top: 0;
-    scale: 0.6;
+  @media (max-width: 768px) {
+    scale: 0.8;
+    bottom: 0.8rem;
+    right: 1rem;
   }
 
   @media (min-width: 480px) {
@@ -173,22 +124,9 @@
       background-color: #042c4f;
     }
   }
-}
 
-@media (max-width: 768px) {
-  .parallax_layer_base {
-    padding: 2rem 6%;
-  }
-
-  .scroll_button {
-    scale: 0.8;
-    bottom: 0.8rem;
-    right: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    font-size: min(4vw, 75%);
+  img {
+    top: 0;
+    scale: 0.6;
   }
 }

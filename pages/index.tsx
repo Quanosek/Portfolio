@@ -3,25 +3,25 @@ import Image from "next/image";
 
 import { useEffect } from "react";
 
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+
 import styles from "@/styles/home.module.scss";
 
-import TitleView from "@/components/title/TitleView";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import TitleView from "@/components/title/TitleView";
 import AboutView from "@/components/about/AboutView";
 import ProjectsView from "@/components/projects/ProjectsView";
 
 export default function Home() {
   useEffect(() => {
-    const parallax = document.getElementById("parallax") as HTMLElement;
-
     // scroll-to-top
-    parallax.addEventListener("scroll", () => {
+    document.addEventListener("scroll", () => {
       const scrollButton = document.getElementById(
         "scrollButton"
       ) as HTMLInputElement;
       const scrollStyle = scrollButton.style;
 
-      if (parallax.scrollTop > 250) {
+      if (document.documentElement.scrollTop > 280) {
         scrollStyle.visibility = "visible";
         scrollStyle.opacity = "0.8";
       } else {
@@ -42,47 +42,38 @@ export default function Home() {
         />
       </Head>
 
-      <div id="parallax" className={`${styles.parallax}`} onScroll={() => {}}>
-        <div id="title" className={`${styles.title} ${styles.parallax_group}`}>
-          <div
-            className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
-          >
-            <TitleView />
-          </div>
-
-          <div
-            className={`${styles.parallax_layer} ${styles.parallax_layer_back}`}
+      <main>
+        <ParallaxBanner id="title" className={styles.title}>
+          <ParallaxBannerLayer
+            className={styles.parallax_background}
+            speed={-30}
           >
             <ParticlesBackground />
-          </div>
+          </ParallaxBannerLayer>
+
+          <ParallaxBannerLayer className={styles.parallax_content}>
+            <TitleView />
+          </ParallaxBannerLayer>
+        </ParallaxBanner>
+
+        <div id="about" className={styles.about}>
+          <p
+            className={styles.scroll_snipped}
+            onClick={() => {
+              const element = document.getElementById("about") as HTMLElement;
+              element.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Kliknij, aby zjechać w dół.
+          </p>
+
+          <AboutView />
         </div>
 
-        <div id="about" className={`${styles.about} ${styles.parallax_group}`}>
-          <div
-            className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
-          >
-            <p
-              className={styles.scroll_snipped}
-              onClick={() => {
-                const element = document.getElementById("about") as HTMLElement;
-                element.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              Kliknij, aby zjechać w dół.
-            </p>
-
-            <AboutView />
-          </div>
-        </div>
-
-        <div id="motto" className={`${styles.motto} ${styles.parallax_group}`}>
-          <div
-            className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
-          >
-            <p>Nie daj na siebie czekać!</p>
-          </div>
-          <div
-            className={`${styles.parallax_layer} ${styles.parallax_layer_back}`}
+        <ParallaxBanner id="motto" className={styles.motto}>
+          <ParallaxBannerLayer
+            className={styles.parallax_background}
+            speed={-20}
           >
             <Image
               alt="wallpaper"
@@ -90,51 +81,41 @@ export default function Home() {
               width={1920}
               height={1080}
             />
-          </div>
-        </div>
+          </ParallaxBannerLayer>
 
-        <div
-          id="projects"
-          className={`${styles.projects} ${styles.parallax_group}`}
-        >
-          <div
-            className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
-          >
-            <ProjectsView />
-          </div>
-        </div>
+          <ParallaxBannerLayer className={styles.parallax_content}>
+            <h2>Uwierz w siebie!</h2>
+            <p>~ Ktoś mądry</p>
+          </ParallaxBannerLayer>
+        </ParallaxBanner>
 
-        <div
-          id="footer"
-          className={`${styles.footer} ${styles.parallax_group}`}
-        >
-          <div
-            className={`${styles.parallax_layer} ${styles.parallax_layer_base}`}
-          >
-            <p>
-              Stworzone z 💙 przez Jakuba Kłało &#169; 2023 Wszelkie Prawa
-              Zastrzeżone.
-            </p>
-          </div>
+        <div id="projects" className={styles.projects}>
+          <ProjectsView />
         </div>
-      </div>
+      </main>
+
+      <footer>
+        <p>
+          Stworzone z 💙 przez Jakuba Kłało &#169; 2023 Wszelkie Prawa
+          Zastrzeżone.
+        </p>
+      </footer>
 
       {/* scroll-to-top */}
       <button
-        onClick={() => {
-          const parallax = document.getElementById("parallax") as HTMLElement;
-          parallax.scrollTo({ top: 0, behavior: "smooth" });
-        }}
+        title="Wróć na samą górę."
         id="scrollButton"
         className={styles.scroll_button}
-        title="Wróć na samą górę."
+        onClick={() => {
+          document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+        }}
       >
         <Image
           className="icon"
+          alt="up"
           src="/icons/arrow.svg"
           width={30}
           height={30}
-          alt="up"
         />
       </button>
     </>

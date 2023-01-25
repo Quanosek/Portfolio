@@ -60,6 +60,28 @@ export default function ProjectsView() {
             <p>Autorski zaawansowany bot muzyczny Discord.</p>
           </div>
         </Link>
+
+        <Link
+          className={styles.project}
+          href="https://www.youtube.com/@NANIKESC/"
+        >
+          <Image
+            alt="NANIKESC"
+            src="/images/nanikesc.jpg"
+            width={150}
+            height={150}
+          />
+          <div className={styles.text}>
+            <div className={styles.title}>
+              <h3>NANIK ESC</h3>
+              <h4>@nanikesc</h4>
+            </div>
+            <p>
+              Mój kanał na platformie YouTube o tematyce Konkursu Piosenki
+              Eurowizji.
+            </p>
+          </div>
+        </Link>
       </div>
 
       <div className={styles.more}>
