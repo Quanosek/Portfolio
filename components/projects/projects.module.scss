@@ -99,6 +99,10 @@
 @media (max-width: 480px) {
   $gap: 5rem;
 
+  .header {
+    margin: 0 1rem;
+  }
+
   .grid {
     margin-top: 3.5rem;
     gap: $gap;

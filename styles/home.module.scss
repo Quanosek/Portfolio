@@ -45,8 +45,13 @@
 
 .motto {
   height: 16rem;
+  font-family: "Gentium Plus";
+  font-style: italic;
+  color: #deeef0;
 
   .parallax_content {
+    padding: 3%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,13 +66,27 @@
     }
 
     p {
-      font-size: 115%;
+      font-size: 150%;
       position: relative;
-      left: 10rem;
+      left: 16rem;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 1.35vw;
+
+      p {
+        left: 22%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+      font-size: max(1.8vw, 70%);
     }
 
     @media (max-width: 480px) {
       gap: 1rem;
+      font-size: 2.4vw;
 
       p {
         position: unset;

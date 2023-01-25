@@ -83,9 +83,13 @@ export default function Home() {
             />
           </ParallaxBannerLayer>
 
-          <ParallaxBannerLayer className={styles.parallax_content}>
-            <h2>Uwierz w siebie!</h2>
-            <p>~ Ktoś mądry</p>
+          <ParallaxBannerLayer className={styles.parallax_content} speed={-2}>
+            <h2>
+              ❝&nbsp;Bardziej niż cokolwiek innego – przygotowywanie się jest
+              <br />
+              sekretem do sukcesu.&nbsp;❞
+            </h2>
+            <p>~ Henry Ford</p>
           </ParallaxBannerLayer>
         </ParallaxBanner>
 
