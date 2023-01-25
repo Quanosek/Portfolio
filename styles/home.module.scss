@@ -10,7 +10,7 @@
 }
 
 .title {
-  height: max(38rem, 100vh);
+  height: max(38rem, min(75rem, 100vh));
 
   h2 {
     font-size: 165%;
@@ -78,7 +78,7 @@
   .parallax_background {
     display: flex;
     justify-content: center;
-    filter: blur(2px);
+    filter: blur(3px);
   }
 }
 

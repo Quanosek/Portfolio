@@ -20,7 +20,7 @@ export default function NavigationButtons() {
           <button>Wszystkie projekty</button>
         </Link>
 
-        <Link href="https://ko-fi.com/Quanosek" target="_blank" tabIndex={-1}>
+        <Link href="https://ko-fi.com/Quanosek/" target="_blank" tabIndex={-1}>
           <button>Wesprzyj mnie</button>
         </Link>
       </div>
@@ -29,7 +29,7 @@ export default function NavigationButtons() {
       <div className={styles.icons}>
         <Link
           title="Github"
-          href="https://github.com/Quanosek"
+          href="https://github.com/Quanosek/"
           target="_blank"
           tabIndex={-1}
         >
@@ -63,7 +63,7 @@ export default function NavigationButtons() {
 
         <Link
           title="Twitter"
-          href="https://twitter.com/Quanosek"
+          href="https://twitter.com/Quanosek/"
           target="_blank"
           tabIndex={-1}
         >

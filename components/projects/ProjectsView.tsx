@@ -57,7 +57,7 @@ export default function ProjectsView() {
               <h3>Metrum</h3>
               <h4>metrum.klalo.pl</h4>
             </div>
-            <p>Autorski zaawansowany bot muzyczny Discord.</p>
+            <p>Autorski zaawansowany bot muzyczny na platformę Discord.</p>
           </div>
         </Link>
 
@@ -85,8 +85,10 @@ export default function ProjectsView() {
       </div>
 
       <div className={styles.more}>
-        <h3>Resztę moich projektów możesz sprawdzić na moim Githubie:</h3>
-        <button>Zobacz więcej!</button>
+        <h3>Resztę projektów możesz sprawdzić na moim Githubie:</h3>
+        <Link href="https://github.com/Quanosek/" tabIndex={-1}>
+          <button>Zobacz więcej!</button>
+        </Link>
       </div>
     </>
   );
