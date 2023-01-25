@@ -14,8 +14,12 @@ import ProjectsView from "@/components/projects/ProjectsView";
 
 export default function Home() {
   useEffect(() => {
-    // scroll-to-top
-    document.addEventListener("scroll", () => {
+    window.addEventListener("scroll", () => {});
+  });
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      // scroll-to-top
       const scrollButton = document.getElementById(
         "scrollButton"
       ) as HTMLInputElement;
@@ -28,6 +32,14 @@ export default function Home() {
         scrollStyle.visibility = "";
         scrollStyle.opacity = "";
       }
+
+      // reveal content
+      const reveals = document.querySelectorAll(".reveal");
+      reveals.forEach((reveal) => {
+        const revealTop = reveal.getBoundingClientRect().top;
+        if (revealTop < window.innerHeight + 100)
+          reveal.classList.add("active");
+      });
     });
   });
 

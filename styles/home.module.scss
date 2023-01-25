@@ -63,7 +63,7 @@
     text-shadow: 1px 1px 16px #000000;
 
     h2 {
-      font-size: 265%;
+      font-size: 245%;
       font-weight: bold;
     }
 
@@ -82,8 +82,8 @@
     }
 
     @media (max-width: 768px) {
-      padding: 1rem;
-      font-size: max(1.8vw, 70%);
+      padding: 1rem 2rem;
+      font-size: max(1.7vw, 72%);
     }
 
     @media (max-width: 480px) {

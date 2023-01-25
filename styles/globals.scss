@@ -47,7 +47,12 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+body {
+  overflow: hidden;
+}
+
 footer {
+  z-index: 10;
   padding: 1rem 5rem 1rem 2rem;
   min-height: 4rem;
   display: flex;
@@ -109,4 +114,16 @@ button {
   position: relative;
   top: 3px;
   filter: invert(1);
+}
+
+.reveal {
+  opacity: 0;
+  position: relative;
+  transform: translateY(150px);
+  transition: all 1s ease !important;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

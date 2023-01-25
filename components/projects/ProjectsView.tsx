@@ -6,10 +6,12 @@ import styles from "./projects.module.scss";
 export default function ProjectsView() {
   return (
     <>
-      <h2 className={styles.header}>Wszystkie moje projekty</h2>
-
+      <h2 className={styles.header}>Wszystkie projekty</h2>
       <div className={styles.grid}>
-        <Link className={styles.project} href="https://piesni.klalo.pl/">
+        <Link
+          className={`${styles.project} reveal`}
+          href="https://piesni.klalo.pl/"
+        >
           <Image
             alt="Śpiewniki"
             src="/images/spiewniki.svg"
@@ -29,7 +31,10 @@ export default function ProjectsView() {
           </div>
         </Link>
 
-        <Link className={styles.project} href="https://fonetyka.klalo.pl/">
+        <Link
+          className={`${styles.project} reveal`}
+          href="https://fonetyka.klalo.pl/"
+        >
           <Image
             alt="Fonetyka"
             src="/images/fonetyka.svg"
@@ -45,7 +50,10 @@ export default function ProjectsView() {
           </div>
         </Link>
 
-        <Link className={styles.project} href="https://metrum.klalo.pl/">
+        <Link
+          className={`${styles.project} reveal`}
+          href="https://metrum.klalo.pl/"
+        >
           <Image
             alt="Metrum"
             src="/images/metrum.png"
@@ -62,7 +70,7 @@ export default function ProjectsView() {
         </Link>
 
         <Link
-          className={styles.project}
+          className={`${styles.project} reveal`}
           href="https://www.youtube.com/@NANIKESC/"
         >
           <Image
@@ -83,8 +91,7 @@ export default function ProjectsView() {
           </div>
         </Link>
       </div>
-
-      <div className={styles.more}>
+      <div className={`${styles.more} reveal`}>
         <h3>Resztę projektów możesz sprawdzić na moim Githubie:</h3>
         <Link href="https://github.com/Quanosek/" tabIndex={-1}>
           <button>Zobacz więcej!</button>
