@@ -14,10 +14,6 @@ import ProjectsView from "@/components/projects/ProjectsView";
 
 export default function Home() {
   useEffect(() => {
-    window.addEventListener("scroll", () => {});
-  });
-
-  useEffect(() => {
     window.addEventListener("scroll", () => {
       // scroll-to-top
       const scrollButton = document.getElementById(
@@ -39,6 +35,7 @@ export default function Home() {
         const revealTop = reveal.getBoundingClientRect().top;
         if (revealTop < window.innerHeight + 100)
           reveal.classList.add("active");
+        else reveal.classList.remove("active");
       });
     });
   });
