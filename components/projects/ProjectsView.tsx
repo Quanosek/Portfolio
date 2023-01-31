@@ -14,7 +14,7 @@ export default function ProjectsView() {
         >
           <Image
             alt="Śpiewniki"
-            src="/images/spiewniki.svg"
+            src="/images/projects/spiewniki.svg"
             width={150}
             height={150}
           />
@@ -37,7 +37,7 @@ export default function ProjectsView() {
         >
           <Image
             alt="Fonetyka"
-            src="/images/fonetyka.svg"
+            src="/images/projects/fonetyka.svg"
             width={150}
             height={150}
           />
@@ -56,7 +56,7 @@ export default function ProjectsView() {
         >
           <Image
             alt="Metrum"
-            src="/images/metrum.png"
+            src="/images/projects/metrum.png"
             width={150}
             height={150}
           />
@@ -75,7 +75,7 @@ export default function ProjectsView() {
         >
           <Image
             alt="NANIKESC"
-            src="/images/nanikesc.jpg"
+            src="/images/projects/nanikesc.jpg"
             width={150}
             height={150}
           />

@@ -33,8 +33,7 @@ export default function Home() {
       const reveals = document.querySelectorAll(".reveal");
       reveals.forEach((reveal) => {
         const revealTop = reveal.getBoundingClientRect().top;
-        if (revealTop < window.innerHeight + 100)
-          reveal.classList.add("active");
+        if (revealTop < window.innerHeight + 50) reveal.classList.add("active");
         else reveal.classList.remove("active");
       });
     });

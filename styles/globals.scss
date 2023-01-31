@@ -25,6 +25,14 @@
 }
 
 @font-face {
+  font-family: "Raleway";
+  src: url("/fonts/Raleway_SemiBold.ttf") format("truetype");
+  size-adjust: 110%;
+  font-display: swap;
+  font-weight: bold;
+}
+
+@font-face {
   font-family: "Brutal Type";
   src: url("/fonts/Brutal_Type_Regular.ttf") format("truetype");
   unicode-range: U+30-39;
@@ -80,10 +88,6 @@ h2 {
   font-size: 200%;
 }
 
-strong {
-  font-weight: bold;
-}
-
 a,
 button {
   cursor: pointer;
@@ -113,7 +117,7 @@ button {
 .icon {
   position: relative;
   top: 3px;
-  filter: invert(1);
+  filter: grayscale(1) invert(1);
 }
 
 .reveal {
@@ -126,4 +130,12 @@ button {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+u {
+  text-decoration: underline;
+}
+
+b {
+  font-weight: bold;
 }

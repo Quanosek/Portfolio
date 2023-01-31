@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Typewriter from "typewriter-effect";
 
 import styles from "./title.module.scss";
@@ -6,16 +6,6 @@ import NavigationButtons from "./NavigationButtons";
 
 export default function TitleView() {
   let [isActive, setIsActive] = useState(false);
-
-  useEffect(() => {
-    // scroll-to-top
-    document.addEventListener("scroll", () => {
-      setIsActive((current) => {
-        if (current) current = !current;
-        return current;
-      });
-    });
-  });
 
   return (
     <>
@@ -56,7 +46,7 @@ export default function TitleView() {
                   'Kreatywny, <span style="color: #ffffff;">twórczy</span>, niebanalny',
                   "Nic nie jest mi straszne!",
                   "Jestem tylko studentem...",
-                  'Moim zdaniem to nie ma tak,<br/>że <span style="color: #20e22d;">dobrze</span> albo że <span style="color: #eb3030;">nie dobrze</span>.<br/>Gdybym miał powiedzieć, co cenię<br/>w życiu najbardziej, powiedziałbym,<br/>że ludzi. <strong>Ekhm...</strong> Ludzi, którzy<br/>podali mi pomocną dłoń...',
+                  'Moim zdaniem to nie ma tak,<br/>że <span style="color: #20e22d;">dobrze</span> albo że <span style="color: #eb3030;">nie dobrze</span>.<br/>Gdybym miał powiedzieć, co cenię<br/>w życiu najbardziej, powiedziałbym,<br/>że ludzi. <b>Ekhm...</b> Ludzi, którzy<br/>podali mi pomocną dłoń...',
                   "Czy potrzebujesz pomocy<br/>przy serwerze Discord?",
                 ],
               }}
