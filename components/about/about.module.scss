@@ -67,7 +67,7 @@ $gap: 4rem;
     font-size: 0.9rem;
 
     div {
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -79,10 +79,11 @@ $gap: 4rem;
   }
 
   .apps {
-    flex-direction: column-reverse !important;
+    flex-direction: column !important;
   }
 
   .text {
+    flex-direction: column !important;
     width: 100%;
 
     div {

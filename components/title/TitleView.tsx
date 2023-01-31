@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 
 import styles from "./title.module.scss";
@@ -6,6 +6,16 @@ import NavigationButtons from "./NavigationButtons";
 
 export default function TitleView() {
   let [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    // scroll-to-top
+    document.addEventListener("scroll", () => {
+      setIsActive((current) => {
+        if (current) current = !current;
+        return current;
+      });
+    });
+  });
 
   return (
     <>
@@ -15,6 +25,7 @@ export default function TitleView() {
           <NavigationButtons />
 
           <button
+            title="menu"
             className={styles.hamburger}
             onClick={() => {
               setIsActive((current) => !current);

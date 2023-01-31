@@ -95,7 +95,7 @@ export default function AboutView() {
               Cię spotkać. Gdy w moim mieście są organizowane wydarzenia, zawsze
               muszę tam być i&nbsp;robić serie zdjęć! Oprócz tego,{" "}
               <b>mam doświadczenie w&nbsp;obsłudze programów Adobe</b>, więc
-              dalsza obróbka zdjęć lub "sklejenie" filmu{" "}
+              dalsza obróbka zdjęć lub &quot;sklejenie&quot; filmu{" "}
               <u>nie stanowi żadnego problemu</u>.
             </p>
           </div>

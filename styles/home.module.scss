@@ -52,13 +52,15 @@ $distance: 4rem;
 
 .motto {
   height: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f6f6ff;
   font-family: "Gentium Plus";
   font-style: italic;
-  color: #f6f6ff;
 
   .parallax_content {
     padding: 3%;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,7 +106,21 @@ $distance: 4rem;
   .parallax_background {
     display: flex;
     justify-content: center;
-    filter: blur(3px);
+    align-items: center;
+    filter: blur(2px);
+    width: 100%;
+
+    img {
+      min-width: 100%;
+      width: auto;
+      height: auto;
+      max-block-size: unset;
+
+      @media (max-width: 768px) {
+        scale: 0.5;
+        min-width: unset;
+      }
+    }
   }
 }
 
