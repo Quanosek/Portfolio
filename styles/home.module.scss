@@ -22,10 +22,10 @@
 
 $distance: 4rem;
 
-.about {
+.info {
   padding: $distance 4.5rem 5rem;
   background-color: #ffffff;
-  color: #000000;
+  color: #313131;
 
   @media (max-width: 768px) {
     padding: 2.5rem 2rem 4rem;
@@ -41,6 +41,7 @@ $distance: 4rem;
   color: #ffffff;
   font-size: 90%;
   cursor: pointer;
+  user-select: none;
   transition: 0.2s opacity ease-in-out;
 
   @media (min-width: 480px) {
@@ -125,17 +126,41 @@ $distance: 4rem;
 }
 
 .projects {
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
 
   @media (max-width: 768px) {
-    padding: 4rem 0;
+    padding: 4rem 0 1rem;
   }
 
   @media (max-width: 480px) {
-    padding: 3rem 0 4rem;
+    padding: 3rem 0 0.5rem;
+  }
+}
+
+$margin: -10rem;
+
+.wave2 {
+  opacity: 0.9;
+  position: relative;
+  top: $margin;
+}
+
+.contact {
+  margin-top: $margin - 1rem;
+  padding: 1rem 4.5rem;
+  height: 30rem;
+  background-color: #ffffff;
+  color: #313131;
+
+  @media (max-width: 768px) {
+    padding: 0rem 5% 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 0.5rem;
   }
 }
 

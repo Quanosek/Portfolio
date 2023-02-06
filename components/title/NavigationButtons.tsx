@@ -12,7 +12,7 @@ export default function NavigationButtons() {
           <button>CV</button>
         </Link>
 
-        <Link href="#about" tabIndex={-1}>
+        <Link href="#info" tabIndex={-1}>
           <button>Informacje o mnie</button>
         </Link>
 

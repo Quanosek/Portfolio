@@ -18,12 +18,12 @@ export default function ProjectsView() {
             width={150}
             height={150}
           />
+
           <div className={styles.text}>
             <div className={styles.title}>
               <h3>Śpiewniki</h3>
               <h4>piesni.klalo.pl</h4>
             </div>
-
             <p>
               Wszystkie śpiewniki Badaczy Pisma Świętego zebrane w jednym
               miejscu.
@@ -41,6 +41,7 @@ export default function ProjectsView() {
             width={150}
             height={150}
           />
+
           <div className={styles.text}>
             <div className={styles.title}>
               <h3>Fonetyka</h3>
@@ -60,6 +61,7 @@ export default function ProjectsView() {
             width={150}
             height={150}
           />
+
           <div className={styles.text}>
             <div className={styles.title}>
               <h3>Metrum</h3>
@@ -79,6 +81,7 @@ export default function ProjectsView() {
             width={150}
             height={150}
           />
+
           <div className={styles.text}>
             <div className={styles.title}>
               <h3>NANIK ESC</h3>
@@ -91,6 +94,7 @@ export default function ProjectsView() {
           </div>
         </Link>
       </div>
+
       <div className={`${styles.more} reveal`}>
         <h3>Resztę projektów możesz sprawdzić na moim Githubie:</h3>
         <Link href="https://github.com/Quanosek/" tabIndex={-1}>

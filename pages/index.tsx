@@ -2,15 +2,16 @@ import Head from "next/head";
 import Image from "next/image";
 
 import { useEffect } from "react";
-
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+import Wave from "react-wavify";
 
 import styles from "@/styles/home.module.scss";
 
 import ParticlesBackground from "@/components/ParticlesBackground";
 import TitleView from "@/components/title/TitleView";
-import AboutView from "@/components/about/AboutView";
+import InfoView from "@/components/info/InfoView";
 import ProjectsView from "@/components/projects/ProjectsView";
+import ContactView from "@/components/contact/ContactView";
 
 export default function Home() {
   useEffect(() => {
@@ -64,18 +65,18 @@ export default function Home() {
           </ParallaxBannerLayer>
         </ParallaxBanner>
 
-        <div id="about" className={styles.about}>
+        <div id="info" className={styles.info}>
           <p
             className={styles.scroll_snipped}
             onClick={() => {
-              const element = document.getElementById("about") as HTMLElement;
+              const element = document.getElementById("info") as HTMLElement;
               element.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Kliknij, aby zjechać w dół.
           </p>
 
-          <AboutView />
+          <InfoView />
         </div>
 
         <ParallaxBanner id="motto" className={styles.motto}>
@@ -104,12 +105,41 @@ export default function Home() {
         <div id="projects" className={styles.projects}>
           <ProjectsView />
         </div>
+
+        <div>
+          <Wave
+            className={styles.wave1}
+            fill="#ffffff"
+            paused={false}
+            options={{
+              height: 60,
+              amplitude: 30,
+              speed: 0.08,
+              points: 4,
+            }}
+          />
+          <Wave
+            className={styles.wave2}
+            fill="#ffffff"
+            paused={false}
+            options={{
+              height: 60,
+              amplitude: 32,
+              speed: 0.12,
+              points: 3,
+            }}
+          />
+        </div>
+
+        <div id="contact" className={styles.contact}>
+          <ContactView />
+        </div>
       </main>
 
       <footer>
         <p>
-          Stworzone z 💙 przez Jakuba Kłało &#169; 2023 Wszelkie Prawa
-          Zastrzeżone.
+          Stworzone z 💙 przez Jakuba Kłało &#169; 2023 Wszelkie prawa
+          zastrzeżone.
         </p>
       </footer>
 
