@@ -82,15 +82,9 @@ export default function Home() {
         <ParallaxBanner id="motto" className={styles.motto}>
           <ParallaxBannerLayer
             className={styles.parallax_background}
+            image="/images/wallpaper.jpg"
             speed={-20}
-          >
-            <Image
-              alt="wallpaper"
-              src="/images/wallpaper.jpg"
-              width={1920}
-              height={1080}
-            />
-          </ParallaxBannerLayer>
+          />
 
           <ParallaxBannerLayer className={styles.parallax_content} speed={-2}>
             <h2>

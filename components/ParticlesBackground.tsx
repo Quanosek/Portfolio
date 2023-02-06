@@ -20,14 +20,17 @@ export default function ParticlesBackground() {
       className={styles.particles}
       init={particlesInit}
       options={{
+        // default settings
         background: {
           color: "#000000",
         },
-        fpsLimit: 120,
         fullScreen: {
           enable: false,
           zIndex: 0,
         },
+        fpsLimit: 144,
+
+        // special effects
         interactivity: {
           events: {
             onHover: {
@@ -45,6 +48,8 @@ export default function ParticlesBackground() {
             },
           },
         },
+
+        // displayed particles
         particles: {
           color: {
             value: "#6e86ef",
@@ -69,9 +74,28 @@ export default function ParticlesBackground() {
             value: 2,
           },
         },
-        setResponsive: {
-          pxRatio: 1,
-        },
+
+        // mobile view
+        responsive: [
+          {
+            maxWidth: 768,
+            options: {
+              fpsLimit: 90,
+              particles: {
+                number: { limit: 50 },
+              },
+              interactivity: {
+                events: {
+                  onHover: {
+                    enable: false,
+                  },
+                },
+              },
+            },
+          },
+        ],
+
+        // end
       }}
     />
   );
