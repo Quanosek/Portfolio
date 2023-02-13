@@ -44,6 +44,11 @@ $gap: 4rem;
         padding: 1vw;
       }
 
+      @media (max-width: 768px) {
+        height: auto;
+        padding: 0.6rem;
+      }
+
       @media (min-width: 480px) {
         &:hover {
           scale: 1.2;

@@ -42,7 +42,7 @@ $distance: 4rem;
 
 .info {
   max-width: $width-limit;
-  padding: $distance 4.5rem 5rem;
+  padding: 2rem 4.5rem 5rem;
   background-color: #ffffff;
   color: #313131;
 
@@ -54,6 +54,10 @@ $distance: 4rem;
 .scroll_snipped {
   opacity: 0.8;
   height: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   bottom: calc($distance * 2);
   text-align: center;

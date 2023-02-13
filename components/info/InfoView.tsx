@@ -22,11 +22,12 @@ export default function InfoView() {
             Zaczynałem od bardzo prostych stron dla znajomych, ale z&nbsp;czasem
             stawały się one coraz bardziej{" "}
             <u>skomplikowane i&nbsp;wymagające</u>. Dlatego niezbędne było
-            wykorzystanie <u>frameworku</u>. Początkowo <b>Vue</b>, a&nbsp;teraz{" "}
-            <b>React</b>, dają ogromne możliwości i&nbsp;dzięki tym narzędziom
-            mogę w&nbsp;pełni <b>uwolnić swoją wyobraźnię</b>. Z&nbsp;pomocą{" "}
-            <b>TypeScript</b> oraz <b>Sass</b> jestem w&nbsp;stanie stworzyć{" "}
-            <u>dowolny design</u>.
+            nauczenie się <u>frameworków i&nbsp;bibliotek</u>. Początkowo{" "}
+            <b>Vue</b>, a&nbsp;teraz <b>React</b>, dają mi ogromne możliwości,
+            a&nbsp;dzięki tym narzędziom mogę w&nbsp;pełni{" "}
+            <b>uwolnić swoją wyobraźnię</b>. Z&nbsp;pomocą <b>TypeScript</b>{" "}
+            oraz <b>Sass</b> jestem w&nbsp;stanie stworzyć <u>dowolny design</u>
+            .
           </p>
         </div>
 
@@ -57,14 +58,14 @@ export default function InfoView() {
             "discord",
           ])}
           <p>
-            Tworzę również aplikacje lub skrypty w&nbsp;językach: <b>Python</b>,{" "}
-            <b>JavaScript</b> czy nawet <b>bash</b>! Najlepszą możliwością na
-            kreatywne wykorzystanie dostępnych możliwości daje mi{" "}
+            Potrafię stworzyć różne aplikacje lub skrypty w&nbsp;językach:{" "}
+            <b>JavaScript</b>, <b>Pyton</b> czy nawet <b>bash</b>! Największą
+            szansę na kreatywne wykorzystanie dostępnych możliwości daje mi{" "}
             <u>programowanie botów</u> na różne serwery <b>Discord</b>,
-            a&nbsp;strona, którą teraz widzisz została postawiona na moim
-            prywatnym serwerze uruchomionym na <b>Raspberry Pi</b>, które
-            korzysta ze zmodyfikowanej{" "}
-            <u>dystrybucji Linuxa na bazie Debiana</u>.
+            a&nbsp;strona, którą teraz przeglądasz została postawiona na moim
+            prywatnym serwerze <b>Raspberry Pi</b>, którego odpowiednie
+            skonfigurowanie wymagało wiedzy w&nbsp;poruszaniu się po{" "}
+            <u>terminalu Linuxa</u>.
           </p>
         </div>
       </div>
@@ -83,12 +84,12 @@ export default function InfoView() {
             "inkspace",
           ])}
           <p>
-            Hobbystycznie zajmuje się fotografią i&nbsp;montowaniem filmów. Za
+            Hobbystycznie zajmuje się fotografią i&nbsp;montażem filmów. Za
             każdym razem gdy gdzieś wyjeżdżam,{" "}
-            <u>biorę ze sobą swoją lustrzankę</u>, bo nigdy nie wiesz, co może
-            Cię spotkać. Gdy w moim mieście są organizowane wydarzenia, zawsze
-            muszę tam być i&nbsp;robić serie zdjęć! Dzięki temu, że{" "}
-            <b>mam doświadczenie w&nbsp;obsłudze programów Adobe</b>, dalsza
+            <u>muszę wziąć ze sobą swoją lustrzankę</u>, bo nigdy nie wiem, co
+            może mnie spotkać! Gdy w&nbsp;moim mieście organizowane są różne
+            wydarzenia, zawsze muszę tam być i&nbsp;robić serie zdjęć, a dzięki
+            mojemu <b>doświadczeniu w&nbsp;obsłudze programów Adobe</b>, dalsza
             obróbka zdjęć lub &quot;sklejenie&quot; filmów{" "}
             <u>nie stanowi żadnego problemu</u>.
           </p>

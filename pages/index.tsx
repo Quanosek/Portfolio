@@ -78,7 +78,7 @@ export default function Home() {
                 element.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Kliknij, aby zjechać w dół.
+              Kliknij, aby zjechać w dół
             </p>
 
             <InfoView />
