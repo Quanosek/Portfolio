@@ -8,7 +8,7 @@ export default function NavigationButtons() {
     <>
       {/* big buttons */}
       <div className={styles.main}>
-        <Link href="" tabIndex={-1}>
+        <Link href="/CV_Jakub_Klalo.pdf" tabIndex={-1} target="_blank">
           <button>CV</button>
         </Link>
 
