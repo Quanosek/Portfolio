@@ -87,9 +87,9 @@ export default function InfoView() {
             każdym razem gdy gdzieś wyjeżdżam,{" "}
             <u>biorę ze sobą swoją lustrzankę</u>, bo nigdy nie wiesz, co może
             Cię spotkać. Gdy w moim mieście są organizowane wydarzenia, zawsze
-            muszę tam być i&nbsp;robić serie zdjęć! Oprócz tego,{" "}
-            <b>mam doświadczenie w&nbsp;obsłudze programów Adobe</b>, więc
-            dalsza obróbka zdjęć lub &quot;sklejenie&quot; filmu{" "}
+            muszę tam być i&nbsp;robić serie zdjęć! Dzięki temu, że{" "}
+            <b>mam doświadczenie w&nbsp;obsłudze programów Adobe</b>, dalsza
+            obróbka zdjęć lub &quot;sklejenie&quot; filmów{" "}
             <u>nie stanowi żadnego problemu</u>.
           </p>
         </div>
