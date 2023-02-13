@@ -39,6 +39,11 @@ $gap: 4rem;
       padding: 0.75rem;
       transition: 0.2s ease-in-out;
 
+      @media (max-width: 950px) {
+        height: 6.5vw;
+        padding: 1vw;
+      }
+
       @media (min-width: 480px) {
         &:hover {
           scale: 1.2;
@@ -49,14 +54,20 @@ $gap: 4rem;
 }
 
 .image {
+  padding: 0 2rem;
   width: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   img {
+    filter: drop-shadow(2px 5px 10px #97b1e5);
     position: relative;
     top: 10px;
+  }
+
+  &.clips img {
+    scale: 0.9;
   }
 }
 
@@ -95,6 +106,14 @@ $gap: 4rem;
     margin: -2rem 0 0;
     width: unset;
     scale: 0.8;
+
+    img {
+      scale: 1.15;
+    }
+
+    &.clips img {
+      scale: 1.05;
+    }
   }
 }
 

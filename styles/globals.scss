@@ -60,6 +60,12 @@ body {
   overflow: hidden;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 footer {
   z-index: 10;
   padding: 1rem 5rem 1rem 2rem;

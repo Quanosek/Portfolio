@@ -42,12 +42,7 @@ export default function InfoView() {
 
       <div className={`${styles.apps} reveal`}>
         <div className={styles.image}>
-          <Image
-            alt="apps"
-            src="/images/info/apps.svg"
-            width={350}
-            height={350}
-          />
+          <Image alt="apps" src="/images/apps.svg" width={350} height={350} />
         </div>
 
         <div className={styles.text}>
@@ -99,13 +94,8 @@ export default function InfoView() {
           </p>
         </div>
 
-        <div className={styles.image}>
-          <Image
-            alt="photos"
-            src="/images/info/photos.svg"
-            width={350}
-            height={350}
-          />
+        <div className={`${styles.image} ${styles.clips}`}>
+          <Image alt="clips" src="/images/clips.svg" width={350} height={350} />
         </div>
       </div>
     </div>

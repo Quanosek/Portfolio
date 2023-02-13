@@ -14,7 +14,17 @@ import ProjectsView from "@/components/projects/ProjectsView";
 import ContactView from "@/components/contact/ContactView";
 
 export default function Home() {
+  function Reveal() {
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((reveal) => {
+      const revealTop = reveal.getBoundingClientRect().top;
+      if (revealTop < window.innerHeight + 50) reveal.classList.add("active");
+    });
+  }
+
   useEffect(() => {
+    Reveal(); // first time check
+
     window.addEventListener("scroll", () => {
       // scroll-to-top
       const scrollButton = document.getElementById(
@@ -30,13 +40,7 @@ export default function Home() {
         scrollStyle.opacity = "";
       }
 
-      // reveal content
-      const reveals = document.querySelectorAll(".reveal");
-      reveals.forEach((reveal) => {
-        const revealTop = reveal.getBoundingClientRect().top;
-        if (revealTop < window.innerHeight + 50) reveal.classList.add("active");
-        else reveal.classList.remove("active");
-      });
+      Reveal(); // every scroll check
     });
   });
 
@@ -65,18 +69,20 @@ export default function Home() {
           </ParallaxBannerLayer>
         </ParallaxBanner>
 
-        <div id="info" className={styles.info}>
-          <p
-            className={styles.scroll_snipped}
-            onClick={() => {
-              const element = document.getElementById("info") as HTMLElement;
-              element.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Kliknij, aby zjechać w dół.
-          </p>
+        <div className={styles.white_holder}>
+          <div id="info" className={styles.info}>
+            <p
+              className={styles.scroll_snipped}
+              onClick={() => {
+                const element = document.getElementById("info") as HTMLElement;
+                element.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Kliknij, aby zjechać w dół.
+            </p>
 
-          <InfoView />
+            <InfoView />
+          </div>
         </div>
 
         <ParallaxBanner id="motto" className={styles.motto}>
@@ -100,7 +106,7 @@ export default function Home() {
           <ProjectsView />
         </div>
 
-        <div>
+        <div className={styles.waves}>
           <Wave
             className={styles.wave1}
             fill="#ffffff"
@@ -125,8 +131,10 @@ export default function Home() {
           />
         </div>
 
-        <div id="contact" className={styles.contact}>
-          <ContactView />
+        <div className={styles.white_holder}>
+          <div id="contact" className={styles.contact}>
+            <ContactView />
+          </div>
         </div>
       </main>
 

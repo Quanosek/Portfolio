@@ -1,3 +1,5 @@
+$width-limit: 2500px;
+
 .parallax_background {
   user-select: none;
 
@@ -12,17 +14,34 @@
 }
 
 .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: max(42rem, min(75rem, 100vh));
 
   h2 {
     font-size: 165%;
     font-weight: normal;
   }
+
+  .parallax_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.white_holder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
 }
 
 $distance: 4rem;
 
 .info {
+  max-width: $width-limit;
   padding: $distance 4.5rem 5rem;
   background-color: #ffffff;
   color: #313131;
@@ -110,6 +129,7 @@ $distance: 4rem;
 }
 
 .projects {
+  max-width: $width-limit;
   padding: 5rem 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -124,27 +144,45 @@ $distance: 4rem;
   }
 }
 
-$margin: -10rem;
+.waves {
+  $margin: -10rem;
 
-.wave2 {
-  opacity: 0.9;
-  position: relative;
-  top: $margin;
+  margin-bottom: $margin;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .wave2 {
+    width: 100vw;
+    opacity: 0.9;
+    position: relative;
+    top: $margin;
+  }
 }
 
 .contact {
-  margin-top: $margin - 1rem;
-  padding: 1rem 4.5rem;
-  height: 30rem;
-  background-color: #ffffff;
+  padding: 0 0 1rem 4.5rem;
+  width: 100%;
+  max-width: $width-limit;
+  min-height: 25rem;
   color: #313131;
+  background-color: #ffffff;
+  background-image: url("/images/contact.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1100px) {
+    background-image: unset;
+  }
 
   @media (max-width: 768px) {
-    padding: 0rem 5% 1rem;
+    padding: 0 5% 4rem;
   }
 
   @media (max-width: 480px) {
-    padding-top: 0.5rem;
+    h2 {
+      text-align: center;
+    }
   }
 }
 
