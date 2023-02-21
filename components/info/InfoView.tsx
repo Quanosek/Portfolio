@@ -8,16 +8,13 @@ export default function InfoView() {
       <div className={`${styles.websites} reveal`}>
         <div className={styles.text}>
           <h2>Strony internetowe</h2>
-          {Programs([
-            "html",
-            "css",
-            "javascript",
-            "typescript",
-            "sass",
-            "react",
-            "vue",
-            "vite",
-          ])}
+          <Image
+            className={styles.programs}
+            alt="programs"
+            src="/images/programs/websites.webp"
+            width={800}
+            height={100}
+          />
           <p>
             Zaczynałem od bardzo prostych stron dla znajomych, ale z&nbsp;czasem
             stawały się one coraz bardziej{" "}
@@ -48,15 +45,13 @@ export default function InfoView() {
 
         <div className={styles.text}>
           <h2>Aplikacje</h2>
-          {Programs([
-            "node-js",
-            "npm",
-            "json",
-            "python",
-            "github",
-            "git",
-            "discord",
-          ])}
+          <Image
+            className={styles.programs}
+            alt="programs"
+            src="/images/programs/apps.webp"
+            width={800}
+            height={100}
+          />
           <p>
             Potrafię stworzyć różne aplikacje lub skrypty w&nbsp;językach:{" "}
             <b>JavaScript</b>, <b>Pyton</b> czy nawet <b>bash</b>! Największą
@@ -73,16 +68,13 @@ export default function InfoView() {
       <div className={`${styles.photos} reveal`}>
         <div className={styles.text}>
           <h2>Fotografia i&nbsp;montaż filmów</h2>
-          {Programs([
-            "adobe-cc",
-            "photoshop",
-            "lightroom",
-            "illustrator",
-            "premiere-pro",
-            "after-effects",
-            "gimp",
-            "inkspace",
-          ])}
+          <Image
+            className={styles.programs}
+            alt="programs"
+            src="/images/programs/photos.webp"
+            width={800}
+            height={100}
+          />
           <p>
             Hobbystycznie zajmuje się fotografią i&nbsp;montażem filmów. Za
             każdym razem gdy gdzieś wyjeżdżam,{" "}
@@ -99,23 +91,6 @@ export default function InfoView() {
           <Image alt="clips" src="/images/clips.svg" width={350} height={350} />
         </div>
       </div>
-    </div>
-  );
-}
-
-function Programs(list: string[]) {
-  return (
-    <div className={styles.icons}>
-      {list.map((img: string) => (
-        <Image
-          key={img}
-          title={img}
-          alt={img}
-          src={`/icons/${img}.svg`}
-          width={65}
-          height={65}
-        />
-      ))}
     </div>
   );
 }

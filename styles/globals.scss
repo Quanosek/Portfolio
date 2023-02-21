@@ -19,14 +19,14 @@
 // fonts
 @font-face {
   font-family: "Raleway";
-  src: url("/fonts/Raleway_Regular.ttf") format("truetype");
+  src: url("/fonts/Raleway_Regular.woff2") format("woff2");
   size-adjust: 110%;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Raleway";
-  src: url("/fonts/Raleway_SemiBold.ttf") format("truetype");
+  src: url("/fonts/Raleway_SemiBold.woff2") format("woff2");
   size-adjust: 110%;
   font-weight: bold;
   font-display: swap;
@@ -34,7 +34,7 @@
 
 @font-face {
   font-family: "Brutal Type";
-  src: url("/fonts/Brutal_Type_Regular.ttf") format("truetype");
+  src: url("/fonts/Brutal_Type_Regular.woff2") format("woff2");
   unicode-range: U+30-39;
   size-adjust: 105%;
   font-display: swap;
@@ -42,7 +42,7 @@
 
 @font-face {
   font-family: "Gentium Plus";
-  src: url("/fonts/Gentium_Plus_Bold.ttf") format("truetype");
+  src: url("/fonts/Gentium_Plus_Bold.woff2") format("woff2");
   font-display: swap;
 }
 

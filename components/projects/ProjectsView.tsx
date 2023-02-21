@@ -57,7 +57,7 @@ export default function ProjectsView() {
         >
           <Image
             alt="Metrum"
-            src="/images/projects/metrum.png"
+            src="/images/projects/metrum.webp"
             width={150}
             height={150}
           />
@@ -77,7 +77,7 @@ export default function ProjectsView() {
         >
           <Image
             alt="NANIKESC"
-            src="/images/projects/nanikesc.jpg"
+            src="/images/projects/nanikesc.webp"
             width={150}
             height={150}
           />

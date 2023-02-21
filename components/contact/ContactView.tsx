@@ -27,22 +27,6 @@ export default function ContactView() {
             </div>
           </Link>
 
-          <Link href={"tel:+48695004062"} className={styles.element}>
-            <div className={styles.image}>
-              <Image
-                alt="tel"
-                src={"/icons/phone.svg"}
-                width={100}
-                height={100}
-              />
-            </div>
-
-            <div className={styles.content}>
-              <h3>Numer zapasowy:</h3>
-              <p>+48 695 004 062</p>
-            </div>
-          </Link>
-
           <Link href={"mailto:kubaklalo@gmail.com"} className={styles.element}>
             <div className={styles.image}>
               <Image

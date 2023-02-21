@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import Wave from "react-wavify";
 
@@ -23,7 +23,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    Reveal(); // first time check
+    // Reveal(); // first time check
 
     window.addEventListener("scroll", () => {
       // scroll-to-top
@@ -88,7 +88,7 @@ export default function Home() {
         <ParallaxBanner id="motto" className={styles.motto}>
           <ParallaxBannerLayer
             className={styles.parallax_background}
-            image="/images/wallpaper.jpg"
+            image="/images/panorama.webp"
             speed={-20}
           />
 
