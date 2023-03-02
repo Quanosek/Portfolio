@@ -1,8 +1,11 @@
-import type { AppProps } from "next/app";
 import Head from "next/head";
-
+import type { AppProps } from "next/app";
 import { useEffect } from "react";
+
 import { ParallaxProvider } from "react-scroll-parallax";
+
+import { GoogleAdSense } from "nextjs-google-adsense";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 import "the-new-css-reset/css/reset.css";
 import "@/styles/globals.scss";
@@ -28,6 +31,9 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <ParallaxProvider>
+        <GoogleAdSense publisherId={"env.local"} />
+        <GoogleAnalytics trackPageViews />
+
         <Component {...pageProps} />
       </ParallaxProvider>
     </>

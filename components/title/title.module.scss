@@ -133,7 +133,7 @@
 
   .main {
     button {
-      padding: 15px 50px;
+      padding: 15px min(8vw, 50px);
       width: 100%;
     }
   }
@@ -146,7 +146,7 @@
     justify-content: space-evenly;
 
     button {
-      width: 4rem;
+      width: min(4rem, 17vw);
       aspect-ratio: 1.1/1;
     }
   }

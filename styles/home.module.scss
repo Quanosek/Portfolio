@@ -49,6 +49,10 @@ $distance: 4rem;
   @media (max-width: 768px) {
     padding: 2.5rem 2rem 4rem;
   }
+
+  @media (max-width: 480px) {
+    padding: 8vw 5vw 12vw;
+  }
 }
 
 .scroll_snipped {
@@ -91,7 +95,7 @@ $distance: 4rem;
     align-items: center;
     text-align: center;
     gap: 5px;
-    text-shadow: 1px 1px 16px #000000;
+    text-shadow: 1px 1px 18px #000000, 0 0 12px #000000, 0 0 6px #000000;
 
     h2 {
       font-size: 245%;
@@ -118,8 +122,9 @@ $distance: 4rem;
     }
 
     @media (max-width: 480px) {
+      padding: 1rem 3vw;
       gap: 1rem;
-      font-size: 2.4vw;
+      font-size: min(65%, 3vw);
 
       p {
         position: unset;
@@ -184,6 +189,8 @@ $distance: 4rem;
   }
 
   @media (max-width: 480px) {
+    padding: 0 3vw 4rem;
+
     h2 {
       text-align: center;
     }
