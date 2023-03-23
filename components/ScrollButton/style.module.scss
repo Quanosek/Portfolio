@@ -1,0 +1,34 @@
+.scroll_button {
+  visibility: hidden;
+  opacity: 0;
+
+  height: 3.2rem;
+  width: 3.2rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #082552;
+  box-shadow: 0 3px 8px -1px #000000;
+  transition: 0.15s ease-in-out;
+  user-select: none;
+
+  @media (max-width: 768px) {
+    scale: 0.8;
+    bottom: 0.8rem;
+    right: 1rem;
+  }
+
+  @media (min-width: 480px) {
+    &:hover {
+      background-color: #243e68;
+    }
+  }
+
+  img {
+    top: 0;
+    scale: 0.6;
+  }
+}

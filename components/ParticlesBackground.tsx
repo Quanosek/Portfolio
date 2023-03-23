@@ -5,7 +5,7 @@ import type { Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-import styles from "@/styles/home.module.scss";
+import styles from "@/styles/index.module.scss";
 
 export default function ParticlesBackground() {
   const particlesInit = useCallback(async (engine: Engine) => {

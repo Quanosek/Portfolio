@@ -10,7 +10,7 @@ export default function Document() {
       </Head>
 
       <body>
-        <div id={"globalLoader"} className="globalLoader">
+        <div id="globalLoader" className="globalLoader">
           <div className="loader">
             <div />
             <div />
@@ -18,6 +18,14 @@ export default function Document() {
         </div>
 
         <Main />
+
+        <footer>
+          <p>
+            Stworzone z 💙 przez Jakuba Kłało &#169; 2023 Wszelkie prawa
+            zastrzeżone.
+          </p>
+        </footer>
+
         <NextScript />
       </body>
     </Html>
