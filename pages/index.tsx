@@ -24,25 +24,8 @@ export default function IndexPage() {
   }
 
   useEffect(() => {
-    Reveal(); // first time check
-
-    window.addEventListener("scroll", () => {
-      // scroll-to-top
-      const scrollButton = document.getElementById(
-        "scrollButton"
-      ) as HTMLInputElement;
-      const scrollStyle = scrollButton.style;
-
-      if (document.documentElement.scrollTop > 280) {
-        scrollStyle.visibility = "visible";
-        scrollStyle.opacity = "0.8";
-      } else {
-        scrollStyle.visibility = "";
-        scrollStyle.opacity = "";
-      }
-
-      Reveal(); // every scroll check
-    });
+    Reveal(); // first time
+    window.addEventListener("scroll", () => Reveal()); // every scroll
   });
 
   return (
@@ -117,8 +100,8 @@ export default function IndexPage() {
                     className={styles.programs}
                     alt="programs"
                     src="/images/programs/websites.webp"
-                    width={800}
-                    height={100}
+                    width={679}
+                    height={69}
                   />
                   <p>
                     Zaczynałem od bardzo prostych stron dla znajomych, ale
@@ -158,8 +141,8 @@ export default function IndexPage() {
                     className={styles.programs}
                     alt="programs"
                     src="/images/programs/apps.webp"
-                    width={800}
-                    height={100}
+                    width={752}
+                    height={70}
                   />
                   <p>
                     Potrafię stworzyć różne aplikacje lub skrypty
@@ -183,8 +166,8 @@ export default function IndexPage() {
                     className={styles.programs}
                     alt="programs"
                     src="/images/programs/photos.webp"
-                    width={800}
-                    height={100}
+                    width={745}
+                    height={70}
                   />
                   <p>
                     Hobbystycznie zajmuje się fotografią i&nbsp;montażem filmów.
@@ -208,9 +191,13 @@ export default function IndexPage() {
                 />
               </div>
 
-              <Link href="/about" className="newButton reveal">
-                <p>Dowiedz się więcej!</p>
-              </Link>
+              {/* <div className={`${styles.more} reveal`}>
+                <h3>Chcesz dowiedzieć się o mnie jeszcze więcej?</h3>
+
+                <Link href="/about" className="newButton">
+                  <p>Informacje o mnie</p>
+                </Link>
+              </div> */}
             </section>
           </div>
         </div>
@@ -234,13 +221,10 @@ export default function IndexPage() {
 
         <div className={styles.holder}>
           <div id="projects" className={styles.projects}>
-            <h2 className={styles.header}>Wszystkie projekty</h2>
+            <h2>Kilka z moich projektów:</h2>
 
             <div className={styles.grid}>
-              <Link
-                className={`${styles.project} reveal`}
-                href="https://piesni.klalo.pl/"
-              >
+              <Link className="reveal" href="https://piesni.klalo.pl/">
                 <Image
                   alt="Śpiewniki"
                   src="/images/projects/spiewniki.svg"
@@ -261,10 +245,7 @@ export default function IndexPage() {
                 </div>
               </Link>
 
-              <Link
-                className={`${styles.project} reveal`}
-                href="https://fonetyka.klalo.pl/"
-              >
+              <Link className="reveal" href="https://fonetyka.klalo.pl/">
                 <Image
                   alt="Fonetyka"
                   src="/images/projects/fonetyka.svg"
@@ -282,10 +263,7 @@ export default function IndexPage() {
                 </div>
               </Link>
 
-              <Link
-                className={`${styles.project} reveal`}
-                href="https://metrum.klalo.pl/"
-              >
+              <Link className="reveal" href="https://metrum.klalo.pl/">
                 <Image
                   alt="Metrum"
                   src="/images/projects/metrum.webp"
@@ -306,7 +284,7 @@ export default function IndexPage() {
               </Link>
 
               <Link
-                className={`${styles.project} reveal`}
+                className="reveal"
                 href="https://www.youtube.com/@NANIKESC/"
               >
                 <Image
@@ -334,7 +312,7 @@ export default function IndexPage() {
               <h3>Resztę projektów możesz sprawdzić na moim Githubie:</h3>
 
               <Link href="https://github.com/Quanosek/" className="newButton">
-                <p>Zobacz więcej!</p>
+                <p>Wszystkie projekty</p>
               </Link>
             </div>
           </div>
@@ -381,8 +359,8 @@ export default function IndexPage() {
                     />
                   </div>
 
-                  <div className={styles.content}>
-                    <h3>Numer prywatny:</h3>
+                  <div className={styles.text}>
+                    <h3>Numer telefonu:</h3>
                     <p>+48 882 461 181</p>
                   </div>
                 </Link>
@@ -400,7 +378,7 @@ export default function IndexPage() {
                     />
                   </div>
 
-                  <div className={styles.content}>
+                  <div className={styles.text}>
                     <h3>Adres e-mail:</h3>
                     <p>kubaklalo@gmail.com</p>
                   </div>
@@ -421,7 +399,7 @@ export default function IndexPage() {
                     />
                   </div>
 
-                  <div className={styles.content}>
+                  <div className={styles.text}>
                     <h3>Facebook</h3>
                     <p>@quanosek</p>
                   </div>
@@ -442,7 +420,7 @@ export default function IndexPage() {
                     />
                   </div>
 
-                  <div className={styles.content}>
+                  <div className={styles.text}>
                     <h3>Twitter</h3>
                     <p>@quanosek</p>
                   </div>

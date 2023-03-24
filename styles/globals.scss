@@ -84,6 +84,11 @@ footer {
     opacity: 0.85;
     font-size: 85%;
   }
+
+  @media (max-width: 480px) {
+    padding: 2vw 4.5rem 2vw 8vw;
+    font-size: 3.5vw;
+  }
 }
 
 h1,
@@ -137,6 +142,7 @@ button {
   position: relative;
   top: 3px;
   filter: grayscale(1) invert(1);
+  user-select: none;
 }
 
 .reveal {
@@ -175,6 +181,11 @@ button {
         transform: translateY(-1px);
       }
     }
+  }
+
+  @media (max-width: 375px) {
+    padding: 5vw 12vw;
+    font-size: 4vw;
   }
 }
 
