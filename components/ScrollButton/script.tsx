@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useEffect } from "react";
 
-import styles from "./style.module.scss";
+import styles from "./styles.module.scss";
 
 export default function ScrollButton() {
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function ScrollButton() {
     <button
       title="Wróć na samą górę."
       id="scrollButton"
-      className={styles.scroll_button}
+      className={styles.scrollButton}
       onClick={() => {
         document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
       }}

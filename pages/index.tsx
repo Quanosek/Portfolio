@@ -10,23 +10,16 @@ import Typewriter from "typewriter-effect";
 
 import styles from "@/styles/index.module.scss";
 
+import Reveal from "@/scripts/Reveal";
+
 import Navbar from "@/components/Navbar/script";
 import ScrollButton from "@/components/ScrollButton/script";
 import ParticlesBackground from "@/components/ParticlesBackground";
 
 export default function IndexPage() {
-  function Reveal() {
-    const reveals = document.querySelectorAll(".reveal");
-    reveals.forEach((reveal) => {
-      const revealTop = reveal.getBoundingClientRect().top;
-      if (revealTop < window.innerHeight + 50) reveal.classList.add("active");
-    });
-  }
-
   useEffect(() => {
-    Reveal(); // first time
-    window.addEventListener("scroll", () => Reveal()); // every scroll
-  });
+    Reveal();
+  }, []);
 
   return (
     <>
@@ -62,7 +55,7 @@ export default function IndexPage() {
                         'Programowanie to moja <span style="color: #ffffff;">pasja</span>',
                         "Front-End Developer",
                         "Pomysłowość to moje drugie imię",
-                        "Zawsze służę chętnie pomocą!",
+                        "Zawsze chętnie służę pomocą!",
                         "Sprawdź wszystkie moje projekty",
                         "Daj znać, jak działa strona",
                         'Kreatywny, <span style="color: #ffffff;">twórczy</span>, niebanalny',

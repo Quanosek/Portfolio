@@ -1,11 +1,18 @@
 import Head from "next/head";
+import React, { useEffect } from "react";
 
 import styles from "@/styles/about.module.scss";
+
+import Reveal from "@/scripts/Reveal";
 
 import Navbar from "@/components/Navbar/script";
 import ScrollButton from "@/components/ScrollButton/script";
 
 export default function AboutPage() {
+  useEffect(() => {
+    Reveal();
+  }, []);
+
   return (
     <>
       <Head>

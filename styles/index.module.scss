@@ -482,24 +482,25 @@
 }
 
 .waves {
-  $margin: -10rem;
-
-  margin-bottom: $margin;
+  margin-bottom: -5px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+
+  div {
+    width: 100%;
+  }
 
   .wave2 {
-    opacity: 0.9;
-    width: 100vw;
+    opacity: 0.8;
+    margin-left: -100%;
     position: relative;
-    top: $margin;
+    bottom: 5px;
   }
 }
 
 .contact {
   z-index: 1;
-  padding: 0 0 5rem 4.5rem;
+  padding: 0 0 6rem 4.5rem;
   width: 100%;
   color: #313131;
   background: url("/images/contact.svg") no-repeat;
@@ -538,7 +539,7 @@
 
   @media (max-width: 768px) {
     margin-top: -1rem;
-    padding: 0 5% 4rem;
+    padding: 0 5% 5rem;
     align-items: flex-start;
 
     .columns {
@@ -549,7 +550,7 @@
 
   @media (max-width: 480px) {
     margin-top: -5vw;
-    padding: 0 5vw 12vw;
+    padding: 0 5vw 14vw;
 
     h2 {
       text-align: center;

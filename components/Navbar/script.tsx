@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-import styles from "./style.module.scss";
+import styles from "./styles.module.scss";
 
 export default function Navbar() {
   let [isActive, setIsActive] = useState(false);
@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <>
       <div className={styles.navbar}>
-        <NavigationButtons />
+        <Buttons />
 
         <button
           title="Otwórz menu"
@@ -31,22 +31,18 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`${styles.mobile_menu} ${
-          isActive ? `${styles.active}` : ""
-        }`}
-        onClick={() => {
-          setIsActive((current) => !current);
-        }}
+        className={`${styles.mobile} ${isActive ? `${styles.active}` : ""}`}
+        onClick={() => setIsActive((current) => !current)}
       >
-        <NavigationButtons />
+        <Buttons />
       </div>
     </>
   );
 }
 
-function NavigationButtons() {
+function Buttons() {
   return (
-    <>
+    <div className={styles.buttons}>
       <div className={styles.text}>
         <Link href="/CV_Jakub_Klalo.pdf" target="_blank">
           <p>CV</p>
@@ -118,6 +114,6 @@ function NavigationButtons() {
           />
         </Link>
       </div>
-    </>
+    </div>
   );
 }
