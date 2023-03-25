@@ -17,10 +17,11 @@
 }
 
 .home {
+  max-width: 2500px;
+  height: max(40rem, min(75rem, 100vh));
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: max(40rem, min(75rem, 100vh));
 
   .background div {
     width: 100%;
@@ -343,9 +344,9 @@
   .grid {
     margin: 0 3%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     justify-content: center;
-    gap: 1rem;
+    grid-gap: 1rem;
 
     @media (max-width: 1800px) {
       grid-template-columns: repeat(2, 1fr);
@@ -370,6 +371,14 @@
       align-items: center;
       gap: 3.5%;
       background-color: #101216;
+
+      @media (min-width: 1800px) {
+        grid-column: span 2;
+
+        &:last-child:nth-child(3n - 2) {
+          grid-column-end: 5;
+        }
+      }
 
       img {
         height: 8.5rem;
