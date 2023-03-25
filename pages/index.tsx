@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 import Wave from "react-wavify";
@@ -17,9 +17,7 @@ import ScrollButton from "@/components/ScrollButton/script";
 import ParticlesBackground from "@/components/ParticlesBackground";
 
 export default function IndexPage() {
-  useEffect(() => {
-    Reveal();
-  }, []);
+  useEffect(() => Reveal());
 
   return (
     <>
@@ -72,7 +70,7 @@ export default function IndexPage() {
           </ParallaxBannerLayer>
         </ParallaxBanner>
 
-        <div className={`${styles.holder} ${styles.white}`}>
+        <div className="holder white">
           <div id="info" className={styles.info}>
             <p
               className={styles.snipped}
@@ -212,7 +210,7 @@ export default function IndexPage() {
           </ParallaxBannerLayer>
         </ParallaxBanner>
 
-        <div className={styles.holder}>
+        <div className="holder">
           <div id="projects" className={styles.projects}>
             <h2>Kilka z moich projektów:</h2>
 
@@ -336,7 +334,7 @@ export default function IndexPage() {
           />
         </div>
 
-        <div className={`${styles.holder} ${styles.white}`}>
+        <div className="holder white">
           <div id="contact" className={styles.contact}>
             <h2>Skontaktuj&nbsp;się ze&nbsp;mną!</h2>
 

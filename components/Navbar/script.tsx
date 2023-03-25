@@ -5,38 +5,40 @@ import { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 
 export default function Navbar() {
-  let [isActive, setIsActive] = useState(false);
+  const [state, setState] = useState(false);
 
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      setIsActive((current) => {
-        if (current) current = !current;
-        return current;
-      });
+    // hide menu on scroll
+    window.addEventListener("scroll", () => {
+      if (state) setState(!state);
     });
-  });
+  }, [state]);
 
   return (
-    <>
-      <div className={styles.navbar}>
+    <div className={styles.navbar}>
+      <nav>
         <Buttons />
 
         <button
           title="Otwórz menu"
           className={styles.hamburger}
-          onClick={() => setIsActive((current) => !current)}
+          onClick={() => setState(!state)}
         >
-          <div className={isActive ? `${styles.active}` : ""} />
+          <div className={state ? `${styles.active}` : ""} />
         </button>
-      </div>
+      </nav>
 
       <div
-        className={`${styles.mobile} ${isActive ? `${styles.active}` : ""}`}
-        onClick={() => setIsActive((current) => !current)}
+        className={`${styles.mobile} ${state ? `${styles.active}` : ""}`}
+        onClick={() => {
+          if (state) setState(!state);
+        }}
       >
-        <Buttons />
+        <div className={`${styles.menu} ${state ? `${styles.active}` : ""}`}>
+          <Buttons />
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 

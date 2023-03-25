@@ -48,8 +48,8 @@
 html,
 body {
   font-family: "Brutal Type", "Raleway";
-  background-color: #000000;
   color: #efefef;
+  background-color: #000000;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
 }
@@ -125,6 +125,20 @@ button {
   top: 3px;
   filter: grayscale(1) invert(1);
   user-select: none;
+}
+
+.holder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  div {
+    max-width: 2500px;
+  }
+
+  &.white {
+    background-color: #ffffff;
+  }
 }
 
 .reveal {

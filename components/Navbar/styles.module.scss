@@ -1,61 +1,80 @@
 .navbar {
-  z-index: 30;
-  padding: 1rem 1rem;
-  display: flex;
-  font-size: 95%;
-  font-weight: bold;
-  color: #ffffff;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
 
-  $background: #000000;
-  background: linear-gradient(rgba($background, 1), rgba($background, 0));
-
-  @media (max-width: 480px) {
-    background: radial-gradient(
-      farthest-corner at 100vw 0,
-      rgba($background, 1),
-      rgba($background, 0)
-    );
-  }
-
-  .buttons {
+  nav {
+    padding: 1rem 1rem;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-  }
-}
+    font-size: 95%;
+    font-weight: bold;
+    color: #ffffff;
 
-.navbar,
-.buttons {
+    $background: #000000;
+    background: linear-gradient(rgba($background, 1), rgba($background, 0));
+
+    @media (max-width: 480px) {
+      background: radial-gradient(
+        farthest-corner at 100vw 0,
+        rgba($background, 1),
+        rgba($background, 0)
+      );
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 1024px) {
+        .text {
+          display: none;
+        }
+
+        .icons {
+          flex-direction: row-reverse;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .icons {
+          display: none;
+        }
+      }
+    }
+  }
+
   button,
   a {
-    border-radius: 0.4rem;
+    z-index: 20;
     background-color: unset;
+    border-radius: 0.4rem;
     transition: 0.15s ease-out;
-  }
 
-  @media (min-width: 480px) {
-    a:hover {
-      backdrop-filter: blur(3px);
-      background-color: rgba(#235cc6, 0.35);
-      box-shadow: 0 3px 10px -2px #000000;
+    @media (min-width: 480px) {
+      &:hover {
+        backdrop-filter: blur(3px);
+        background-color: rgba(#235cc6, 0.35);
+        box-shadow: 0 3px 10px -2px #000000;
 
-      div,
-      p,
-      img {
-        opacity: 1;
-        transform: translateY(-1px);
+        div,
+        p,
+        img {
+          opacity: 1;
+          transform: translateY(-1px);
+        }
       }
     }
   }
 }
 
 .buttons {
-  z-index: 50;
   width: 100%;
 
   div {
     display: flex;
-    align-items: center;
   }
 
   .text a {
@@ -67,31 +86,22 @@
     aspect-ratio: 1/1;
   }
 
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    div,
-    p,
-    img {
-      opacity: 0.9;
-      transition: 0.2s ease-in-out;
-    }
-
-    img {
-      position: relative;
-      top: 1px;
-    }
+  div,
+  p,
+  img {
+    opacity: 0.9;
+    transition: 0.2s ease-in-out;
   }
 }
 
 .hamburger {
   display: none;
-
-  z-index: 20;
   padding: 1rem;
   aspect-ratio: 1/1;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
 
   div {
     $height: 3px;
@@ -104,8 +114,6 @@
     background-color: $background-color;
     transition: $transition;
 
-    $distance: 0.6rem;
-
     &::before,
     &::after {
       content: "";
@@ -117,22 +125,23 @@
       transition: $transition;
     }
 
+    $distance: 0.6rem;
+
     &::before {
       transform: translateY(-$distance); // to up
     }
-
     &::after {
       transform: translateY($distance); // to down
     }
 
     &.active {
       background: transparent;
+
       $rotate: 45deg;
 
       &::before {
         transform: rotate($rotate);
       }
-
       &::after {
         transform: rotate(-$rotate);
       }
@@ -142,17 +151,36 @@
 
 .mobile {
   z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+
+  @media (max-width: 1024px) {
+    &.active {
+      backdrop-filter: blur(6px);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.menu {
   opacity: 0;
   visibility: hidden;
-  position: absolute;
+  position: relative;
   top: 0;
   right: -100vw;
 
-  &.active {
-    right: 0;
-  }
-
   padding: 6rem 1rem 1rem;
+  width: 20rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -161,32 +189,38 @@
 
   font-size: 95%;
   font-weight: bold;
-  backdrop-filter: blur(3px);
   transition: 0.15s ease-in-out;
   overflow-y: auto;
 
-  $background: #000000;
-  background-color: rgba($background, 0.1);
-  box-shadow: 15px 0 30px 50px rgba($background, 0.1);
+  $background: rgba(#000000, 0.65);
+  background-color: $background;
+  box-shadow: 15px 0 30px 50px $background;
+
+  @media (max-width: 1024px) {
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      right: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    background-color: #000000;
+  }
 
   .buttons {
-    width: 100%;
-    position: relative;
-    right: 5px;
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 3rem;
 
-    .text,
-    .icons {
-      a {
-        background-color: #082552;
+    div a {
+      background-color: #082552;
 
-        @media (min-width: 480px) {
-          &:hover {
-            background-color: #243e68;
-          }
+      @media (min-width: 480px) {
+        &:hover {
+          background-color: #243e68;
         }
       }
     }
@@ -212,55 +246,14 @@
       justify-items: center;
 
       a {
-        padding: 4vw;
-        width: min(4.5rem, 17vw);
+        padding: 3vw;
+        width: min(4.5rem, 15vw);
         aspect-ratio: 1.1/1;
       }
     }
-  }
-}
 
-@media (max-width: 1024px) {
-  .navbar {
-    .text {
-      display: none;
-    }
-
-    .icons {
-      flex-direction: row-reverse;
-    }
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .mobile.active {
-    visibility: visible;
-    opacity: 1;
-    right: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    .icons {
-      display: none;
-    }
-  }
-
-  .mobile {
-    width: 100%;
-    overflow-y: auto;
-    background-color: #000000;
-
-    .buttons {
+    @media (max-width: 480px) {
       padding: 0 6%;
-      right: 0;
-
-      a {
-        width: 100%;
-      }
 
       .text {
         gap: 3vw;

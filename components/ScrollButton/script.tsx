@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 
 export default function ScrollButton() {
   useEffect(() => {
-    window.onscroll = () => {
+    window.addEventListener("scroll", () => {
       const scrollButton = document.getElementById(
         "scrollButton"
       ) as HTMLInputElement;
@@ -18,8 +18,8 @@ export default function ScrollButton() {
         scrollStyle.visibility = "";
         scrollStyle.opacity = "";
       }
-    };
-  });
+    });
+  }, []);
 
   return (
     <button
