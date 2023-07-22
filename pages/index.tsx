@@ -23,11 +23,6 @@ export default function IndexPage() {
     <>
       <Head>
         <title>Portfolio | Jakub Kłało</title>
-        <meta name="description" content="Strona Jakub Kłało." />
-        <meta
-          name="keywords"
-          content="klalo, piesni.klalo.pl, metrum.klalo.pl, fonetyka.klalo.pl, Fonetyka, Quanosek, Jakub Kłało, Polska, Lublin, Politechnika Lubelska, pollub.tv, WEiI, Wydział Elektrotechniki i Informatyki, Multimedia.to, Inżynieria Multimediów, JavaScript, TypeScript, HTML, CSS, Python, frontend, deweloper, web developer, github, kontakt"
-        />
       </Head>
 
       <main>

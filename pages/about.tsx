@@ -15,7 +15,6 @@ export default function AboutPage() {
     <>
       <Head>
         <title>Informacje o mnie | Jakub Kłało</title>
-        <meta name="description" content="Strona Jakub Kłało." />
       </Head>
 
       <main>
