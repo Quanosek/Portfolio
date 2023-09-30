@@ -4,8 +4,9 @@ import localFont from "next/font/local";
 import Link from "next/link";
 import Image from "next/image";
 
-import Wave from "react-wavify";
+import { RevealWrapper } from "next-reveal";
 import Typewriter from "typewriter-effect";
+import Wave from "react-wavify";
 
 import styles from "@/styles/home.module.scss";
 import Particles from "../components/particles";
@@ -122,7 +123,7 @@ export default function HomePage() {
 
       <section id="info" className="white">
         <div className={`${styles.info} content`}>
-          <div>
+          <RevealWrapper>
             <div className={styles.text}>
               <h2>Strony internetowe</h2>
 
@@ -161,9 +162,9 @@ export default function HomePage() {
               height={330}
               draggable={false}
             />
-          </div>
+          </RevealWrapper>
 
-          <div className={styles.reverse}>
+          <RevealWrapper className={styles.reverse}>
             <Image
               className={styles.image}
               alt="apps"
@@ -200,9 +201,9 @@ export default function HomePage() {
                 w&nbsp;poruszaniu się po <u>terminalu Linuxa</u>.
               </p>
             </div>
-          </div>
+          </RevealWrapper>
 
-          <div>
+          <RevealWrapper>
             <div className={styles.text}>
               <h2>Fotografia i&nbsp;montaż filmów</h2>
 
@@ -240,13 +241,13 @@ export default function HomePage() {
               height={330}
               draggable={false}
             />
-          </div>
+          </RevealWrapper>
 
-          <div className={styles.more}>
+          <RevealWrapper className={styles.more}>
             <Link href="/about">
               <p>Dowiedz się więcej!</p>
             </Link>
-          </div>
+          </RevealWrapper>
         </div>
       </section>
 
@@ -260,14 +261,16 @@ export default function HomePage() {
           }}
         />
 
-        <div className={`${styles.motto} ${GentiumPlus.className} content`}>
+        <RevealWrapper
+          className={`${styles.motto} ${GentiumPlus.className} content`}
+        >
           <h2>
             ❝&nbsp;Bardziej niż cokolwiek innego – przygotowywanie się
             <br />
             jest sekretem do sukcesu.&nbsp;❞
           </h2>
           <p>~ Henry Ford</p>
-        </div>
+        </RevealWrapper>
       </section>
 
       {/* --- PROJECTS SECTION --- */}
@@ -276,7 +279,7 @@ export default function HomePage() {
         <div className={`${styles.projects} content`}>
           <h2>Kilka z moich projektów:</h2>
 
-          <div className={styles.grid}>
+          <RevealWrapper className={styles.grid}>
             <ProjectTile
               project={{
                 link: "spiewniki.klalo.pl",
@@ -313,15 +316,15 @@ export default function HomePage() {
                 description: "Zaawansowany bot muzyczny na platformę Discord",
               }}
             />
-          </div>
+          </RevealWrapper>
 
-          <div className={styles.more}>
+          <RevealWrapper className={styles.more}>
             <h3>Resztę projektów możesz sprawdzić klikając w ten przycisk:</h3>
 
             <Link href="/projects">
               <p>Wszystkie projekty</p>
             </Link>
-          </div>
+          </RevealWrapper>
         </div>
       </section>
 
