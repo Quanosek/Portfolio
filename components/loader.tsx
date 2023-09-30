@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import styles from "@/styles/components/loader.module.scss";
 
-export default function Loader() {
+export default function LoaderComponent() {
   const [pageReady, setPageReady] = useState(false);
 
   useEffect(() => {

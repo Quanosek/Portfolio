@@ -9,7 +9,7 @@ import Typewriter from "typewriter-effect";
 import Wave from "react-wavify";
 
 import styles from "@/styles/home.module.scss";
-import Particles from "../components/particles";
+import Particles from "@/components/particles";
 
 // motto font-face
 const GentiumPlus = localFont({

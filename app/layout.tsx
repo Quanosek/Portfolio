@@ -5,9 +5,9 @@ import Link from "next/link";
 import "the-new-css-reset/css/reset.css";
 import "@/styles/global.scss";
 
-import Analytics from "../components/analytics";
-import Loader from "../components/loader";
-import Navigation from "../components/navigation";
+import Analytics from "@/components/analytics";
+import Loader from "@/components/loader";
+import Navigation from "@/components/navigation";
 
 // Global font-face
 const Nexa = localFont({
@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   description: "My personal website",
 };
 
+// Default page layout
 export default function RootLayout({
   children,
 }: {
@@ -51,15 +52,12 @@ export default function RootLayout({
       </head>
 
       <body>
-        {/* Google Analytics */}
         {process.env.NODE_ENV !== "development" && <Analytics />}
 
-        {/* Main content */}
         <Loader />
         <Navigation />
         {children}
 
-        {/* Default footer */}
         <footer>
           <section>
             <p>
