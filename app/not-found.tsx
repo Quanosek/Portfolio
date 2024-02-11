@@ -1,4 +1,9 @@
+"use client";
+
 import type { Metadata } from "next";
+
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import styles from "@/styles/not-found.module.scss";
 
@@ -6,15 +11,27 @@ export const metadata: Metadata = {
   title: "Nie znaleziono strony / Portfolio",
 };
 
-export default function NotFound() {
+export default function NotFoundPage() {
+  const router = useRouter();
+  const [seconds, setSeconds] = useState(10); // 10 seconds
+
+  useEffect(() => {
+    const counter = setInterval(() => {
+      setSeconds((prevSeconds: number) => prevSeconds - 1);
+      if (seconds === 1) router.push("/");
+    }, 1000);
+
+    return () => clearInterval(counter);
+  }, [router, seconds]);
+
   return (
-    <main>
-      <section>
-        <div className={`${styles.error} content`}>
-          <h1>Błąd 404</h1>
-          <p>Nie udało się odnaleźć wybranej strony!</p>
-        </div>
-      </section>
-    </main>
+    <>
+      <h1>Nie znaleziono strony</h1>
+
+      <p>
+        Pojawił się błąd przy próbie połączenia z wybraną stroną, za chwilę
+        nastąpi powrót do strony głównej. <span>[{seconds}]</span>
+      </p>
+    </>
   );
 }

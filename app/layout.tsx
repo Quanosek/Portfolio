@@ -1,15 +1,14 @@
 import localFont from "next/font/local";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 
 import "the-new-css-reset/css/reset.css";
-import "@/styles/global.scss";
+import "@/styles/globals.scss";
 
 import Analytics from "@/components/analytics";
-import Loader from "@/components/loader";
-import Navigation from "@/components/navigation";
+import Header from "@/components/header";
 
-// Global font-face
+// global font-face
 const Nexa = localFont({
   src: [
     {
@@ -30,13 +29,23 @@ const Nexa = localFont({
   display: "swap",
 });
 
-// Default metadata
+// global metadata (default values)
 export const metadata: Metadata = {
   title: "Moje portfolio / klalo.pl",
   description: "My personal website",
+  icons: {
+    icon: "/assets/info/images/rocket.svg",
+  },
 };
 
-// Default page layout
+// global viewport
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "black",
+};
+
+// app project layout
 export default function RootLayout({
   children,
 }: {
@@ -44,28 +53,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl" className={Nexa.className}>
-      <head>
-        {/* Show logo */}
-        <link rel="icon" href="/logo/favicon.ico" sizes="64x64" />
-        <link rel="icon" href="/logo/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png" />
-      </head>
+      {process.env.NODE_ENV !== "development" && <Analytics />}
 
       <body>
-        {process.env.NODE_ENV !== "development" && <Analytics />}
+        <Header />
 
-        <Loader />
-        <Navigation />
-        {children}
+        <section>
+          <main>{children}</main>
+        </section>
 
         <footer>
           <section>
             <p>
-              Stworzone z <span>💙</span> przez{" "}
-              <Link href="https://github.com/Quanosek">Jakuba Kłało</Link>
+              Stworzone z 💙 przez{" "}
+              <Link href="https://github.com/quanosek" target="_blank">
+                Jakuba Kłało
+              </Link>
             </p>
 
-            <p>Wszelkie prawa zastrzeżone &#169; 2023</p>
+            <p>
+              Wszelkie prawa zastrzeżone &#169; 2023-{new Date().getFullYear()}
+            </p>
           </section>
         </footer>
       </body>

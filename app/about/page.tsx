@@ -8,13 +8,10 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main>
-      <section>
-        <div className={`${styles.about} content`}>
-          <h1>Informacje o mnie</h1>
-          <p>Strona chwilowo niedostępna. Zajrzyj tu wkrótce!</p>
-        </div>
-      </section>
-    </main>
+    <>
+      <h1>Informacje o mnie</h1>
+
+      <p>Strona w trakcie budowy. Zajrzyj tu wkrótce!</p>
+    </>
   );
 }

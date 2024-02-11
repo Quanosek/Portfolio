@@ -8,13 +8,10 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <main>
-      <section>
-        <div className={`${styles.projects} content`}>
-          <h1>Wszystkie projekty</h1>
-          <p>Strona chwilowo niedostępna. Zajrzyj tu wkrótce!</p>
-        </div>
-      </section>
-    </main>
+    <>
+      <h1>Wszystkie moje projekty</h1>
+
+      <p>Strona w trakcie budowy. Zajrzyj tu wkrótce!</p>
+    </>
   );
 }

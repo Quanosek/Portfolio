@@ -4,9 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-import styles from "@/styles/components/navigation.module.scss";
+import styles from "@/styles/components/header.module.scss";
 
-export default function NavigationComponent() {
+export default function HeaderComponent() {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -22,20 +22,16 @@ export default function NavigationComponent() {
     return (
       <div className={styles.buttons}>
         <div className={styles.text}>
-          <Link href="/CV_Jakub_Klalo.pdf" target="_blank">
-            <p>CV</p>
-          </Link>
-
           <Link href="/about">
-            <p>Informacje o mnie</p>
+            <p>O mnie</p>
           </Link>
 
           <Link href="/projects">
-            <p>Wszystkie projekty</p>
+            <p>Projekty</p>
           </Link>
 
           <Link href="https://ko-fi.com/Quanosek/" target="_blank">
-            <p>Wesprzyj mnie</p>
+            <p>Wesprzyj</p>
           </Link>
         </div>
 

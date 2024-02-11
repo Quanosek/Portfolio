@@ -1,25 +1,27 @@
 "use client";
 
-import type { Engine } from "tsparticles-engine";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import { useEffect, useState } from "react";
 
-import { useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
-export default function ParticlesComponent() {
-  const [visible, setVisible] = useState(false);
+// https://www.npmjs.com/package/@tsparticles/react
 
-  const particlesInit = async (main: Engine) => {
-    await loadFull(main).then(() => setVisible(true));
-  };
+export default function App() {
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
+  }, []);
+
+  // https://particles.js.org/docs/classes/tsParticles_Engine.Options_Classes_Options.Options.html
 
   const particlesOptions = {
-    background: {
-      color: "#000000",
-    },
+    fpsLimit: 90,
     fullScreen: {
       enable: false,
-      zIndex: 0,
     },
     interactivity: {
       events: {
@@ -30,11 +32,11 @@ export default function ParticlesComponent() {
       },
       modes: {
         bubble: {
-          opacity: 1,
-          size: 3.5,
           color: {
             value: "#ccd5f9",
           },
+          opacity: 1,
+          size: 4,
         },
       },
     },
@@ -46,35 +48,39 @@ export default function ParticlesComponent() {
         color: {
           value: "#6e86ef",
         },
+        distance: 180,
         enable: true,
-        opacity: 1,
       },
       move: {
         enable: true,
       },
-      opacity: {
-        value: 0.8,
-      },
       number: {
-        value: 120,
+        value: 100,
+      },
+      opacity: {
+        value: 0.5,
       },
       size: {
-        value: 2,
+        value: 2.5,
       },
     },
     responsive: [
       {
         maxWidth: 768,
         options: {
-          fpsLimit: 90,
-          particles: {
-            number: { limit: 50 },
-          },
           interactivity: {
             events: {
               onHover: {
                 enable: false,
               },
+            },
+          },
+          particles: {
+            links: {
+              distance: 150,
+            },
+            number: {
+              value: 40,
             },
           },
         },
@@ -85,12 +91,11 @@ export default function ParticlesComponent() {
   return (
     <div
       style={{
-        opacity: visible ? "1" : "0",
-        filter: visible ? "none" : "blur(6px)",
-        transition: "0.25s opacity ease-out, 0.5s filter ease-out",
+        opacity: init ? 1 : 0,
+        transition: "opacity 0.5s ease-in-out",
       }}
     >
-      <Particles init={particlesInit} options={particlesOptions} />
+      <Particles options={particlesOptions} />
     </div>
   );
 }

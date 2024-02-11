@@ -1,20 +1,18 @@
 "use client";
 
-import localFont from "next/font/local";
 import Link from "next/link";
 import Image from "next/image";
 
-import { RevealWrapper } from "next-reveal";
 import Typewriter from "typewriter-effect";
-import Wave from "react-wavify";
 
 import styles from "@/styles/home.module.scss";
+import Waves from "@/components/waves";
 import Particles from "@/components/particles";
 
 // motto font-face
+import localFont from "next/font/local";
 const GentiumPlus = localFont({
   src: "../fonts/gentium_plus_bold.woff2",
-  weight: "600",
   display: "swap",
 });
 
@@ -71,40 +69,32 @@ export default function HomePage() {
 
   // main page
   return (
-    <main>
-      <section>
-        <div className="background">
-          <Particles />
-        </div>
+    <>
+      {/* --- WELCOME SECTION --- */}
+      <div className={styles.welcomeScreen}>
+        <div className={styles.content}>
+          <p>Hej, nazywam się</p>
+          <h1>Jakub Kłało</h1>
 
-        {/* --- HOME SECTION --- */}
-
-        <div className={`${styles.home} content`}>
-          <div className={styles.text}>
-            <p>Hej, nazywam się</p>
-            <h1>Jakub Kłało</h1>
-
-            <div className={styles.typeWriter}>
-              <Typewriter
-                options={{
-                  autoStart: true,
-                  loop: true,
-                  strings: [
-                    'Programowanie to moja <span style="color: #ffffff;">pasja</span>',
-                    "Front-End Developer",
-                    "Pomysłowość to moje drugie imię",
-                    "Zawsze chętnie służę pomocą!",
-                    "Sprawdź wszystkie moje projekty",
-                    "Daj znać, jak działa strona",
-                    'Kreatywny, <span style="color: #ffffff;">twórczy</span>, niebanalny',
-                    "Nic nie jest mi straszne!",
-                    "Jestem tylko studentem...",
-                    'Moim zdaniem to nie ma tak,<br/>że <span style="color: #20e22d;">dobrze</span> albo że <span style="color: #eb3030;">nie dobrze</span>.<br/>Gdybym miał powiedzieć, co cenię<br/>w życiu najbardziej, powiedziałbym,<br/>że ludzi. <b>Ekhm...</b> Ludzi, którzy<br/>podali mi pomocną dłoń...',
-                    "Czy potrzebujesz pomocy<br/>przy serwerze Discord?",
-                  ],
-                }}
-              />
-            </div>
+          <div className={styles.typeWriter}>
+            <Typewriter
+              options={{
+                strings: [
+                  "Witaj na mojej stronie!",
+                  'Programowanie to moja <span style="color: #ffffff;">pasja</span>',
+                  "Front-End Developer",
+                  "Pomysłowość to moje drugie imię",
+                  "Zawsze chętnie służę pomocą!",
+                  "Sprawdź wszystkie moje projekty",
+                  "Daj znać, jak działa strona",
+                  'Kreatywny, <span style="color: #ffffff;">twórczy</span>, niebanalny...',
+                  "Nic nie jest mi straszne!",
+                  "Potrzebujesz bota Discord?",
+                ],
+                loop: true,
+                autoStart: true,
+              }}
+            />
           </div>
 
           <button
@@ -117,13 +107,18 @@ export default function HomePage() {
             Kliknij, aby zjechać w dół
           </button>
         </div>
-      </section>
+
+        <div className={styles.background}>
+          <Particles />
+        </div>
+      </div>
+
+      <Waves />
 
       {/* --- INFO SECTION --- */}
-
-      <section id="info" className="white">
+      <div id="info" className="section white">
         <div className={`${styles.info} content`}>
-          <RevealWrapper>
+          <div>
             <div className={styles.text}>
               <h2>Strony internetowe</h2>
 
@@ -162,9 +157,9 @@ export default function HomePage() {
               height={330}
               draggable={false}
             />
-          </RevealWrapper>
+          </div>
 
-          <RevealWrapper className={styles.reverse}>
+          <div className={styles.reverse}>
             <Image
               className={styles.image}
               alt="apps"
@@ -201,9 +196,9 @@ export default function HomePage() {
                 w&nbsp;poruszaniu się po <u>terminalu Linuxa</u>.
               </p>
             </div>
-          </RevealWrapper>
+          </div>
 
-          <RevealWrapper>
+          <div>
             <div className={styles.text}>
               <h2>Fotografia i&nbsp;montaż filmów</h2>
 
@@ -241,19 +236,18 @@ export default function HomePage() {
               height={330}
               draggable={false}
             />
-          </RevealWrapper>
+          </div>
 
-          <RevealWrapper className={styles.more}>
+          <div className={styles.more}>
             <Link href="/about">
               <p>Dowiedz się więcej!</p>
             </Link>
-          </RevealWrapper>
+          </div>
         </div>
-      </section>
+      </div>
 
       {/* --- MOTTO SECTION --- */}
-
-      <section>
+      <div className="section">
         <div
           className="background blur"
           style={{
@@ -261,25 +255,22 @@ export default function HomePage() {
           }}
         />
 
-        <RevealWrapper
-          className={`${styles.motto} ${GentiumPlus.className} content`}
-        >
+        <div className={`${styles.motto} ${GentiumPlus.className} content`}>
           <h2>
             ❝&nbsp;Bardziej niż cokolwiek innego – przygotowywanie się
             <br />
             jest sekretem do sukcesu.&nbsp;❞
           </h2>
           <p>~ Henry Ford</p>
-        </RevealWrapper>
-      </section>
+        </div>
+      </div>
 
       {/* --- PROJECTS SECTION --- */}
-
-      <section>
+      <div className="section">
         <div className={`${styles.projects} content`}>
           <h2>Kilka z moich projektów:</h2>
 
-          <RevealWrapper className={styles.grid}>
+          <div className={styles.grid}>
             <ProjectTile
               project={{
                 link: "spiewniki.klalo.pl",
@@ -316,44 +307,22 @@ export default function HomePage() {
                 description: "Zaawansowany bot muzyczny na platformę Discord",
               }}
             />
-          </RevealWrapper>
+          </div>
 
-          <RevealWrapper className={styles.more}>
+          <div className={styles.more}>
             <h3>Resztę projektów możesz sprawdzić klikając w ten przycisk:</h3>
 
             <Link href="/projects">
               <p>Wszystkie projekty</p>
             </Link>
-          </RevealWrapper>
+          </div>
         </div>
-      </section>
-
-      <div className={styles.waves}>
-        <Wave
-          fill="#ffffff"
-          paused={false}
-          options={{
-            height: 50,
-            amplitude: 30,
-            speed: 0.08,
-            points: 4,
-          }}
-        />
-        <Wave
-          fill="#ffffff"
-          paused={false}
-          options={{
-            height: 50,
-            amplitude: 32,
-            speed: 0.12,
-            points: 3,
-          }}
-        />
       </div>
 
-      {/* --- CONTACT SECTION --- */}
+      <Waves />
 
-      <section className="white">
+      {/* --- CONTACT SECTION --- */}
+      <div className="section white">
         <div className={`${styles.contact} content`}>
           <h2>Skontaktuj&nbsp;się ze&nbsp;mną!</h2>
 
@@ -437,7 +406,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </>
   );
 }
