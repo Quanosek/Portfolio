@@ -51,8 +51,21 @@ export default function ProjectsPage() {
         </div>
 
         <div className={styles.content}>
-          <div className={styles.projectTitle}>
-            <h2>{title}</h2>
+          <div className={styles.topDiv}>
+            <div className={styles.projectTitle}>
+              <div>
+                <Image
+                  src={`/projects/${name}_icon.svg`}
+                  alt="watermark"
+                  width={200}
+                  height={200}
+                  draggable={false}
+                  style={watermarkStyle}
+                />
+              </div>
+
+              <h2>{title}</h2>
+            </div>
 
             <div className={styles.links} style={{ filter: "invert(1)" }}>
               <Link href={githubLink}>

@@ -3,7 +3,8 @@
 
   position: relative;
   width: 100%;
-  min-height: min(70rem, calc(110svh));
+  height: min(70rem, 110svh);
+  min-height: 40rem;
   display: flex;
   justify-content: center;
   background-color: #000000;
@@ -12,6 +13,7 @@
     z-index: 1;
     padding: min(20rem, 30vh) 3%;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +59,7 @@
     button {
       opacity: 65%;
       position: absolute;
-      bottom: 14vh;
+      bottom: 6rem;
       text-align: center;
 
       &:hover {
@@ -558,7 +560,6 @@
       overflow: hidden;
 
       p {
-        margin-left: 3px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;

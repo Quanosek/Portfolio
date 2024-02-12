@@ -216,7 +216,7 @@ export default function HomePage() {
                 co może mnie spotkać! Gdy w moim mieście organizowane są różne
                 wydarzenia, zawsze muszę tam być i robić serie zdjęć, a dzięki
                 mojemu <b>doświadczeniu w obsłudze programów Adobe</b>, dalsza
-                obróbka zdjęć lub {`"`}sklejenie{`"`} filmów{" "}
+                obróbka zdjęć lub montaż filmów{" "}
                 <u>nie stanowi żadnego problemu</u>.
               </p>
             </div>
@@ -363,26 +363,6 @@ export default function HomePage() {
 
                 <div className={styles.text}>
                   <h3>Messenger</h3>
-                  <p>@quanosek</p>
-                </div>
-              </Link>
-
-              <Link
-                href={"https://x.com/messages/compose?recipient_id=@quanosek"}
-                className={styles.element}
-              >
-                <div className={styles.image}>
-                  <Image
-                    src="/icons/x.com.svg"
-                    alt="x.com"
-                    width={40}
-                    height={40}
-                    draggable={false}
-                  />
-                </div>
-
-                <div className={styles.text}>
-                  <h3>X (Twitter)</h3>
                   <p>@quanosek</p>
                 </div>
               </Link>

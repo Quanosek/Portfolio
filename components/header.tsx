@@ -51,34 +51,6 @@ export default function HeaderComponent() {
           </Link>
 
           <Link
-            title="Facebook"
-            href="https://facebook.com/Quanosek/"
-            target="_blank"
-          >
-            <Image
-              src="/icons/facebook.svg"
-              alt="facebook"
-              width={25}
-              height={25}
-              draggable={false}
-            />
-          </Link>
-
-          <Link
-            title="X (Twitter)"
-            href="https://x.com/Quanosek/"
-            target="_blank"
-          >
-            <Image
-              src="/icons/x.com.svg"
-              alt="x.com"
-              width={25}
-              height={25}
-              draggable={false}
-            />
-          </Link>
-
-          <Link
             title="LinkedIn"
             href="https://linkedin.com/in/Quanosek/"
             target="_blank"
@@ -86,6 +58,20 @@ export default function HeaderComponent() {
             <Image
               src="/icons/linkedin.svg"
               alt="email"
+              width={25}
+              height={25}
+              draggable={false}
+            />
+          </Link>
+
+          <Link
+            title="Facebook"
+            href="https://facebook.com/Quanosek/"
+            target="_blank"
+          >
+            <Image
+              src="/icons/facebook.svg"
+              alt="facebook"
               width={25}
               height={25}
               draggable={false}

@@ -47,7 +47,7 @@ $project-bg-color: #0b111f;
   }
 
   @media (max-width: 768px) {
-    height: 60vw;
+    height: 62vw;
   }
 }
 
@@ -88,7 +88,7 @@ $project-bg-color: #0b111f;
     position: absolute;
     bottom: 4vw;
     left: 5vw;
-    filter: blur(2px);
+    filter: blur(3px);
   }
 
   @media (min-width: 769px) {
@@ -116,22 +116,48 @@ $project-bg-color: #0b111f;
   @media (max-width: 768px) {
     padding: 4.2vw 5.8vw;
     font-size: 3.5vw;
+    gap: 3.5vw;
   }
 }
 
-.projectTitle {
+.topDiv {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  h2 {
-    width: 100%;
-    font-size: 165%;
-    font-weight: normal;
+  .projectTitle {
+    display: flex;
+    align-items: center;
+    gap: 2.5vw;
 
     @media (max-width: 768px) {
-      font-weight: bold;
+      height: 8vw;
+    }
+
+    div {
+      width: 9vw;
+      opacity: 90%;
+      display: none;
+      align-items: center;
+
+      @media (max-width: 768px) {
+        display: flex;
+      }
+
+      img {
+        opacity: 100% !important;
+      }
+    }
+
+    h2 {
+      width: 100%;
+      font-size: 165%;
+      font-weight: normal;
+
+      @media (max-width: 768px) {
+        font-weight: bold;
+      }
     }
   }
 }
@@ -147,6 +173,7 @@ $project-bg-color: #0b111f;
     aspect-ratio: 1/1;
     position: relative;
     top: 0;
+    height: min(5.5vw, 55px);
     transition: 0.2s top ease-out;
 
     &:hover {
