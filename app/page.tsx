@@ -5,10 +5,10 @@ import Image from "next/image";
 
 import { Fade } from "react-awesome-reveal";
 import Typewriter from "typewriter-effect";
-import Wave from "react-wavify";
 
 import styles from "@/styles/home.module.scss";
 import Particles from "@/components/particles";
+import Waves from "@/components/waves";
 
 // motto font-face
 import localFont from "next/font/local";
@@ -110,31 +110,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className={styles.wavesHandler}>
-        <div className={styles.waves}>
-          <Wave
-            fill="#ffffff"
-            paused={false}
-            options={{
-              height: 50,
-              amplitude: 38,
-              speed: 0.1,
-              points: 4,
-            }}
-          />
-
-          <Wave
-            fill="#ffffff"
-            paused={false}
-            options={{
-              height: 50,
-              amplitude: 52,
-              speed: 0.08,
-              points: 3,
-            }}
-          />
-        </div>
-      </div>
+      <Waves />
 
       <div id="info" className={styles.infoHandler}>
         <div className={styles.info}>
@@ -263,7 +239,7 @@ export default function HomePage() {
 
             <div>
               <Link href="/about" className={styles.more}>
-                <p>Dowiedz się więcej!</p>
+                <p>Dowiedz się więcej</p>
               </Link>
             </div>
           </Fade>
@@ -335,6 +311,26 @@ export default function HomePage() {
             </div>
           </Fade>
         </div>
+      </div>
+
+      <Waves />
+
+      <div className={styles.question}>
+        <Fade cascade damping={0.1} triggerOnce>
+          <div className={styles.title}>
+            <h2>Masz jakieś pytanie?</h2>
+            <p>
+              Chętnie odpowiem na każde z nich, a jeżeli potrzebujesz pomocy, to
+              jestem do Twojej dyspozycji!
+            </p>
+          </div>
+
+          <div className={styles.button}>
+            <Link href="/about#form">
+              <p>Przejdź do formularza</p>
+            </Link>
+          </div>
+        </Fade>
       </div>
     </>
   );
