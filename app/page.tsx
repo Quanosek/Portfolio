@@ -30,8 +30,8 @@ export default function HomePage() {
               title={name}
               src={`/home/programs/${name}.svg`}
               alt={name}
-              width={60}
-              height={60}
+              width={40}
+              height={40}
               draggable={false}
             />
           );
@@ -67,8 +67,7 @@ export default function HomePage() {
   // main page
   return (
     <>
-      {/* --- WELCOME SECTION --- */}
-      <div className={styles.welcomeScreen}>
+      <div className={styles.welcome}>
         <div className={styles.content}>
           <p>Hej, nazywam się</p>
           <h1>Jakub Kłało</h1>
@@ -112,9 +111,8 @@ export default function HomePage() {
 
       <Waves />
 
-      {/* --- INFO SECTION --- */}
-      <div id="info" className="section white">
-        <div className={`${styles.info} content`}>
+      <div id="info" className={styles.infoHandler}>
+        <div className={styles.info}>
           <div>
             <div className={styles.text}>
               <h2>Strony internetowe</h2>
@@ -134,15 +132,14 @@ export default function HomePage() {
               />
 
               <p>
-                Zaczynałem od bardzo prostych stron dla znajomych, ale
-                z&nbsp;czasem stawały się one coraz bardziej{" "}
-                <u>skomplikowane i&nbsp;wymagające</u>. Dlatego niezbędne było
-                nauczenie się <u>frameworków i&nbsp;bibliotek</u>. Początkowo{" "}
-                <b>Vue</b>, a&nbsp;teraz <b>React</b>, dają mi ogromne
-                możliwości, a&nbsp;dzięki tym narzędziom mogę w&nbsp;pełni{" "}
-                <b>uwolnić swoją wyobraźnię</b>. Z&nbsp;pomocą <b>TypeScript</b>{" "}
-                oraz <b>Sass</b> jestem w&nbsp;stanie stworzyć{" "}
-                <u>dowolny design</u>.
+                Zaczynałem od bardzo prostych stron dla znajomych, ale z czasem
+                stawały się one coraz bardziej <u>skomplikowane i wymagające</u>
+                . Dlatego niezbędne było nauczenie się{" "}
+                <u>frameworków i bibliotek</u>. Początkowo <b>Vue</b>, a teraz{" "}
+                <b>React</b>, dają mi ogromne możliwości, a dzięki tym
+                narzędziom mogę w pełni <b>uwolnić swoją wyobraźnię</b>. Z
+                pomocą <b>TypeScript</b> oraz <b>Sass</b> jestem w stanie
+                stworzyć <u>dowolny design</u>.
               </p>
             </div>
 
@@ -183,14 +180,14 @@ export default function HomePage() {
               />
 
               <p>
-                Potrafię stworzyć różne aplikacje lub skrypty w&nbsp;językach:{" "}
+                Potrafię stworzyć różne aplikacje lub skrypty w językach:{" "}
                 <b>JavaScript</b>, <b>Pyton</b> czy nawet <b>bash</b>!
                 Największą szansę na kreatywne wykorzystanie dostępnych
                 możliwości daje mi <u>programowanie botów</u> na różne serwery{" "}
-                <b>Discord</b>, a&nbsp;strona, którą teraz przeglądasz została
+                <b>Discord</b>, a strona, którą teraz przeglądasz została
                 postawiona na moim prywatnym serwerze <b>Raspberry Pi</b>,
-                którego odpowiednie skonfigurowanie wymagało wiedzy
-                w&nbsp;poruszaniu się po <u>terminalu Linuxa</u>.
+                którego odpowiednie skonfigurowanie wymagało wiedzy w poruszaniu
+                się po <u>terminalu Linuxa</u>.
               </p>
             </div>
           </div>
@@ -213,14 +210,13 @@ export default function HomePage() {
               />
 
               <p>
-                Hobbystycznie zajmuje się fotografią i&nbsp;montażem filmów. Za
+                Hobbystycznie zajmuje się fotografią i montażem filmów. Za
                 każdym razem gdy gdzieś wyjeżdżam,{" "}
                 <u>muszę wziąć ze sobą swoją lustrzankę</u>, bo nigdy nie wiem,
-                co może mnie spotkać! Gdy w&nbsp;moim mieście organizowane są
-                różne wydarzenia, zawsze muszę tam być i&nbsp;robić serie zdjęć,
-                a dzięki mojemu{" "}
-                <b>doświadczeniu w&nbsp;obsłudze programów Adobe</b>, dalsza
-                obróbka zdjęć lub &quot;sklejenie&quot; filmów{" "}
+                co może mnie spotkać! Gdy w moim mieście organizowane są różne
+                wydarzenia, zawsze muszę tam być i robić serie zdjęć, a dzięki
+                mojemu <b>doświadczeniu w obsłudze programów Adobe</b>, dalsza
+                obróbka zdjęć lub {`"`}sklejenie{`"`} filmów{" "}
                 <u>nie stanowi żadnego problemu</u>.
               </p>
             </div>
@@ -232,6 +228,9 @@ export default function HomePage() {
               width={330}
               height={330}
               draggable={false}
+              style={{
+                scale: "0.95",
+              }}
             />
           </div>
 
@@ -243,7 +242,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* --- MOTTO SECTION --- */}
       <div className="section">
         <div
           className="background blur"
@@ -252,15 +250,15 @@ export default function HomePage() {
 
         <div className={`${styles.motto} ${GentiumPlus.className} content`}>
           <h2>
-            ❝&nbsp;Bardziej niż cokolwiek innego – przygotowywanie się
+            „&nbsp;Bardziej niż cokolwiek innego – przygotowywanie się
             <br />
-            jest sekretem do sukcesu.&nbsp;❞
+            jest sekretem do sukcesu.&nbsp;”
           </h2>
+
           <p>~ Henry Ford</p>
         </div>
       </div>
 
-      {/* --- PROJECTS SECTION --- */}
       <div className="section">
         <div className={`${styles.projects} content`}>
           <h2>Kilka z moich projektów:</h2>
@@ -307,7 +305,6 @@ export default function HomePage() {
 
       <Waves />
 
-      {/* --- CONTACT SECTION --- */}
       <div className="section white">
         <div className={`${styles.contact} content`}>
           <h2>Skontaktuj&nbsp;się ze&nbsp;mną!</h2>

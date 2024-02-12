@@ -2,46 +2,47 @@
 :root {
   color-scheme: dark;
 
-  --white: #ededed;
+  --primary: #121212;
+  --secondary: #f0f0f0;
+
   --header-height: 4.5rem;
 }
 
 // tab focus border
 :focus-visible {
-  box-shadow: 0 0 1px 2px var(--white);
+  box-shadow: 0 0 1px 2px var(--secondary);
 }
 
 // text selection behavior
 ::selection {
-  color: var(--white);
+  color: var(--secondary);
   background: #4378bd;
 }
 
 // custom scrollbar
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 14px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  border-radius: 0.4rem;
-  background-color: rgba(#030303, 0.3);
+  background-color: var(--primary);
 }
+
 ::-webkit-scrollbar-thumb {
-  background-color: #dfdfdf;
-  border-radius: 20px;
+  background-color: var(--secondary);
   border: 2px solid transparent;
   background-clip: content-box;
 
   &:hover {
-    background-color: #c5c5c5;
+    background-color: #ffffff;
   }
 }
 
 // default reset
 html,
 body {
-  color: var(--white);
-  background-color: #030303;
+  color: var(--secondary);
+  background-color: var(--primary);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -88,8 +89,8 @@ main {
     align-items: center;
 
     &.white {
-      color: #313131;
-      background-color: #ffffff;
+      color: var(--primary);
+      background-color: var(--secondary);
     }
 
     .background {
@@ -192,25 +193,27 @@ footer {
 
 // components
 .wavesHandler {
-  $wave-height: 3rem;
-
-  margin: calc(-2 * $wave-height) 0 $wave-height;
+  margin: -6rem 0 6rem;
   position: relative;
   width: 100%;
-  height: $wave-height;
+  height: 0;
 
   .waves {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
 
     div:last-child {
       opacity: 80%;
       margin-left: -100%;
       position: relative;
       bottom: 1rem;
+    }
+
+    path {
+      fill: var(--secondary);
     }
   }
 }
