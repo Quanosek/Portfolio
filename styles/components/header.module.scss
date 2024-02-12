@@ -63,7 +63,6 @@
 
     &:hover {
       background-color: transparent;
-      transform: none;
       user-select: none;
       box-shadow: none;
     }
@@ -237,20 +236,7 @@
     }
 
     .icons {
-      width: 100%;
       display: none;
-      grid-template-columns: repeat(4, 1fr);
-      justify-items: center;
-
-      @media (max-width: 425px) {
-        display: none;
-      }
-
-      a {
-        padding: 3vw;
-        width: min(4.5rem, 15vw);
-        aspect-ratio: 1.1/1;
-      }
     }
   }
 }

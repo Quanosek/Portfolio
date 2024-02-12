@@ -67,8 +67,8 @@ export default function HomePage() {
   // main page
   return (
     <>
-      <div className={styles.welcome}>
-        <div className={styles.content}>
+      <div className={styles.welcomeHandler}>
+        <div className={styles.welcome}>
           <p>Hej, nazywam się</p>
           <h1>Jakub Kłało</h1>
 
@@ -104,7 +104,7 @@ export default function HomePage() {
           </button>
         </div>
 
-        <div className={styles.background}>
+        <div className={styles.particlesBackground}>
           <Particles />
         </div>
       </div>
@@ -234,29 +234,29 @@ export default function HomePage() {
             />
           </div>
 
-          <div className={styles.more}>
-            <Link href="/about">
+          <div>
+            <Link href="/about" className={styles.more}>
               <p>Dowiedz się więcej!</p>
             </Link>
           </div>
         </div>
       </div>
 
-      <div className="section">
-        <div
-          className="background blur"
-          style={{ backgroundImage: "url(/home/panorama.webp)" }}
-        />
-
-        <div className={`${styles.motto} ${GentiumPlus.className} content`}>
+      <div className={styles.mottoHandler}>
+        <div className={`${GentiumPlus.className} ${styles.motto}`}>
           <h2>
-            „&nbsp;Bardziej niż cokolwiek innego – przygotowywanie się
+            „Bardziej niż cokolwiek innego – przygotowywanie się
             <br />
-            jest sekretem do sukcesu.&nbsp;”
+            jest sekretem do sukcesu.”
           </h2>
 
           <p>~ Henry Ford</p>
         </div>
+
+        <div
+          className={styles.parallaxBackground}
+          style={{ backgroundImage: "url(/home/panorama.webp)" }}
+        />
       </div>
 
       <div className="section">
