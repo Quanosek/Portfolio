@@ -8,10 +8,10 @@ export default function AboutPage() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Informacje o mnie:</h1>
+      <h1 className={styles.title}>Informacje o&nbsp;mnie:</h1>
 
       <p className={styles.description}>
-        Strona w trakcie budowy. Zajrzyj tu wkrótce!
+        Strona w&nbsp;trakcie budowy. Zajrzyj tu wkrótce!
       </p>
     </div>
   );

@@ -23,7 +23,7 @@ export default function HeaderComponent() {
       <div className={styles.buttons}>
         <div className={styles.text}>
           <Link href="/about">
-            <p>O mnie</p>
+            <p>O&nbsp;mnie</p>
           </Link>
 
           <Link href="/projects">

@@ -26,7 +26,7 @@ export default function NotFoundPage() {
       <h1 className={styles.title}>Nie znaleziono strony</h1>
 
       <p className={styles.description}>
-        Pojawił się błąd przy próbie połączenia z wybraną stroną, za chwilę
+        Pojawił się błąd przy próbie połączenia z&nbsp;wybraną stroną, za chwilę
         nastąpi powrót do strony głównej. <span>[{seconds}]</span>
       </p>
     </div>

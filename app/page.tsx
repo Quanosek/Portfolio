@@ -104,7 +104,7 @@ export default function HomePage() {
               element.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            Kliknij, aby zjechać w dół
+            Kliknij, aby zjechać w&nbsp;dół
           </button>
         </div>
 
@@ -137,15 +137,15 @@ export default function HomePage() {
                 />
 
                 <p>
-                  Zaczynałem od bardzo prostych stron dla znajomych, ale z
-                  czasem stawały się one coraz bardziej{" "}
-                  <u>skomplikowane i wymagające</u>. Dlatego niezbędne było
-                  nauczenie się <u>frameworków i bibliotek</u>. Początkowo{" "}
-                  <b>Vue</b>, a teraz <b>React</b>, dają mi ogromne możliwości,
-                  a dzięki tym narzędziom mogę w pełni{" "}
-                  <b>uwolnić swoją wyobraźnię</b>. Z pomocą <b>TypeScript</b>{" "}
-                  oraz <b>Sass</b> jestem w stanie stworzyć{" "}
-                  <u>dowolny design</u>.
+                  Zaczynałem od bardzo prostych stron dla znajomych, ale
+                  z&nbsp;czasem stawały się one coraz bardziej{" "}
+                  <u>skomplikowane i&nbsp;wymagające</u>. Dlatego niezbędne było
+                  nauczenie się <u>frameworków i&nbsp;bibliotek</u>. Początkowo{" "}
+                  <b>Vue</b>, a&nbsp;teraz <b>React</b>, dają mi ogromne
+                  możliwości, a&nbsp;dzięki tym narzędziom mogę w&nbsp;pełni{" "}
+                  <b>uwolnić swoją wyobraźnię</b>. Z&nbsp;pomocą{" "}
+                  <b>TypeScript</b> oraz <b>Sass</b> jestem w&nbsp;stanie
+                  stworzyć <u>dowolny design</u>.
                 </p>
               </div>
 
@@ -186,14 +186,14 @@ export default function HomePage() {
                 />
 
                 <p>
-                  Potrafię stworzyć różne aplikacje lub skrypty w językach:{" "}
+                  Potrafię stworzyć różne aplikacje lub skrypty w&nbsp;językach:{" "}
                   <b>JavaScript</b>, <b>Pyton</b> czy nawet <b>bash</b>!
                   Największą szansę na kreatywne wykorzystanie dostępnych
                   możliwości daje mi <u>programowanie botów</u> na różne serwery{" "}
-                  <b>Discord</b>, a strona, którą teraz przeglądasz została
+                  <b>Discord</b>, a&nbsp;strona, którą teraz przeglądasz została
                   postawiona na moim prywatnym serwerze <b>Raspberry Pi</b>,
-                  którego odpowiednie skonfigurowanie wymagało wiedzy w
-                  poruszaniu się po <u>terminalu Linuxa</u>.
+                  którego odpowiednie skonfigurowanie wymagało wiedzy
+                  w&nbsp;poruszaniu się po <u>terminalu Linuxa</u>.
                 </p>
               </div>
             </div>
@@ -216,13 +216,14 @@ export default function HomePage() {
                 />
 
                 <p>
-                  Hobbystycznie zajmuje się fotografią i montażem filmów. Za
-                  każdym razem gdy gdzieś wyjeżdżam,{" "}
+                  Hobbystycznie zajmuje się fotografią i&nbsp;montażem filmów.
+                  Za każdym razem gdy gdzieś wyjeżdżam,{" "}
                   <u>muszę wziąć ze sobą swoją lustrzankę</u>, bo nigdy nie
                   wiem, co może mnie spotkać! Gdy w moim mieście organizowane są
-                  różne wydarzenia, zawsze muszę tam być i robić serie zdjęć, a
-                  dzięki mojemu <b>doświadczeniu w obsłudze programów Adobe</b>,
-                  dalsza obróbka zdjęć lub montaż filmów{" "}
+                  różne wydarzenia, zawsze muszę tam być i&nbsp;robić serie
+                  zdjęć, a&nbsp;dzięki mojemu{" "}
+                  <b>doświadczeniu w&nbsp;obsłudze programów Adobe</b>, dalsza
+                  obróbka zdjęć lub montaż filmów{" "}
                   <u>nie stanowi żadnego problemu</u>.
                 </p>
               </div>
@@ -268,7 +269,7 @@ export default function HomePage() {
 
       <div className={styles.projectsHandler}>
         <div className={`${styles.projects} content`}>
-          <h2>Kilka z moich projektów:</h2>
+          <h2>Kilka z&nbsp;moich projektów:</h2>
 
           <Fade triggerOnce>
             <div className={styles.grid}>
@@ -277,7 +278,7 @@ export default function HomePage() {
                   link="spiewniki.klalo.pl"
                   img="spiewniki"
                   title="Śpiewniki"
-                  description="Zebrane w jednym miejscu śpiewniki i pieśni religijne"
+                  description="Zebrane w&nbsp;jednym miejscu śpiewniki i&nbsp;pieśni religijne"
                 />
 
                 <ProjectTile
@@ -298,14 +299,14 @@ export default function HomePage() {
                   link="games.klalo.pl"
                   img="games"
                   title="Pokój gier"
-                  description="Przeglądarkowe wersje znanych i lubianych gier"
+                  description="Przeglądarkowe wersje znanych i&nbsp;lubianych gier"
                 />
               </Fade>
             </div>
 
             <div className={styles.more}>
               <h3>
-                Resztę projektów możesz sprawdzić klikając w ten przycisk:
+                Resztę projektów możesz sprawdzić klikając w&nbsp;ten przycisk:
               </h3>
 
               <Link href="/projects">
@@ -322,9 +323,10 @@ export default function HomePage() {
         <Fade cascade damping={0.1} triggerOnce>
           <div className={styles.title}>
             <h2>Masz jakieś pytanie?</h2>
+
             <p>
-              Chętnie odpowiem na każde z nich, a jeżeli potrzebujesz pomocy, to
-              jestem do Twojej dyspozycji!
+              Chętnie odpowiem na każde z&nbsp;nich, a&nbsp;jeżeli potrzebujesz
+              pomocy, to jestem do Twojej dyspozycji!
             </p>
           </div>
 

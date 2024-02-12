@@ -27,6 +27,12 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
+
+  .centerDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .project {
