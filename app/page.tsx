@@ -28,7 +28,7 @@ export default function HomePage() {
             <Image
               key={index}
               title={name}
-              src={`/home/programs/${name}.svg`}
+              src={`/icons/programs/${name}.svg`}
               alt={name}
               width={40}
               height={40}
@@ -45,7 +45,7 @@ export default function HomePage() {
     return (
       <Link href={`https://${link}/`} target="_blank">
         <Image
-          src={`/projects/${img}_icon.svg`}
+          src={`/assets/projects/${img}_icon.svg`}
           alt={title}
           width={125}
           height={125}
@@ -145,7 +145,7 @@ export default function HomePage() {
 
             <Image
               className={styles.image}
-              src="/home/rocket.svg"
+              src="/assets/home/rocket.svg"
               alt="websites"
               width={330}
               height={330}
@@ -156,7 +156,7 @@ export default function HomePage() {
           <div className={styles.reverse}>
             <Image
               className={styles.image}
-              src="/home/apps.svg"
+              src="/assets/home/apps.svg"
               alt="apps"
               width={330}
               height={330}
@@ -223,7 +223,7 @@ export default function HomePage() {
 
             <Image
               className={styles.image}
-              src="/home/clips.svg"
+              src="/assets/home/clips.svg"
               alt="clips"
               width={330}
               height={330}
@@ -255,7 +255,7 @@ export default function HomePage() {
 
         <div
           className={styles.parallaxBackground}
-          style={{ backgroundImage: "url(/home/panorama.webp)" }}
+          style={{ backgroundImage: "url(/assets/home/panorama.webp)" }}
         />
       </div>
 
@@ -299,74 +299,6 @@ export default function HomePage() {
             <Link href="/projects">
               <p>Wszystkie projekty</p>
             </Link>
-          </div>
-        </div>
-      </div>
-
-      <Waves />
-
-      <div className="section white">
-        <div className={`${styles.contact} content`}>
-          <h2>Skontaktuj&nbsp;się ze&nbsp;mną!</h2>
-
-          <div className={styles.columns}>
-            <div>
-              <Link href={"tel:+48882461181"} className={styles.element}>
-                <div className={styles.image}>
-                  <Image
-                    src="/icons/phone.svg"
-                    alt="phone"
-                    width={40}
-                    height={40}
-                    draggable={false}
-                  />
-                </div>
-
-                <div className={styles.text}>
-                  <h3>Numer telefonu:</h3>
-                  <p>+48 882 461 181</p>
-                </div>
-              </Link>
-
-              <Link
-                href={"mailto:kubaklalo@gmail.com"}
-                className={styles.element}
-              >
-                <div className={styles.image}>
-                  <Image
-                    src="/icons/email.svg"
-                    alt="email"
-                    width={40}
-                    height={40}
-                    draggable={false}
-                  />
-                </div>
-
-                <div className={styles.text}>
-                  <h3>Adres e-mail:</h3>
-                  <p>kubaklalo@gmail.com</p>
-                </div>
-              </Link>
-            </div>
-
-            <div>
-              <Link href={"https://m.me/quanosek/"} className={styles.element}>
-                <div className={styles.image}>
-                  <Image
-                    src="/icons/messenger.svg"
-                    alt="messenger"
-                    width={40}
-                    height={40}
-                    draggable={false}
-                  />
-                </div>
-
-                <div className={styles.text}>
-                  <h3>Messenger</h3>
-                  <p>@quanosek</p>
-                </div>
-              </Link>
-            </div>
           </div>
         </div>
       </div>

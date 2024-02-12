@@ -33,7 +33,7 @@ export default function ProjectsPage() {
       <div className={styles.project}>
         <Image
           className={styles.websiteImage}
-          src={`/projects/${name}.webp`}
+          src={`/assets/projects/${name}.webp`}
           alt="project image"
           width={500}
           height={300}
@@ -42,7 +42,7 @@ export default function ProjectsPage() {
 
         <div className={styles.mobileBackground}>
           <Image
-            src={`/projects/${name}.webp`}
+            src={`/assets/projects/${name}.webp`}
             alt="project image"
             width={500}
             height={300}
@@ -55,7 +55,7 @@ export default function ProjectsPage() {
             <div className={styles.projectTitle}>
               <div>
                 <Image
-                  src={`/projects/${name}_icon.svg`}
+                  src={`/assets/projects/${name}_icon.svg`}
                   alt="watermark"
                   width={200}
                   height={200}
@@ -103,7 +103,7 @@ export default function ProjectsPage() {
 
         <Image
           className={styles.watermark}
-          src={`/projects/${name}_icon.svg`}
+          src={`/assets/projects/${name}_icon.svg`}
           alt="watermark"
           width={200}
           height={200}

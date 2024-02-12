@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   title: "Moje portfolio / klalo.pl",
   description: "My personal website",
   icons: {
-    icon: "/home/rocket.svg",
+    icon: "/assets/home/rocket.svg",
   },
 };
 
