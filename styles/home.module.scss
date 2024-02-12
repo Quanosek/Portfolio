@@ -90,6 +90,32 @@
   }
 }
 
+.wavesHandler {
+  margin: -6rem 0 6rem;
+  position: relative;
+  width: 100%;
+  height: 0;
+
+  .waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    div:last-child {
+      opacity: 80%;
+      margin-left: -100%;
+      position: relative;
+      bottom: 1rem;
+    }
+
+    path {
+      fill: var(--secondary);
+    }
+  }
+}
+
 .infoHandler {
   padding: min(5rem, 5%) 5%;
   width: 100%;
@@ -307,33 +333,31 @@
   background-size: cover;
 }
 
+//! SECTION TO CHANGE
+
+.projectsHandler {
+  padding: min(5rem, 5%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 425px) {
+    padding: 10vw 0 15vw;
+  }
+}
+
 .projects {
-  padding: min(4rem, 4%) 0 6rem;
+  width: var(--global-width);
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  gap: 3rem;
+  gap: min(6vw, 2rem);
 
   h2 {
     font-size: 225%;
-  }
 
-  @media (max-width: 1024px) {
-    gap: 2rem;
-  }
-
-  @media (max-width: 768px) {
-    padding: 6% 0 6rem;
-
-    h2 {
+    @media (max-width: 768px) {
       font-size: min(6vw, 200%);
-    }
-  }
-
-  @media (max-width: 425px) {
-    padding: 8vw 0 30vw;
-    gap: 6vw;
-
-    h2 {
-      font-size: 6vw;
     }
   }
 
@@ -438,7 +462,7 @@
   }
 
   .more {
-    margin-top: 1rem;
+    margin: 1rem 5% 0;
     display: flex;
     flex-direction: column;
     align-items: center;

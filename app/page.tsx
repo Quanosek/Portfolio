@@ -3,10 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { Fade } from "react-awesome-reveal";
 import Typewriter from "typewriter-effect";
+import Wave from "react-wavify";
 
 import styles from "@/styles/home.module.scss";
-import Waves from "@/components/waves";
 import Particles from "@/components/particles";
 
 // motto font-face
@@ -109,136 +110,163 @@ export default function HomePage() {
         </div>
       </div>
 
-      <Waves />
+      <div className={styles.wavesHandler}>
+        <div className={styles.waves}>
+          <Wave
+            fill="#ffffff"
+            paused={false}
+            options={{
+              height: 50,
+              amplitude: 38,
+              speed: 0.1,
+              points: 4,
+            }}
+          />
+
+          <Wave
+            fill="#ffffff"
+            paused={false}
+            options={{
+              height: 50,
+              amplitude: 52,
+              speed: 0.08,
+              points: 3,
+            }}
+          />
+        </div>
+      </div>
 
       <div id="info" className={styles.infoHandler}>
         <div className={styles.info}>
-          <div>
-            <div className={styles.text}>
-              <h2>Strony internetowe</h2>
+          <Fade triggerOnce>
+            <div>
+              <div className={styles.text}>
+                <h2>Strony internetowe</h2>
 
-              <Programs
-                programs={[
-                  "adobe-xd",
-                  "html-5",
-                  "css-3",
-                  "javascript",
-                  "typescript",
-                  "sass",
-                  "react",
-                  "vue",
-                  "vite",
-                ]}
+                <Programs
+                  programs={[
+                    "adobe-xd",
+                    "html-5",
+                    "css-3",
+                    "javascript",
+                    "typescript",
+                    "sass",
+                    "react",
+                    "vue",
+                    "vite",
+                  ]}
+                />
+
+                <p>
+                  Zaczynałem od bardzo prostych stron dla znajomych, ale z
+                  czasem stawały się one coraz bardziej{" "}
+                  <u>skomplikowane i wymagające</u>. Dlatego niezbędne było
+                  nauczenie się <u>frameworków i bibliotek</u>. Początkowo{" "}
+                  <b>Vue</b>, a teraz <b>React</b>, dają mi ogromne możliwości,
+                  a dzięki tym narzędziom mogę w pełni{" "}
+                  <b>uwolnić swoją wyobraźnię</b>. Z pomocą <b>TypeScript</b>{" "}
+                  oraz <b>Sass</b> jestem w stanie stworzyć{" "}
+                  <u>dowolny design</u>.
+                </p>
+              </div>
+
+              <Image
+                className={styles.image}
+                src="/assets/home/rocket.svg"
+                alt="websites"
+                width={330}
+                height={330}
+                draggable={false}
               />
-
-              <p>
-                Zaczynałem od bardzo prostych stron dla znajomych, ale z czasem
-                stawały się one coraz bardziej <u>skomplikowane i wymagające</u>
-                . Dlatego niezbędne było nauczenie się{" "}
-                <u>frameworków i bibliotek</u>. Początkowo <b>Vue</b>, a teraz{" "}
-                <b>React</b>, dają mi ogromne możliwości, a dzięki tym
-                narzędziom mogę w pełni <b>uwolnić swoją wyobraźnię</b>. Z
-                pomocą <b>TypeScript</b> oraz <b>Sass</b> jestem w stanie
-                stworzyć <u>dowolny design</u>.
-              </p>
             </div>
 
-            <Image
-              className={styles.image}
-              src="/assets/home/rocket.svg"
-              alt="websites"
-              width={330}
-              height={330}
-              draggable={false}
-            />
-          </div>
-
-          <div className={styles.reverse}>
-            <Image
-              className={styles.image}
-              src="/assets/home/apps.svg"
-              alt="apps"
-              width={330}
-              height={330}
-              draggable={false}
-            />
-
-            <div className={styles.text}>
-              <h2>Aplikacje</h2>
-
-              <Programs
-                programs={[
-                  "raspberry-pi",
-                  "vs-code",
-                  "node-js",
-                  "npm",
-                  "python",
-                  "github",
-                  "git",
-                  "discord",
-                ]}
+            <div className={styles.reverse}>
+              <Image
+                className={styles.image}
+                src="/assets/home/apps.svg"
+                alt="apps"
+                width={330}
+                height={330}
+                draggable={false}
               />
 
-              <p>
-                Potrafię stworzyć różne aplikacje lub skrypty w językach:{" "}
-                <b>JavaScript</b>, <b>Pyton</b> czy nawet <b>bash</b>!
-                Największą szansę na kreatywne wykorzystanie dostępnych
-                możliwości daje mi <u>programowanie botów</u> na różne serwery{" "}
-                <b>Discord</b>, a strona, którą teraz przeglądasz została
-                postawiona na moim prywatnym serwerze <b>Raspberry Pi</b>,
-                którego odpowiednie skonfigurowanie wymagało wiedzy w poruszaniu
-                się po <u>terminalu Linuxa</u>.
-              </p>
+              <div className={styles.text}>
+                <h2>Aplikacje</h2>
+
+                <Programs
+                  programs={[
+                    "raspberry-pi",
+                    "vs-code",
+                    "node-js",
+                    "npm",
+                    "python",
+                    "github",
+                    "git",
+                    "discord",
+                  ]}
+                />
+
+                <p>
+                  Potrafię stworzyć różne aplikacje lub skrypty w językach:{" "}
+                  <b>JavaScript</b>, <b>Pyton</b> czy nawet <b>bash</b>!
+                  Największą szansę na kreatywne wykorzystanie dostępnych
+                  możliwości daje mi <u>programowanie botów</u> na różne serwery{" "}
+                  <b>Discord</b>, a strona, którą teraz przeglądasz została
+                  postawiona na moim prywatnym serwerze <b>Raspberry Pi</b>,
+                  którego odpowiednie skonfigurowanie wymagało wiedzy w
+                  poruszaniu się po <u>terminalu Linuxa</u>.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div>
-            <div className={styles.text}>
-              <h2>Fotografia i&nbsp;montaż filmów</h2>
+            <div>
+              <div className={styles.text}>
+                <h2>Fotografia i&nbsp;montaż filmów</h2>
 
-              <Programs
-                programs={[
-                  "gimp",
-                  "photoshop",
-                  "lightroom",
-                  "illustrator",
-                  "premiere-pro",
-                  "after-effects",
-                  "audition",
-                  "audacity",
-                ]}
+                <Programs
+                  programs={[
+                    "gimp",
+                    "photoshop",
+                    "lightroom",
+                    "illustrator",
+                    "premiere-pro",
+                    "after-effects",
+                    "audition",
+                    "audacity",
+                  ]}
+                />
+
+                <p>
+                  Hobbystycznie zajmuje się fotografią i montażem filmów. Za
+                  każdym razem gdy gdzieś wyjeżdżam,{" "}
+                  <u>muszę wziąć ze sobą swoją lustrzankę</u>, bo nigdy nie
+                  wiem, co może mnie spotkać! Gdy w moim mieście organizowane są
+                  różne wydarzenia, zawsze muszę tam być i robić serie zdjęć, a
+                  dzięki mojemu <b>doświadczeniu w obsłudze programów Adobe</b>,
+                  dalsza obróbka zdjęć lub montaż filmów{" "}
+                  <u>nie stanowi żadnego problemu</u>.
+                </p>
+              </div>
+
+              <Image
+                className={styles.image}
+                src="/assets/home/clips.svg"
+                alt="clips"
+                width={330}
+                height={330}
+                draggable={false}
+                style={{
+                  scale: "0.95",
+                }}
               />
-
-              <p>
-                Hobbystycznie zajmuje się fotografią i montażem filmów. Za
-                każdym razem gdy gdzieś wyjeżdżam,{" "}
-                <u>muszę wziąć ze sobą swoją lustrzankę</u>, bo nigdy nie wiem,
-                co może mnie spotkać! Gdy w moim mieście organizowane są różne
-                wydarzenia, zawsze muszę tam być i robić serie zdjęć, a dzięki
-                mojemu <b>doświadczeniu w obsłudze programów Adobe</b>, dalsza
-                obróbka zdjęć lub montaż filmów{" "}
-                <u>nie stanowi żadnego problemu</u>.
-              </p>
             </div>
 
-            <Image
-              className={styles.image}
-              src="/assets/home/clips.svg"
-              alt="clips"
-              width={330}
-              height={330}
-              draggable={false}
-              style={{
-                scale: "0.95",
-              }}
-            />
-          </div>
-
-          <div>
-            <Link href="/about" className={styles.more}>
-              <p>Dowiedz się więcej!</p>
-            </Link>
-          </div>
+            <div>
+              <Link href="/about" className={styles.more}>
+                <p>Dowiedz się więcej!</p>
+              </Link>
+            </div>
+          </Fade>
         </div>
       </div>
 
@@ -259,47 +287,53 @@ export default function HomePage() {
         />
       </div>
 
-      <div className="section">
+      <div className={styles.projectsHandler}>
         <div className={`${styles.projects} content`}>
           <h2>Kilka z moich projektów:</h2>
 
-          <div className={styles.grid}>
-            <ProjectTile
-              link="spiewniki.klalo.pl"
-              img="spiewniki"
-              title="Śpiewniki"
-              description="Zebrane w jednym miejscu śpiewniki i pieśni religijne"
-            />
+          <Fade triggerOnce>
+            <div className={styles.grid}>
+              <Fade cascade damping={0.1} triggerOnce>
+                <ProjectTile
+                  link="spiewniki.klalo.pl"
+                  img="spiewniki"
+                  title="Śpiewniki"
+                  description="Zebrane w jednym miejscu śpiewniki i pieśni religijne"
+                />
 
-            <ProjectTile
-              link="metrum.klalo.pl"
-              img="metrum"
-              title="Metrum"
-              description="Zaawansowany bot muzyczny na platformę Discord"
-            />
+                <ProjectTile
+                  link="metrum.klalo.pl"
+                  img="metrum"
+                  title="Metrum"
+                  description="Zaawansowany bot muzyczny na platformę Discord"
+                />
 
-            <ProjectTile
-              link="fonetyka.klalo.pl"
-              img="fonetyka"
-              title="Fonetyka"
-              description="Polski generator zapisu fonetycznego"
-            />
+                <ProjectTile
+                  link="fonetyka.klalo.pl"
+                  img="fonetyka"
+                  title="Fonetyka"
+                  description="Polski generator zapisu fonetycznego"
+                />
 
-            <ProjectTile
-              link="games.klalo.pl"
-              img="games"
-              title="Pokój gier"
-              description="Przeglądarkowe wersje znanych i lubianych gier"
-            />
-          </div>
+                <ProjectTile
+                  link="games.klalo.pl"
+                  img="games"
+                  title="Pokój gier"
+                  description="Przeglądarkowe wersje znanych i lubianych gier"
+                />
+              </Fade>
+            </div>
 
-          <div className={styles.more}>
-            <h3>Resztę projektów możesz sprawdzić klikając w ten przycisk:</h3>
+            <div className={styles.more}>
+              <h3>
+                Resztę projektów możesz sprawdzić klikając w ten przycisk:
+              </h3>
 
-            <Link href="/projects">
-              <p>Wszystkie projekty</p>
-            </Link>
-          </div>
+              <Link href="/projects">
+                <p>Zobacz moje projekty!</p>
+              </Link>
+            </div>
+          </Fade>
         </div>
       </div>
     </>
