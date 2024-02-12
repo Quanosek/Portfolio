@@ -1,24 +1,21 @@
 "use client";
 
-import type { Metadata } from "next";
-
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import styles from "@/styles/not-found.module.scss";
-
-export const metadata: Metadata = {
-  title: "Nie znaleziono strony / Portfolio",
-};
+import DynamicTitle from "@/functions/dynamicTitle";
 
 export default function NotFoundPage() {
+  DynamicTitle("Nie znaleziono strony / klalo.pl");
+
   const router = useRouter();
   const [seconds, setSeconds] = useState(10); // 10 seconds
 
   useEffect(() => {
     const counter = setInterval(() => {
       setSeconds((prevSeconds: number) => prevSeconds - 1);
-      // if (seconds === 1) router.push("/");
+      if (seconds === 1) router.push("/");
     }, 1000);
 
     return () => clearInterval(counter);

@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 import { Fade } from "react-awesome-reveal";
 
 import styles from "@/styles/projects.module.scss";
+import DynamicTitle from "@/functions/dynamicTitle";
 
 interface ProjectProps {
   name: string;
@@ -19,6 +19,8 @@ interface ProjectProps {
 }
 
 export default function ProjectsPage() {
+  DynamicTitle("Projekty / klalo.pl");
+
   const Project = ({
     name,
     title,
@@ -46,6 +48,7 @@ export default function ProjectsPage() {
             width={500}
             height={300}
             draggable={false}
+            priority={true}
           />
         </div>
 

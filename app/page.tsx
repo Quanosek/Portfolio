@@ -6,9 +6,10 @@ import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
 import Typewriter from "typewriter-effect";
 
-import styles from "@/styles/home.module.scss";
 import Particles from "@/components/particles";
 import Waves from "@/components/waves";
+import DynamicTitle from "@/functions/dynamicTitle";
+import styles from "@/styles/home.module.scss";
 
 // motto font-face
 import localFont from "next/font/local";
@@ -18,6 +19,8 @@ const GentiumPlus = localFont({
 });
 
 export default function HomePage() {
+  DynamicTitle("Moje portfolio / klalo.pl");
+
   // interactive programs icons by names
   const Programs = (params: { programs: string[] }) => {
     const programs = params.programs;

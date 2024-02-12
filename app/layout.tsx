@@ -32,7 +32,8 @@ const Nexa = localFont({
 // global metadata (default values)
 export const metadata: Metadata = {
   title: "Moje portfolio / klalo.pl",
-  description: "My personal website",
+  description:
+    "Moja strona internetowa, na której prezentuję wszystkie informacje o sobie i swoich różnych projektach.",
   icons: {
     icon: "/assets/home/rocket.svg",
   },

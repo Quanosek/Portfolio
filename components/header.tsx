@@ -97,6 +97,7 @@ export default function HeaderComponent() {
           <Buttons />
 
           <button
+            title="Menu"
             className={styles.hamburger}
             onClick={() => setActive(!active)}
           >

@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
+"use client";
 
 import styles from "@/styles/about.module.scss";
-
-export const metadata: Metadata = {
-  title: "O mnie / Portfolio",
-};
+import DynamicTitle from "@/functions/dynamicTitle";
 
 export default function AboutPage() {
+  DynamicTitle("O mnie / klalo.pl");
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Informacje o mnie:</h1>
