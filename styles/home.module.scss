@@ -80,8 +80,10 @@
 
     div {
       position: absolute;
-      width: 105%;
-      height: 105%;
+      top: -5%;
+      left: -5%;
+      bottom: -5%;
+      right: -5%;
     }
   }
 }
