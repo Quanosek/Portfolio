@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Metrum"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 657 477">
+    <defs>
+        <style>.cls-1{fill:#fff;}.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:27px;}</style>
+    </defs>
+    <path id="obrys" class="cls-2" d="M35.48,13.5H620.06c12.95,0,23.44,11.12,23.44,24.83V438.67c0,13.71-10.5,24.83-23.44,24.83H35.48c-12.14,0-21.98-10.42-21.98-23.28V36.78c0-12.85,9.84-23.28,21.98-23.28Z"/>
+    <g id="paski">
+        <path id="prawy" class="cls-1" d="M368.03,378h183.44c3.19,0,5.78,2.69,5.78,6v15c0,3.31-2.59,6-5.78,6h-183.44c-3.19,0-5.78-2.69-5.78-6v-15c0-3.31,2.59-6,5.78-6Z"/>
+        <path id="lewy" class="cls-1" d="M105.29,378h213.92c3.06,0,5.54,2.69,5.54,6v15c0,3.31-2.48,6-5.54,6H105.29c-3.06,0-5.54-2.69-5.54-6v-15c0-3.31,2.48-6,5.54-6Z"/>
+    </g>
+    <g id="taśmy">
+        <g id="lewa_taśma">
+            <circle id="wew._kółko" class="cls-2" cx="189.75" cy="268.5" r="24"/>
+            <path id="obręcz_prawy" class="cls-2" d="M265.22,336c16.03-17.91,25.78-41.57,25.78-67.5s-9.75-49.59-25.78-67.5"/>
+            <path id="obręcz_lewy" class="cls-2" d="M114.28,201c-16.03,17.91-25.78,41.57-25.78,67.5s9.75,49.59,25.78,67.5"/>
+        </g>
+        <g id="prawa_taśma">
+            <circle id="wew._kółko-2" class="cls-2" cx="467.25" cy="268.5" r="24"/>
+            <path id="obręcz_prawy-2" class="cls-2" d="M542.72,336c16.03-17.91,25.78-41.57,25.78-67.5s-9.75-49.59-25.78-67.5"/>
+            <path id="obręcz_lewy-2" class="cls-2" d="M391.78,201c-16.03,17.91-25.78,41.57-25.78,67.5s9.75,49.59,25.78,67.5"/>
+        </g>
+        <path id="okienko" class="cls-2" d="M95.88,201h465.23c4.08,0,7.38,3.36,7.38,7.5v120c0,4.14-3.31,7.5-7.38,7.5H95.88c-4.08,0-7.38-3.36-7.38-7.5v-120c0-4.14,3.31-7.5,7.38-7.5Z"/>
+    </g>
+    <g id="przyciski">
+        <g id="lewa_strona">
+            <circle id="kulka" class="cls-1" cx="169.5" cy="59.25" r="14.25"/>
+            <circle id="kulka-2" class="cls-1" cx="226.5" cy="59.25" r="14.25"/>
+        </g>
+        <g id="prawa_strona">
+            <circle id="kulka-3" class="cls-1" cx="430.5" cy="59.25" r="14.25"/>
+            <circle id="kulka-4" class="cls-1" cx="487.5" cy="59.25" r="14.25"/>
+        </g>
+        <path id="ramka" class="cls-2" d="M508.04,102.75H149.08c-13.21,0-14.58,0-26.17-21.66l-30.66-60.84h472.5l-30.29,61.34c-10.47,21.16-11.47,21.16-26.43,21.16Z"/>
+    </g>
+</svg>

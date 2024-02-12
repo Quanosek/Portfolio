@@ -1,0 +1,32 @@
+.container {
+  padding: min(3rem, 5%) 5% 5%;
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  background-color: #010714;
+
+  @media (max-width: 768px) {
+    padding-bottom: 10vw;
+    gap: 6vw;
+  }
+}
+
+.title {
+  font-size: 225%;
+
+  @media (max-width: 768px) {
+    font-size: 5.5vw;
+  }
+}
+
+.description {
+  text-align: center;
+  font-size: 115%;
+
+  @media (max-width: 768px) {
+    font-size: 3vw;
+  }
+}

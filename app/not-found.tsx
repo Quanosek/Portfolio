@@ -18,20 +18,20 @@ export default function NotFoundPage() {
   useEffect(() => {
     const counter = setInterval(() => {
       setSeconds((prevSeconds: number) => prevSeconds - 1);
-      if (seconds === 1) router.push("/");
+      // if (seconds === 1) router.push("/");
     }, 1000);
 
     return () => clearInterval(counter);
   }, [router, seconds]);
 
   return (
-    <>
-      <h1>Nie znaleziono strony</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Nie znaleziono strony</h1>
 
-      <p>
+      <p className={styles.description}>
         Pojawił się błąd przy próbie połączenia z wybraną stroną, za chwilę
         nastąpi powrót do strony głównej. <span>[{seconds}]</span>
       </p>
-    </>
+    </div>
   );
 }

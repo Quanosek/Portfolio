@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 import styles from "@/styles/projects.module.scss";
 
@@ -6,12 +9,208 @@ export const metadata: Metadata = {
   title: "Projekty / Portfolio",
 };
 
-export default function ProjectsPage() {
-  return (
-    <>
-      <h1>Wszystkie moje projekty</h1>
+interface ProjectProps {
+  name: string;
+  title: string;
+  githubLink: string;
+  websiteLink: string;
+  description: React.ReactNode;
+  technologies: string[];
+  watermarkStyle?: React.CSSProperties;
+}
 
-      <p>Strona w trakcie budowy. Zajrzyj tu wkrótce!</p>
-    </>
+export default function ProjectsPage() {
+  const Project = ({
+    name,
+    title,
+    githubLink,
+    websiteLink,
+    description,
+    technologies,
+    watermarkStyle,
+  }: ProjectProps) => {
+    return (
+      <div className={styles.project}>
+        <Image
+          className={styles.websiteImage}
+          src={`/projects/${name}.webp`}
+          alt="project image"
+          width={500}
+          height={300}
+          draggable={false}
+        />
+
+        <div className={styles.mobileBackground}>
+          <Image
+            src={`/projects/${name}.webp`}
+            alt="project image"
+            width={500}
+            height={300}
+            draggable={false}
+          />
+        </div>
+
+        <div className={styles.content}>
+          <div className={styles.projectTitle}>
+            <h2>{title}</h2>
+
+            <div className={styles.links} style={{ filter: "invert(1)" }}>
+              <Link href={githubLink}>
+                <Image
+                  title="Kod źródłowy Github"
+                  src="/icons/github_2.svg"
+                  alt="github"
+                  width={45}
+                  height={45}
+                  draggable={false}
+                />
+              </Link>
+
+              <Link href={websiteLink}>
+                <Image
+                  title="Strona internetowa"
+                  src="/icons/external_link.svg"
+                  alt="link"
+                  width={45}
+                  height={45}
+                  draggable={false}
+                />
+              </Link>
+            </div>
+          </div>
+
+          <p className={styles.description}>{description}</p>
+
+          <div className={styles.technologies}>
+            {technologies.map((tech) => (
+              <p key={tech}>{tech}</p>
+            ))}
+          </div>
+        </div>
+
+        <Image
+          className={styles.watermark}
+          src={`/projects/${name}_icon.svg`}
+          alt="watermark"
+          width={200}
+          height={200}
+          draggable={false}
+          style={watermarkStyle}
+        />
+      </div>
+    );
+  };
+
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.title}>Wszystkie moje projekty:</h1>
+
+      <div className={styles.projectsList}>
+        <Project
+          name="spiewniki"
+          title="Śpiewniki"
+          description={
+            <>
+              Niezawodna aplikacja internetowa, działająca również w trybie
+              offline, zawierająca bogatą bazę danych <b>ponad 1000</b> różnych
+              pieśni. Umożliwia bardzo proste wyszukiwanie pieśni po jej{" "}
+              <b>tytule lub treści tekstu</b>, następnie np. wyświetlenie jej
+              wraz <b>z akordami</b> w formie prezentacji jako pojedyncze
+              zwrotki.
+            </>
+          }
+          technologies={["Next.js", "React", "TypeScript", "PWA", "Sass"]}
+          githubLink="https://github.com/Quanosek/spiewniki-next"
+          websiteLink="https://spiewniki.klalo.pl/"
+          watermarkStyle={{
+            opacity: "18%",
+            scale: "1.1",
+          }}
+        />
+
+        <Project
+          name="metrum"
+          title="Metrum"
+          description={
+            <>
+              Zaawansowany bot muzyczny na platformie Discord, umożliwiający
+              odtwarzanie dowolnych materiałów z <b>YouTube, Spotify</b> i wielu
+              innych popularnych serwisów. Posiada{" "}
+              <b>rozbudowany system komend</b>, dzięki którym możliwe jest
+              m.in.: <b>zarządzanie kolejką</b> czy <b>wyświetlanie tekstu</b>{" "}
+              obecnie granego utworu.
+            </>
+          }
+          technologies={[
+            "Node.js",
+            "Discord.js",
+            "Distube",
+            "JavaScript",
+            "Vue",
+          ]}
+          githubLink="https://github.com/Quanosek/Metrum.js"
+          websiteLink="https://metrum.klalo.pl/"
+          watermarkStyle={{
+            rotate: "-8deg",
+            scale: "0.85",
+          }}
+        />
+
+        <Project
+          name="fonetyka"
+          title="Fonetyka"
+          description={
+            <>
+              Aplikacja internetowa o bardzo prostym i intuicyjnym interfejsie,
+              służąca do <b>konwersji dowolnych słów</b> w języku polskim na dwa
+              rodzaje zapisu fonetycznego - <b>AS</b> i <b>IPA</b>. Aplikacja
+              posiada również <b>wbudowaną historię</b> wcześniej wpisach słów
+              wraz z ich wygenerowanym zapisem fonetycznym.
+            </>
+          }
+          technologies={["Next.js", "React", "TypeScript", "PWA", "Sass"]}
+          githubLink="https://github.com/Quanosek/Fonetyka"
+          websiteLink="https://fonetyka.klalo.pl/"
+        />
+
+        <Project
+          name="games"
+          title="Pokój gier"
+          description={
+            <>
+              Platforma zawierająca <b>wiele prostych gier</b> do samodzielnego{" "}
+              <b>uzupełnienia</b> o pytania lub hasła, możliwe później do
+              wyświetlenia na <b>zewnętrznym ekranie</b> np. rzutniku. Strona
+              oferuje nie tylko gry typu <b>quiz</b>, ale również dokładnie
+              odwzorowane kopie znanych i lubianych przez wszystkich{" "}
+              <b>teleturniejów</b>.
+            </>
+          }
+          technologies={["Next.js", "React", "TypeScript", "Sass"]}
+          githubLink="https://github.com/Quanosek/Games"
+          websiteLink="https://games.klalo.pl/"
+        />
+
+        <Project
+          name="weather"
+          title="Pogoda"
+          description={
+            <>
+              Prosta aplikacja pogodowa, wykorzystująca darmowe <b>API</b> do
+              wyświetlania aktualnej pogody <b>w dowolnym miejscu</b> na świecie
+              na podstawie <b>dynamicznego wyszukiwania</b> lub{" "}
+              <b>obecnej lokalizacji</b>. Aplikacja pokazuje również mapę
+              pogodową dla wybranego obszaru oraz prognozę na najbliższe dni.
+            </>
+          }
+          technologies={["Next.js", "React", "API", "TypeScript", "Sass"]}
+          githubLink="https://github.com/Quanosek/Weather"
+          websiteLink="https://weather.klalo.pl/"
+          watermarkStyle={{
+            bottom: "-1rem",
+          }}
+        />
+      </div>
+    </div>
   );
 }

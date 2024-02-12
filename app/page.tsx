@@ -28,7 +28,7 @@ export default function HomePage() {
             <Image
               key={index}
               title={name}
-              src={`/assets/info/programs/${name}.svg`}
+              src={`/home/programs/${name}.svg`}
               alt={name}
               width={60}
               height={60}
@@ -41,27 +41,24 @@ export default function HomePage() {
   };
 
   // my projects section quick tiles
-  const ProjectTile = (params: { project: any }) => {
-    const project = params.project;
-
+  const ProjectTile = ({ link, img, title, description }: any) => {
     return (
-      <Link href={`https://${project.link}/`} target="_blank">
+      <Link href={`https://${link}/`} target="_blank">
         <Image
-          alt={project.title}
-          src={`/assets/projects/${project.img}`}
+          src={`/projects/${img}_icon.svg`}
+          alt={title}
           width={125}
           height={125}
           draggable={false}
-          onError={(e: any) => (e.target.src = "/assets/projects/vercel.svg")}
         />
 
         <div className={styles.text}>
           <div className={styles.title}>
-            <h3>{project.title}</h3>
-            <h4>{project.link}</h4>
+            <h3>{title}</h3>
+            <h4>{link}</h4>
           </div>
 
-          <p>{project.description}</p>
+          <p>{description}</p>
         </div>
       </Link>
     );
@@ -151,8 +148,8 @@ export default function HomePage() {
 
             <Image
               className={styles.image}
+              src="/home/rocket.svg"
               alt="websites"
-              src="/assets/info/images/rocket.svg"
               width={330}
               height={330}
               draggable={false}
@@ -162,8 +159,8 @@ export default function HomePage() {
           <div className={styles.reverse}>
             <Image
               className={styles.image}
+              src="/home/apps.svg"
               alt="apps"
-              src="/assets/info/images/apps.svg"
               width={330}
               height={330}
               draggable={false}
@@ -230,8 +227,8 @@ export default function HomePage() {
 
             <Image
               className={styles.image}
+              src="/home/clips.svg"
               alt="clips"
-              src="/assets/info/images/clips.svg"
               width={330}
               height={330}
               draggable={false}
@@ -250,9 +247,7 @@ export default function HomePage() {
       <div className="section">
         <div
           className="background blur"
-          style={{
-            backgroundImage: "url(/assets/panorama.webp)",
-          }}
+          style={{ backgroundImage: "url(/home/panorama.webp)" }}
         />
 
         <div className={`${styles.motto} ${GentiumPlus.className} content`}>
@@ -272,40 +267,31 @@ export default function HomePage() {
 
           <div className={styles.grid}>
             <ProjectTile
-              project={{
-                link: "spiewniki.klalo.pl",
-                img: "spiewniki.svg",
-                title: "Śpiewniki",
-                description:
-                  "Zebrane w jednym miejscu śpiewniki i pieśni religijne",
-              }}
+              link="spiewniki.klalo.pl"
+              img="spiewniki"
+              title="Śpiewniki"
+              description="Zebrane w jednym miejscu śpiewniki i pieśni religijne"
             />
 
             <ProjectTile
-              project={{
-                link: "pogoda.klalo.pl",
-                img: "pogoda.svg",
-                title: "Pogoda",
-                description: "Prosta aplikacja API pogody z wyszukiwarką",
-              }}
+              link="metrum.klalo.pl"
+              img="metrum"
+              title="Metrum"
+              description="Zaawansowany bot muzyczny na platformę Discord"
             />
 
             <ProjectTile
-              project={{
-                link: "fonetyka.klalo.pl",
-                img: "fonetyka.svg",
-                title: "Fonetyka",
-                description: "Polski generator zapisu fonetycznego",
-              }}
+              link="fonetyka.klalo.pl"
+              img="fonetyka"
+              title="Fonetyka"
+              description="Polski generator zapisu fonetycznego"
             />
 
             <ProjectTile
-              project={{
-                link: "metrum.klalo.pl",
-                img: "metrum.webp",
-                title: "Metrum",
-                description: "Zaawansowany bot muzyczny na platformę Discord",
-              }}
+              link="games.klalo.pl"
+              img="games"
+              title="Pokój gier"
+              description="Przeglądarkowe wersje znanych i lubianych gier"
             />
           </div>
 
@@ -331,7 +317,7 @@ export default function HomePage() {
               <Link href={"tel:+48882461181"} className={styles.element}>
                 <div className={styles.image}>
                   <Image
-                    src={"/icons/phone.svg"}
+                    src="/icons/phone.svg"
                     alt="phone"
                     width={40}
                     height={40}
@@ -351,7 +337,7 @@ export default function HomePage() {
               >
                 <div className={styles.image}>
                   <Image
-                    src={"/icons/email.svg"}
+                    src="/icons/email.svg"
                     alt="email"
                     width={40}
                     height={40}
@@ -370,7 +356,7 @@ export default function HomePage() {
               <Link href={"https://m.me/quanosek/"} className={styles.element}>
                 <div className={styles.image}>
                   <Image
-                    src={"/icons/messenger.svg"}
+                    src="/icons/messenger.svg"
                     alt="messenger"
                     width={40}
                     height={40}
@@ -390,7 +376,7 @@ export default function HomePage() {
               >
                 <div className={styles.image}>
                   <Image
-                    src={"/icons/x.com.svg"}
+                    src="/icons/x.com.svg"
                     alt="x.com"
                     width={40}
                     height={40}
