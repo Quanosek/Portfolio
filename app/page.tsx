@@ -5,9 +5,9 @@ import Image from "next/image";
 
 import { Fade } from "react-awesome-reveal";
 import Typewriter from "typewriter-effect";
+import Wave from "react-wavify";
 
 import Particles from "@/components/particles";
-import Waves from "@/components/waves";
 import DynamicTitle from "@/functions/dynamicTitle";
 import styles from "@/styles/home.module.scss";
 
@@ -21,52 +21,77 @@ const GentiumPlus = localFont({
 export default function HomePage() {
   DynamicTitle("Moje portfolio / klalo.pl");
 
+  // smooth waves animation
+  const Waves = () => (
+    <div className="wavesHandler">
+      <div className="waves">
+        <Wave
+          fill="#ffffff"
+          paused={false}
+          options={{
+            height: 50,
+            amplitude: 38,
+            speed: 0.1,
+            points: 4,
+          }}
+        />
+
+        <Wave
+          fill="#ffffff"
+          paused={false}
+          options={{
+            height: 50,
+            amplitude: 52,
+            speed: 0.08,
+            points: 3,
+          }}
+        />
+      </div>
+    </div>
+  );
+
   // interactive programs icons by names
   const Programs = (params: { programs: string[] }) => {
     const programs = params.programs;
 
     return (
       <div className={styles.programs}>
-        {programs.map((name: string, index: number) => {
-          return (
-            <Image
-              key={index}
-              title={name}
-              src={`/icons/programs/${name}.svg`}
-              alt={name}
-              width={40}
-              height={40}
-              draggable={false}
-            />
-          );
-        })}
+        {programs.map((name: string, index: number) => (
+          <Image
+            key={index}
+            title={name}
+            src={`/icons/programs/${name}.svg`}
+            alt={name}
+            width={40}
+            height={40}
+            draggable={false}
+          />
+        ))}
       </div>
     );
   };
 
   // my projects section quick tiles
-  const ProjectTile = ({ link, img, title, description }: any) => {
-    return (
-      <Link href={`https://${link}/`} target="_blank">
-        <Image
-          src={`/assets/projects/${img}_icon.svg`}
-          alt={title}
-          width={125}
-          height={125}
-          draggable={false}
-        />
+  const ProjectTile = ({ link, img, title, description }: any) => (
+    <Link href={`https://${link}/`} target="_blank">
+      <Image
+        src={`/assets/projects/${img}_icon.svg`}
+        alt={title}
+        width={125}
+        height={125}
+        draggable={false}
+      />
 
-        <div className={styles.text}>
-          <div className={styles.title}>
-            <h3>{title}</h3>
-            <h4>{link}</h4>
-          </div>
-
-          <p>{description}</p>
+      <div className={styles.text}>
+        <div className={styles.title}>
+          <h3>{title}</h3>
+          <h4>{link}</h4>
         </div>
-      </Link>
-    );
-  };
+
+        <p>{description}</p>
+      </div>
+    </Link>
+  );
 
   // main page
   return (

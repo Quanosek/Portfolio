@@ -41,7 +41,7 @@ export default function AboutPage() {
 
       <p className={styles.soon}>Więcej informacji pojawi się wkrótce!</p>
 
-      <div className={styles.formHandler}>
+      <div id="form" className={styles.formHandler}>
         <Fade triggerOnce>
           <h2>Skontaktuj się!</h2>
 

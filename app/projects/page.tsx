@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 import { Fade } from "react-awesome-reveal";
 
@@ -29,92 +29,90 @@ export default function ProjectsPage() {
     description,
     technologies,
     watermarkStyle,
-  }: ProjectProps) => {
-    return (
-      <div className={styles.project}>
+  }: ProjectProps) => (
+    <div className={styles.project}>
+      <Image
+        className={styles.websiteImage}
+        src={`/assets/projects/${name}.webp`}
+        alt="project image"
+        width={500}
+        height={300}
+        draggable={false}
+      />
+
+      <div className={styles.mobileBackground}>
         <Image
-          className={styles.websiteImage}
           src={`/assets/projects/${name}.webp`}
           alt="project image"
           width={500}
           height={300}
           draggable={false}
-        />
-
-        <div className={styles.mobileBackground}>
-          <Image
-            src={`/assets/projects/${name}.webp`}
-            alt="project image"
-            width={500}
-            height={300}
-            draggable={false}
-            priority={true}
-          />
-        </div>
-
-        <div className={styles.content}>
-          <div className={styles.topDiv}>
-            <div className={styles.projectTitle}>
-              <div>
-                <Image
-                  src={`/assets/projects/${name}_icon.svg`}
-                  alt="watermark"
-                  width={200}
-                  height={200}
-                  draggable={false}
-                  style={watermarkStyle}
-                />
-              </div>
-
-              <h2>{title}</h2>
-            </div>
-
-            <div className={styles.links} style={{ filter: "invert(1)" }}>
-              <Link href={githubLink}>
-                <Image
-                  title="Kod źródłowy Github"
-                  src="/icons/github_2.svg"
-                  alt="github"
-                  width={45}
-                  height={45}
-                  draggable={false}
-                />
-              </Link>
-
-              <Link href={websiteLink}>
-                <Image
-                  title="Strona internetowa"
-                  src="/icons/external_link.svg"
-                  alt="link"
-                  width={45}
-                  height={45}
-                  draggable={false}
-                />
-              </Link>
-            </div>
-          </div>
-
-          <p className={styles.description}>{description}</p>
-
-          <div className={styles.technologies}>
-            {technologies.map((tech) => (
-              <p key={tech}>{tech}</p>
-            ))}
-          </div>
-        </div>
-
-        <Image
-          className={styles.watermark}
-          src={`/assets/projects/${name}_icon.svg`}
-          alt="watermark"
-          width={200}
-          height={200}
-          draggable={false}
-          style={watermarkStyle}
+          priority={true}
         />
       </div>
-    );
-  };
+
+      <div className={styles.content}>
+        <div className={styles.topDiv}>
+          <div className={styles.projectTitle}>
+            <div>
+              <Image
+                src={`/assets/projects/${name}_icon.svg`}
+                alt="watermark"
+                width={200}
+                height={200}
+                draggable={false}
+                style={watermarkStyle}
+              />
+            </div>
+
+            <h2>{title}</h2>
+          </div>
+
+          <div className={styles.links} style={{ filter: "invert(1)" }}>
+            <Link href={githubLink}>
+              <Image
+                title="Kod źródłowy Github"
+                src="/icons/github_2.svg"
+                alt="github"
+                width={45}
+                height={45}
+                draggable={false}
+              />
+            </Link>
+
+            <Link href={websiteLink}>
+              <Image
+                title="Strona internetowa"
+                src="/icons/external_link.svg"
+                alt="link"
+                width={45}
+                height={45}
+                draggable={false}
+              />
+            </Link>
+          </div>
+        </div>
+
+        <p className={styles.description}>{description}</p>
+
+        <div className={styles.technologies}>
+          {technologies.map((tech) => (
+            <p key={tech}>{tech}</p>
+          ))}
+        </div>
+      </div>
+
+      <Image
+        className={styles.watermark}
+        src={`/assets/projects/${name}_icon.svg`}
+        alt="watermark"
+        width={200}
+        height={200}
+        draggable={false}
+        style={watermarkStyle}
+      />
+    </div>
+  );
 
   return (
     <div className={styles.container}>

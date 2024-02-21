@@ -1,5 +1,6 @@
-import localFont from "next/font/local";
 import type { Metadata, Viewport } from "next";
+import type { ReactNode } from "react";
+
 import Link from "next/link";
 
 import "the-new-css-reset/css/reset.css";
@@ -8,7 +9,7 @@ import "@/styles/globals.scss";
 import Analytics from "@/components/analytics";
 import Header from "@/components/header";
 
-// global font-face
+import localFont from "next/font/local";
 const Nexa = localFont({
   src: [
     {
@@ -29,7 +30,6 @@ const Nexa = localFont({
   display: "swap",
 });
 
-// global metadata (default values)
 export const metadata: Metadata = {
   title: "Moje portfolio / klalo.pl",
   description:
@@ -39,24 +39,16 @@ export const metadata: Metadata = {
   },
 };
 
-// global viewport
 export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: "black",
+  themeColor: "#000000",
 };
 
-// app project layout
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pl" className={Nexa.className}>
+    <html lang="pl">
       {process.env.NODE_ENV !== "development" && <Analytics />}
 
-      <body>
+      <body className={Nexa.className}>
         <Header />
 
         <section>
