@@ -39,7 +39,7 @@ export default function AboutPage() {
     <div className={styles.container}>
       <h1 className={styles.title}>Informacje o&nbsp;mnie:</h1>
 
-      <p style={{ opacity: "50%" }}>Więcej informacji pojawi się wkrótce!</p>
+      <p className={styles.soon}>Więcej informacji pojawi się wkrótce!</p>
 
       <div className={styles.formHandler}>
         <Fade triggerOnce>
