@@ -19,7 +19,7 @@ interface ProjectProps {
 }
 
 export default function ProjectsPage() {
-  DynamicTitle("Projekty / klalo.pl");
+  DynamicTitle("Projekty - Portfolio / klalo.pl");
 
   const Project = ({
     name,

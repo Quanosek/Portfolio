@@ -43,6 +43,7 @@
   align-items: center;
   font-size: 125%;
   overflow: hidden;
+  box-shadow: 2px 3px 12px -2px rgba(#000000, 0.35);
 
   &:hover .websiteImage {
     scale: 1.04;
@@ -113,8 +114,7 @@ $project-bg-color: #0b111f;
 
   @media (min-width: 769px) {
     background-color: $project-bg-color;
-    box-shadow: 0 0 2rem 2rem $project-bg-color;
-    text-shadow: 1px 1px 3px $project-bg-color;
+    text-shadow: 0 0 1px var(--background);
   }
 
   @media (max-width: 768px) {
