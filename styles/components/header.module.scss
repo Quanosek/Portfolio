@@ -52,7 +52,17 @@
   a,
   button {
     height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #d2d2d2;
+
+    &:hover {
+      background-color: #0b111f;
+      box-shadow: 0 3px 10px -2px rgba(#000000, 0.8);
+      transform: translateY(-1px);
+      filter: brightness(2);
+    }
   }
 
   .title {
@@ -76,11 +86,10 @@
 }
 
 .hamburger {
-  display: none;
   aspect-ratio: 1/1;
 
-  @media (max-width: 1024px) {
-    display: flex;
+  @media (min-width: 1025px) {
+    display: none !important;
   }
 
   @media (max-width: 768px) {
@@ -201,14 +210,6 @@
       gap: 3.2vw;
     }
 
-    a {
-      background-color: #082552;
-
-      &:hover {
-        background-color: #243e68;
-      }
-    }
-
     .text {
       width: 100%;
       display: flex;
@@ -216,13 +217,9 @@
       gap: 0.5rem;
 
       a {
-        padding: 0.8rem 0;
+        padding: min(4vw, 0.8rem) 0;
         min-width: 16rem;
-
-        @media (max-width: 320px) {
-          padding: 4vw 0;
-          font-size: 5vw;
-        }
+        font-size: min(5vw, 100%);
       }
 
       @media (max-width: 425px) {

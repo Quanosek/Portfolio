@@ -34,7 +34,7 @@
   }
 }
 
-// default reset
+// default tags reset
 html,
 body {
   color: var(--secondary);
@@ -59,6 +59,7 @@ button {
   cursor: pointer;
 }
 
+// responsive components resize
 section {
   width: 100%;
   display: flex;
@@ -96,20 +97,6 @@ footer {
 header {
   position: fixed;
   top: 0;
-
-  a,
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-      background-color: #0b111f;
-      box-shadow: 0 3px 10px -2px rgba(#000000, 0.8);
-      transform: translateY(-1px);
-      filter: brightness(2);
-    }
-  }
 }
 
 footer {
@@ -134,7 +121,7 @@ footer {
   }
 }
 
-// Waves component
+// waves component
 .wavesHandler {
   margin: -6rem 0 6rem;
   position: relative;
