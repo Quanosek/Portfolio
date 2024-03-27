@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { useRouter } from "next/navigation";
 import { Fade } from "react-awesome-reveal";
 
 import styles from "@/styles/projects.module.scss";
@@ -20,6 +21,7 @@ interface ProjectProps {
 
 export default function ProjectsPage() {
   DynamicTitle("Projekty - Portfolio / klalo.pl");
+  const router = useRouter();
 
   const Project = ({
     name,
@@ -30,7 +32,7 @@ export default function ProjectsPage() {
     technologies,
     watermarkStyle,
   }: ProjectProps) => (
-    <div className={styles.project}>
+    <Link href={websiteLink} className={styles.project}>
       <Image
         className={styles.websiteImage}
         src={`/assets/projects/${name}.webp`}
@@ -68,29 +70,18 @@ export default function ProjectsPage() {
             <h2>{title}</h2>
           </div>
 
-          <div className={styles.links} style={{ filter: "invert(1)" }}>
-            <Link href={githubLink}>
+          <Link href={githubLink} legacyBehavior>
+            <div className={styles.githubLink}>
               <Image
                 title="Kod źródłowy Github"
                 src="/icons/github_2.svg"
                 alt="github"
-                width={45}
-                height={45}
+                width={40}
+                height={40}
                 draggable={false}
               />
-            </Link>
-
-            <Link href={websiteLink}>
-              <Image
-                title="Strona internetowa"
-                src="/icons/external_link.svg"
-                alt="link"
-                width={45}
-                height={45}
-                draggable={false}
-              />
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
 
         <p className={styles.description}>{description}</p>
@@ -111,7 +102,7 @@ export default function ProjectsPage() {
         draggable={false}
         style={watermarkStyle}
       />
-    </div>
+    </Link>
   );
 
   return (

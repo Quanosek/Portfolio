@@ -45,8 +45,14 @@
   overflow: hidden;
   box-shadow: 2px 3px 12px -2px rgba(#000000, 0.35);
 
-  &:hover .websiteImage {
-    scale: 1.04;
+  &:hover {
+    h2 {
+      text-decoration: underline;
+    }
+
+    .websiteImage {
+      scale: 1.04;
+    }
   }
 
   @media (max-width: 768px) {
@@ -169,29 +175,29 @@ $project-bg-color: #0b111f;
   }
 }
 
-.links {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.githubLink {
+  padding: 8px;
+  aspect-ratio: 1/1;
+  position: relative;
+  top: 0;
+  height: min(5.5vw, 55px);
+  transition: 0.2s top ease-out;
+  filter: invert(1);
   user-select: none;
 
-  a {
-    padding: 8px;
-    aspect-ratio: 1/1;
-    position: relative;
-    top: 0;
-    height: min(5.5vw, 55px);
-    transition: 0.2s top ease-out;
+  &:hover {
+    top: -2px;
+    scale: 1.02;
+  }
 
-    &:hover {
-      top: -2px;
-      scale: 1.02;
-    }
+  @media (max-width: 768px) {
+    padding: 1vw;
+    width: 8vw;
+    height: auto;
 
-    @media (max-width: 768px) {
-      padding: 1vw;
-      width: 8vw;
-      height: auto;
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
