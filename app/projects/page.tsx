@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { useRouter } from "next/navigation";
 import { Fade } from "react-awesome-reveal";
 
 import styles from "@/styles/projects.module.scss";
@@ -21,7 +20,6 @@ interface ProjectProps {
 
 export default function ProjectsPage() {
   DynamicTitle("Projekty - Portfolio / klalo.pl");
-  const router = useRouter();
 
   const Project = ({
     name,
