@@ -2,13 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-
 import { Fade } from "react-awesome-reveal";
 import Typewriter from "typewriter-effect";
 import Wave from "react-wavify";
-
 import Particles from "@/components/particles";
-import DynamicTitle from "@/functions/dynamicTitle";
+import DynamicTitle from "@/lib/dynamicTitle";
+
 import styles from "@/styles/home.module.scss";
 
 // motto font-face
@@ -101,7 +100,7 @@ export default function HomePage() {
           <p>Hej, nazywam się</p>
           <h1>Jakub Kłało</h1>
 
-          <div className={styles.typeWriter}>
+          <div className={styles.typewriter}>
             <Typewriter
               options={{
                 strings: [
@@ -129,7 +128,7 @@ export default function HomePage() {
               element.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            Kliknij, aby zjechać w&nbsp;dół
+            <p>Kliknij, aby zjechać w&nbsp;dół</p>
           </button>
         </div>
 
@@ -149,28 +148,27 @@ export default function HomePage() {
 
                 <Programs
                   programs={[
-                    "adobe-xd",
-                    "html-5",
-                    "css-3",
-                    "javascript",
                     "typescript",
-                    "sass",
                     "react",
+                    "nextjs",
+                    "prisma",
+                    "sass",
                     "vue",
                     "vite",
+                    "figma",
                   ]}
                 />
 
                 <p>
                   Zaczynałem od bardzo prostych stron dla znajomych, ale
-                  z&nbsp;czasem stawały się one coraz bardziej{" "}
-                  <u>skomplikowane i&nbsp;wymagające</u>. Dlatego niezbędne było
-                  nauczenie się <u>frameworków i&nbsp;bibliotek</u>. Początkowo{" "}
-                  <b>Vue</b>, a&nbsp;teraz <b>React</b>, dają mi ogromne
-                  możliwości, a&nbsp;dzięki tym narzędziom mogę w&nbsp;pełni{" "}
+                  z&nbsp;czasem stawały się one coraz bardziej skomplikowane
+                  i&nbsp;wymagające. Dlatego niezbędne było nauczenie się
+                  frameworków i&nbsp;bibliotek. Początkowo <b>Vue</b>,
+                  a&nbsp;teraz <b>React</b>, dają mi ogromne możliwości,
+                  a&nbsp;dzięki tym narzędziom mogę w&nbsp;pełni{" "}
                   <b>uwolnić swoją wyobraźnię</b>. Z&nbsp;pomocą{" "}
                   <b>TypeScript</b> oraz <b>Sass</b> jestem w&nbsp;stanie
-                  stworzyć <u>dowolny design</u>.
+                  stworzyć dowolny design.
                 </p>
               </div>
 
@@ -214,11 +212,11 @@ export default function HomePage() {
                   Potrafię stworzyć różne aplikacje lub skrypty w&nbsp;językach:{" "}
                   <b>JavaScript</b>, <b>Pyton</b> czy nawet <b>bash</b>!
                   Największą szansę na kreatywne wykorzystanie dostępnych
-                  możliwości daje mi <u>programowanie botów</u> na różne serwery{" "}
+                  możliwości daje mi programowanie botów na różne serwery{" "}
                   <b>Discord</b>, a&nbsp;strona, którą teraz przeglądasz została
                   postawiona na moim prywatnym serwerze <b>Raspberry Pi</b>,
                   którego odpowiednie skonfigurowanie wymagało wiedzy
-                  w&nbsp;poruszaniu się po <u>terminalu Linuxa</u>.
+                  w&nbsp;poruszaniu się po terminalu Linuxa.
                 </p>
               </div>
             </div>
@@ -229,27 +227,25 @@ export default function HomePage() {
 
                 <Programs
                   programs={[
-                    "gimp",
                     "photoshop",
                     "lightroom",
                     "illustrator",
                     "premiere-pro",
                     "after-effects",
                     "audition",
+                    "gimp",
                     "audacity",
                   ]}
                 />
 
                 <p>
                   Hobbystycznie zajmuje się fotografią i&nbsp;montażem filmów.
-                  Za każdym razem gdy gdzieś wyjeżdżam,{" "}
-                  <u>muszę wziąć ze sobą swoją lustrzankę</u>, bo nigdy nie
-                  wiem, co może mnie spotkać! Gdy w moim mieście organizowane są
-                  różne wydarzenia, zawsze muszę tam być i&nbsp;robić serie
-                  zdjęć, a&nbsp;dzięki mojemu{" "}
+                  Za każdym razem gdy gdzieś wyjeżdżam, muszę wziąć ze sobą
+                  swoją lustrzankę, bo nigdy nie wiem, co może mnie spotkać! Gdy
+                  w moim mieście organizowane są różne wydarzenia, zawsze muszę
+                  tam być i&nbsp;robić serie zdjęć, a&nbsp;dzięki mojemu{" "}
                   <b>doświadczeniu w&nbsp;obsłudze programów Adobe</b>, dalsza
-                  obróbka zdjęć lub montaż filmów{" "}
-                  <u>nie stanowi żadnego problemu</u>.
+                  obróbka zdjęć lub montaż filmów nie stanowi żadnego problemu.
                 </p>
               </div>
 
@@ -260,9 +256,7 @@ export default function HomePage() {
                 width={330}
                 height={330}
                 draggable={false}
-                style={{
-                  scale: "0.95",
-                }}
+                style={{ scale: "0.95" }}
               />
             </div>
 
@@ -335,7 +329,7 @@ export default function HomePage() {
               </h3>
 
               <Link href="/projects">
-                <p>Zobacz moje projekty!</p>
+                <p>Zobacz moje projekty</p>
               </Link>
             </div>
           </Fade>
@@ -351,7 +345,7 @@ export default function HomePage() {
 
             <p>
               Chętnie odpowiem na każde z&nbsp;nich, a&nbsp;jeżeli potrzebujesz
-              pomocy, to jestem do Twojej dyspozycji!
+              pomocy, to jestem do Twojej dyspozycji.
             </p>
           </div>
 

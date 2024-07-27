@@ -37,7 +37,7 @@
   }
 }
 
-.formHandler {
+.formContainer {
   margin-top: 2rem;
   width: var(--global-width);
   display: flex;
@@ -74,7 +74,7 @@
     align-items: center;
   }
 
-  div {
+  label {
     position: relative;
     width: 100%;
     display: flex;
@@ -82,21 +82,14 @@
     gap: 10px;
   }
 
-  label {
+  p {
     opacity: 85%;
     font-size: 110%;
   }
 
-  span {
-    color: #ff4d4d;
-    position: relative;
-    bottom: 1px;
-    font-size: 95%;
-    user-select: none;
-  }
-
   input,
   textarea {
+    width: 100%;
     padding: 1rem;
     font-size: 105%;
     font-weight: 300;
@@ -132,6 +125,14 @@
     right: 1rem;
     font-size: 80%;
     pointer-events: none;
+    user-select: none;
+  }
+
+  span {
+    color: #ff4d4d;
+    position: relative;
+    bottom: 1px;
+    font-size: 95%;
     user-select: none;
   }
 

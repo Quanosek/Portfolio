@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-import styles from "@/styles/components/header.module.scss";
+import styles from "@/styles/header.module.scss";
 
 export default function HeaderComponent() {
   const [active, setActive] = useState(false);

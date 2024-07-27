@@ -94,8 +94,8 @@
 
   @media (max-width: 768px) {
     &:hover {
-      background-color: transparent;
-      transform: none;
+      background-color: transparent !important;
+      transform: none !important;
       user-select: none;
       box-shadow: none;
     }

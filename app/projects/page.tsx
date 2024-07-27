@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-
 import { Fade } from "react-awesome-reveal";
+import DynamicTitle from "@/lib/dynamicTitle";
 
 import styles from "@/styles/projects.module.scss";
-import DynamicTitle from "@/functions/dynamicTitle";
 
 interface ProjectProps {
   name: string;
@@ -34,7 +33,7 @@ export default function ProjectsPage() {
       <Image
         className={styles.websiteImage}
         src={`/assets/projects/${name}.webp`}
-        alt="project image"
+        alt="project"
         width={500}
         height={300}
         draggable={false}
@@ -43,7 +42,7 @@ export default function ProjectsPage() {
       <div className={styles.mobileBackground}>
         <Image
           src={`/assets/projects/${name}.webp`}
-          alt="project image"
+          alt="project"
           width={500}
           height={300}
           draggable={false}
@@ -105,7 +104,7 @@ export default function ProjectsPage() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Wszystkie moje projekty:</h1>
+      <h1 className={styles.title}>Wszystkie moje projekty</h1>
 
       <div className={styles.projectsList}>
         <Fade triggerOnce className={styles.centerDiv}>

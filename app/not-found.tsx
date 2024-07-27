@@ -2,9 +2,9 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import DynamicTitle from "@/lib/dynamicTitle";
 
 import styles from "@/styles/not-found.module.scss";
-import DynamicTitle from "@/functions/dynamicTitle";
 
 export default function NotFoundPage() {
   DynamicTitle("Nie znaleziono strony / klalo.pl");

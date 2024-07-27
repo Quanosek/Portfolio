@@ -1,5 +1,5 @@
 {
-  "version": "0.3.2",
+  "version": "0.3.3",
   "name": "portfolio",
   "description": "My personal website",
   "scripts": {
@@ -10,28 +10,30 @@
   },
   "dependencies": {
     "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.4.0",
+    "@tsparticles/slim": "^3.5.0",
     "@types/nodemailer": "^6.4.15",
+    "axios": "^1.7.2",
     "next": "14.1.4",
     "nextjs-google-analytics": "^2.3.3",
-    "nodemailer": "^6.9.13",
+    "nodemailer": "^6.9.14",
     "react": "^18.3.1",
-    "react-awesome-reveal": "^4.2.12",
+    "react-awesome-reveal": "^4.2.13",
     "react-dom": "^18.3.1",
-    "react-hook-form": "^7.52.0",
-    "react-wavify": "^1.11.0",
+    "react-hook-form": "^7.52.1",
+    "react-textarea-autosize": "^8.5.3",
+    "react-wavify": "^1.11.1",
     "sharp": "^0.33.4",
     "the-new-css-reset": "^1.11.2",
-    "tsparticles": "^3.4.0",
+    "tsparticles": "^3.5.0",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
-    "@types/node": "^20.14.2",
+    "@types/node": "^20.14.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.1.4",
-    "sass": "^1.77.5",
-    "typescript": "^5.4.5"
+    "sass": "^1.77.8",
+    "typescript": "^5.5.4"
   }
 }

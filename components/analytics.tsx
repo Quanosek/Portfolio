@@ -3,10 +3,9 @@
 import { GoogleAnalytics } from "nextjs-google-analytics";
 
 export default function AnalyticsComponent() {
-  //
   // https://search.google.com/search-console
   // https://analytics.google.com/
-  //
+
   return (
     <GoogleAnalytics
       trackPageViews

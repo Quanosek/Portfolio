@@ -1,35 +1,44 @@
 "use client";
 
 import { useState } from "react";
-
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Fade } from "react-awesome-reveal";
+import TextareaAutosize from "react-textarea-autosize";
+import axios from "axios";
+import DynamicTitle from "@/lib/dynamicTitle";
 
 import styles from "@/styles/about.module.scss";
-import DynamicTitle from "@/functions/dynamicTitle";
 
-export type Inputs = {
-  name: string;
+interface FormInput {
   email: string;
+  title: string;
   message: string;
-};
+}
 
 export default function AboutPage() {
   DynamicTitle("O mnie - Portfolio / klalo.pl");
 
-  // https://www.react-hook-form.com/get-started/
-
   const {
-    register,
     formState: { errors },
     handleSubmit,
-  } = useForm<Inputs>();
+    register,
+    reset,
+  } = useForm<FormInput>();
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    fetch("/api/email", { method: "POST", body: JSON.stringify(data) })
-      .then((res) => res.json())
-      .then((response) => alert(response.message))
-      .catch((err) => alert(err));
+  const onSubmitHandler: SubmitHandler<FormInput> = (values) => {
+    if (values.title.trim() === "" || values.message.trim() === "") {
+      return alert("Pola nie mogą pozostać puste");
+    }
+
+    return axios
+      .post("/api/email", values)
+      .then(() => {
+        alert("Wiadomość została wysłana!");
+        reset();
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   const maxMsgLength = 5000;
@@ -37,47 +46,25 @@ export default function AboutPage() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Informacje o&nbsp;mnie:</h1>
+      <h1 className={styles.title}>Informacje o&nbsp;mnie</h1>
 
-      <p className={styles.soon}>Więcej informacji pojawi się wkrótce!</p>
+      <p className={styles.soon}>Więcej informacji już wkrótce</p>
 
-      <div id="form" className={styles.formHandler}>
+      <div className={styles.formContainer}>
         <Fade triggerOnce>
           <h2>Skontaktuj się!</h2>
 
           <form
+            id="form"
             className={styles.contactForm}
-            onSubmit={handleSubmit(onSubmit)}
+            onSubmit={handleSubmit(onSubmitHandler)}
           >
-            <div>
-              <label htmlFor="name">
-                Imię i nazwisko <span>*</span>
-              </label>
+            <label htmlFor="email">
+              <p>Adres e-mail:</p>
 
               <input
-                id="name"
-                type="text"
-                placeholder="Twoje dane"
-                autoComplete="off"
-                maxLength={988} // RFC 5322
-                {...register("name", { required: true })}
-              />
-
-              {errors.name && <span>To pole jest wymagane!</span>}
-            </div>
-
-            <div>
-              <label htmlFor="email">
-                Adres e-mail <span>*</span>
-              </label>
-
-              <input
-                id="email"
-                type="text"
-                placeholder="example@domain.com"
-                autoCapitalize="none"
-                autoComplete="off"
-                spellCheck="false"
+                placeholder="nazwa@mail.com"
+                autoComplete="email"
                 maxLength={320} // RFC 5321
                 {...register("email", {
                   required: true,
@@ -87,23 +74,39 @@ export default function AboutPage() {
 
               {errors.email &&
                 ((errors.email.type === "pattern" && (
-                  <span>Nieprawidłowy adres e-mail!</span>
-                )) || <span>To pole jest wymagane!</span>)}
-            </div>
+                  <span>Nieprawidłowy adres e-mail</span>
+                )) || <span>To pole jest wymagane</span>)}
+            </label>
 
-            <div>
-              <label htmlFor="message">
-                Wiadomość <span>*</span>
-              </label>
+            <label>
+              <p>Tytuł:</p>
+
+              <input
+                placeholder="Najlepszy tytuł!"
+                autoComplete="off"
+                maxLength={988} // RFC 5322
+                {...register("title", { required: true })}
+                onChange={(e) => {
+                  e.target.value = e.target.value.replace(/\s+/g, " ");
+                }}
+              />
+
+              {errors.title && <span>To pole jest wymagane</span>}
+            </label>
+
+            <label>
+              <p>Wiadomość:</p>
 
               <div>
-                <textarea
-                  id="message"
+                <TextareaAutosize
                   placeholder="Przywitaj się!"
-                  autoComplete="off"
-                  maxLength={maxMsgLength}
                   {...register("message", { required: true })}
-                  onInput={(e) => setMsgLength(e.currentTarget.value.length)}
+                  onChange={(e) => {
+                    e.target.value = e.target.value
+                      .replace("  ", " ")
+                      .replace(/\n{3,}/g, "\n\n");
+                    setMsgLength(e.currentTarget.value.length);
+                  }}
                 />
 
                 <p className={styles.lengthInfo}>
@@ -111,10 +114,10 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              {errors.message && <span>To pole jest wymagane!</span>}
-            </div>
+              {errors.message && <span>To pole jest wymagane</span>}
+            </label>
 
-            <button>
+            <button type="submit">
               <p>Wyślij wiadomość</p>
             </button>
           </form>

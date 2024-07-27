@@ -11,6 +11,7 @@
 }
 
 .welcome {
+  position: relative;
   padding: min(20rem, 30vh) 3%;
   width: 100%;
   height: 100%;
@@ -33,22 +34,10 @@
     font-size: 600%;
   }
 
-  .typeWriter {
+  .typewriter {
     font-size: 150%;
     color: #c3e9ff;
     user-select: none;
-  }
-
-  button {
-    opacity: 65%;
-    position: absolute;
-    bottom: 6rem;
-    text-align: center;
-
-    &:hover {
-      opacity: 95%;
-      transform: translateY(-2px);
-    }
   }
 
   @media (max-width: 425px) {
@@ -63,14 +52,27 @@
       line-height: 1.2em;
     }
 
-    .typeWriter {
+    .typewriter {
       font-size: 4vw;
     }
+  }
+}
 
-    button {
-      font-size: 3vw;
-      bottom: 12vh;
-    }
+.snipped {
+  opacity: 65%;
+  position: absolute;
+  bottom: 7rem;
+  text-align: center;
+  font-size: 40%;
+
+  &:hover {
+    opacity: 95%;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 425px) {
+    font-size: 3vw;
+    bottom: 12vh;
   }
 }
 

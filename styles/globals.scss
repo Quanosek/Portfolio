@@ -1,4 +1,3 @@
-// global styles
 :root {
   color-scheme: dark;
 
@@ -10,12 +9,10 @@
   --global-width: min(100%, 2000px);
 }
 
-// tab focus border
 :focus-visible {
   box-shadow: 0 0 1px 2px var(--secondary);
 }
 
-// custom scrollbar
 ::-webkit-scrollbar {
   width: 14px;
   height: 8px;
@@ -34,36 +31,11 @@
   }
 }
 
-// default tags reset
 html,
 body {
   color: var(--secondary);
   background-color: var(--background);
   -webkit-tap-highlight-color: transparent;
-}
-
-b,
-h1,
-h2,
-h3 {
-  font-weight: bold;
-}
-
-u {
-  text-decoration: underline;
-}
-
-a,
-button {
-  transition: 0.2s ease-out;
-  cursor: pointer;
-}
-
-// responsive components resize
-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 main {
@@ -121,7 +93,29 @@ footer {
   }
 }
 
-// waves component
+b,
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
+u {
+  text-decoration: underline;
+}
+
+a,
+button {
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .wavesHandler {
   margin: -6rem 0 6rem;
   position: relative;

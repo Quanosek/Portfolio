@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-// https://www.npmjs.com/package/@tsparticles/react
-
 export default function App() {
   const [init, setInit] = useState(false);
 
@@ -16,13 +14,9 @@ export default function App() {
     }).then(() => setInit(true));
   }, []);
 
-  // https://particles.js.org/docs/classes/tsParticles_Engine.Options_Classes_Options.Options.html
-
   const particlesOptions = {
     fpsLimit: 90,
-    fullScreen: {
-      enable: false,
-    },
+    fullScreen: { enable: false },
     interactivity: {
       events: {
         onHover: {
@@ -32,56 +26,34 @@ export default function App() {
       },
       modes: {
         bubble: {
-          color: {
-            value: "#ccd5f9",
-          },
+          color: { value: "#ccd5f9" },
           opacity: 1,
           size: 4,
         },
       },
     },
     particles: {
-      color: {
-        value: "#6e86ef",
-      },
+      color: { value: "#6e86ef" },
       links: {
-        color: {
-          value: "#6e86ef",
-        },
+        color: { value: "#6e86ef" },
         distance: 180,
         enable: true,
       },
-      move: {
-        enable: true,
-      },
-      number: {
-        value: 100,
-      },
-      opacity: {
-        value: 0.5,
-      },
-      size: {
-        value: 2.5,
-      },
+      move: { enable: true },
+      number: { value: 100 },
+      opacity: { value: 0.5 },
+      size: { value: 2.5 },
     },
     responsive: [
       {
         maxWidth: 768,
         options: {
           interactivity: {
-            events: {
-              onHover: {
-                enable: false,
-              },
-            },
+            events: { onHover: { enable: false } },
           },
           particles: {
-            links: {
-              distance: 150,
-            },
-            number: {
-              value: 40,
-            },
+            links: { distance: 150 },
+            number: { value: 40 },
           },
         },
       },
