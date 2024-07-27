@@ -89,7 +89,7 @@ export default function HeaderComponent() {
             title="Powrót do strony głównej"
             href="/"
           >
-            Portfolio
+            <p>Portfolio</p>
           </Link>
 
           <Buttons />
