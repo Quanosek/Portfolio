@@ -131,6 +131,43 @@ export default function ProjectsPage() {
           />
 
           <Project
+            name="games"
+            title="Pokój gier"
+            description={
+              <>
+                Platforma zawierająca <b>wiele prostych gier</b> do
+                samodzielnego <b>uzupełnienia</b> o&nbsp;pytania lub hasła,
+                możliwe później do wyświetlenia na <b>zewnętrznym ekranie</b>{" "}
+                np. rzutniku. Strona oferuje nie tylko gry typu <b>quiz</b>, ale
+                również dokładnie odwzorowane kopie znanych i&nbsp;lubianych
+                przez wszystkich <b>teleturniejów</b>.
+              </>
+            }
+            technologies={["Next.js", "React", "TypeScript", "Sass"]}
+            githubLink="https://github.com/Quanosek/games"
+            websiteLink="https://games.klalo.pl/"
+          />
+
+          <Project
+            name="fonetyka"
+            title="Fonetyka"
+            description={
+              <>
+                Aplikacja internetowa o&nbsp;bardzo prostym i&nbsp;intuicyjnym
+                interfejsie, służąca do <b>konwersji dowolnych słów</b>{" "}
+                w&nbsp;języku polskim na dwa rodzaje zapisu fonetycznego -{" "}
+                <b>AS</b> i&nbsp;<b>IPA</b>. Aplikacja posiada również{" "}
+                <b>wbudowaną historię</b> wcześniej wpisach słów wraz z&nbsp;ich
+                wygenerowanym zapisem fonetycznym.
+              </>
+            }
+            technologies={["Next.js", "React", "TypeScript", "PWA", "Sass"]}
+            githubLink="https://github.com/Quanosek/fonetyka"
+            websiteLink="https://fonetyka.klalo.pl/"
+            watermarkStyle={{ scale: "0.9" }}
+          />
+
+          <Project
             name="metrum"
             title="Metrum"
             description={
@@ -155,43 +192,8 @@ export default function ProjectsPage() {
             watermarkStyle={{
               rotate: "-8deg",
               scale: "0.85",
+              bottom: "1.5rem",
             }}
-          />
-
-          <Project
-            name="fonetyka"
-            title="Fonetyka"
-            description={
-              <>
-                Aplikacja internetowa o&nbsp;bardzo prostym i&nbsp;intuicyjnym
-                interfejsie, służąca do <b>konwersji dowolnych słów</b>{" "}
-                w&nbsp;języku polskim na dwa rodzaje zapisu fonetycznego -{" "}
-                <b>AS</b> i&nbsp;<b>IPA</b>. Aplikacja posiada również{" "}
-                <b>wbudowaną historię</b> wcześniej wpisach słów wraz z&nbsp;ich
-                wygenerowanym zapisem fonetycznym.
-              </>
-            }
-            technologies={["Next.js", "React", "TypeScript", "PWA", "Sass"]}
-            githubLink="https://github.com/Quanosek/Fonetyka"
-            websiteLink="https://fonetyka.klalo.pl/"
-          />
-
-          <Project
-            name="games"
-            title="Pokój gier"
-            description={
-              <>
-                Platforma zawierająca <b>wiele prostych gier</b> do
-                samodzielnego <b>uzupełnienia</b> o&nbsp;pytania lub hasła,
-                możliwe później do wyświetlenia na <b>zewnętrznym ekranie</b>{" "}
-                np. rzutniku. Strona oferuje nie tylko gry typu <b>quiz</b>, ale
-                również dokładnie odwzorowane kopie znanych i&nbsp;lubianych
-                przez wszystkich <b>teleturniejów</b>.
-              </>
-            }
-            technologies={["Next.js", "React", "TypeScript", "Sass"]}
-            githubLink="https://github.com/Quanosek/Games"
-            websiteLink="https://games.klalo.pl/"
           />
 
           <Project
@@ -207,11 +209,8 @@ export default function ProjectsPage() {
               </>
             }
             technologies={["Next.js", "React", "API", "TypeScript", "Sass"]}
-            githubLink="https://github.com/Quanosek/Weather"
+            githubLink="https://github.com/Quanosek/weather"
             websiteLink="https://weather.klalo.pl/"
-            watermarkStyle={{
-              bottom: "-1rem",
-            }}
           />
         </Fade>
       </div>
