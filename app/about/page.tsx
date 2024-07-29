@@ -82,7 +82,7 @@ export default function AboutPage() {
               <p>Tytuł:</p>
 
               <input
-                placeholder="Najlepszy tytuł!"
+                placeholder="Ważna sprawa"
                 autoComplete="off"
                 maxLength={988} // RFC 5322
                 {...register("title", { required: true })}
@@ -99,13 +99,19 @@ export default function AboutPage() {
 
               <div>
                 <TextareaAutosize
-                  placeholder="Przywitaj się!"
+                  placeholder="Przywitaj się"
                   {...register("message", { required: true })}
                   onChange={(e) => {
                     e.target.value = e.target.value
                       .replace("  ", " ")
                       .replace(/\n{3,}/g, "\n\n");
                     setMsgLength(e.currentTarget.value.length);
+                  }}
+                  onInput={(e) => {
+                    e.currentTarget.value = e.currentTarget.value.slice(
+                      0,
+                      maxMsgLength
+                    );
                   }}
                 />
 
