@@ -72,22 +72,21 @@ header {
 }
 
 footer {
-  padding: 1.5rem 3%;
-  font-size: min(1.4vw, 95%);
+  padding: 2rem 3% 2.5rem;
+  font-size: min(1.4vw, 85%);
   font-weight: lighter;
   background-color: #000000;
 
-  a:hover {
-    text-decoration: underline;
+  section {
+    opacity: 65%;
+    justify-content: center;
   }
 
   @media (max-width: 768px) {
     padding: min(5vw, 1.5rem) 1%;
-    font-size: min(3vw, 100%);
+    font-size: min(2.5vw, 100%);
 
     section {
-      flex-direction: column;
-      align-items: center;
       gap: 1.25vw;
     }
   }
@@ -114,30 +113,4 @@ section {
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.wavesHandler {
-  margin: -6rem 0 6rem;
-  position: relative;
-  width: 100%;
-  height: 0;
-
-  .waves {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-
-    div:last-child {
-      opacity: 80%;
-      margin-left: -100%;
-      position: relative;
-      bottom: 1rem;
-    }
-
-    path {
-      fill: var(--secondary);
-    }
-  }
 }

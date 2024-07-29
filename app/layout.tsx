@@ -1,13 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-
-import Link from "next/link";
+import Analytics from "@/components/analytics";
+import Header from "@/components/header";
 
 import "the-new-css-reset/css/reset.css";
 import "@/styles/globals.scss";
-
-import Analytics from "@/components/analytics";
-import Header from "@/components/header";
 
 import localFont from "next/font/local";
 const Nexa = localFont({
@@ -60,14 +57,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <footer>
           <section>
             <p>
-              Stworzone z 💙 przez{" "}
-              <Link href="https://github.com/quanosek" target="_blank">
-                Jakuba Kłało
-              </Link>
-            </p>
-
-            <p>
-              Wszelkie prawa zastrzeżone &#169; 2023-{new Date().getFullYear()}
+              Jakub Kłało &#169; {new Date().getFullYear()} klalo.pl. Wszelkie
+              prawa zastrzeżone.
             </p>
           </section>
         </footer>

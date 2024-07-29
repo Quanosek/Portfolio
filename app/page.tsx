@@ -22,10 +22,9 @@ export default function HomePage() {
 
   // smooth waves animation
   const Waves = () => (
-    <div className="wavesHandler">
-      <div className="waves">
+    <div className={styles.wavesHandler}>
+      <div className={styles.waves}>
         <Wave
-          fill="#ffffff"
           paused={false}
           options={{
             height: 50,
@@ -36,7 +35,6 @@ export default function HomePage() {
         />
 
         <Wave
-          fill="#ffffff"
           paused={false}
           options={{
             height: 50,
@@ -50,25 +48,21 @@ export default function HomePage() {
   );
 
   // interactive programs icons by names
-  const Programs = (params: { programs: string[] }) => {
-    const programs = params.programs;
-
-    return (
-      <div className={styles.programs}>
-        {programs.map((name: string, index: number) => (
-          <Image
-            key={index}
-            title={name}
-            src={`/icons/programs/${name}.svg`}
-            alt={name}
-            width={40}
-            height={40}
-            draggable={false}
-          />
-        ))}
-      </div>
-    );
-  };
+  const Programs = ({ programs }: { programs: string[] }) => (
+    <div className={styles.programs}>
+      {programs.map((name: string, index: number) => (
+        <Image
+          key={index}
+          title={name}
+          src={`/icons/programs/${name}.svg`}
+          alt={name}
+          width={40}
+          height={40}
+          draggable={false}
+        />
+      ))}
+    </div>
+  );
 
   // my projects section quick tiles
   const ProjectTile = ({ link, img, title, description }: any) => (
@@ -104,15 +98,12 @@ export default function HomePage() {
             <Typewriter
               options={{
                 strings: [
-                  "Witaj na mojej stronie!",
+                  "Witaj na mojej stronie",
                   'Programowanie to moja <span style="color: #ffffff;">pasja</span>',
-                  "Front-End Developer",
-                  "Pomysłowość to moje drugie imię",
-                  "Zawsze chętnie służę pomocą!",
+                  "Fullstack Developer",
+                  "Zawsze chętnie służę pomocą",
                   "Sprawdź wszystkie moje projekty",
-                  "Daj znać, jak działa strona",
-                  'Kreatywny, <span style="color: #ffffff;">twórczy</span>, niebanalny...',
-                  "Nic nie jest mi straszne!",
+                  "Daj znać jak działa strona",
                   "Potrzebujesz bota Discord?",
                 ],
                 loop: true,
@@ -260,11 +251,9 @@ export default function HomePage() {
               />
             </div>
 
-            <div>
-              <Link href="/about" className={styles.more}>
-                <p>Dowiedz się więcej</p>
-              </Link>
-            </div>
+            <Link href="/about" className={styles.moreButton}>
+              <p>Dowiedz się więcej</p>
+            </Link>
           </Fade>
         </div>
       </div>
@@ -287,8 +276,8 @@ export default function HomePage() {
       </div>
 
       <div className={styles.projectsHandler}>
-        <div className={`${styles.projects} content`}>
-          <h2>Kilka z&nbsp;moich projektów:</h2>
+        <div className={styles.projects}>
+          <h2>Najlepsze projekty:</h2>
 
           <Fade triggerOnce>
             <div className={styles.grid}>
@@ -325,10 +314,10 @@ export default function HomePage() {
 
             <div className={styles.more}>
               <h3>
-                Resztę projektów możesz sprawdzić klikając w&nbsp;ten przycisk:
+                Sprawdź więcej moich projektów klikając w&nbsp;ten przycisk:
               </h3>
 
-              <Link href="/projects">
+              <Link href="/projects" className={styles.moreButton}>
                 <p>Zobacz moje projekty</p>
               </Link>
             </div>
@@ -350,7 +339,7 @@ export default function HomePage() {
           </div>
 
           <div className={styles.button}>
-            <Link href="/about#form">
+            <Link href="/about#form" className={styles.moreButton}>
               <p>Przejdź do formularza</p>
             </Link>
           </div>
