@@ -1,17 +1,43 @@
+// BUTTONS COMPONENT
+
 .buttons {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: bold;
 
   div {
+    height: 100%;
     display: flex;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #d2d2d2;
+
+      &:hover {
+        background-color: #0b111f;
+        box-shadow: 0 3px 10px -2px rgba(#000000, 0.8);
+        transform: translateY(-1px);
+        filter: brightness(2);
+      }
+    }
+  }
+
+  .text a {
+    padding: 5px 20px;
   }
 
   .icons a {
+    padding: 14px;
     aspect-ratio: 1/1;
 
     img {
+      height: 100%;
+      width: 100%;
       filter: invert(1);
       user-select: none;
     }
@@ -34,81 +60,47 @@
   }
 }
 
-.navigation {
-  z-index: 1;
-  padding: 0 3%;
-  width: 100%;
-  height: var(--header-height);
+// HEADER NAVBAR
+
+.title {
+  padding: 5px 20px;
+  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-weight: bold;
+  font-size: 150%;
+  color: #ffffff;
+  transition: 0.2s transform ease-in-out;
 
-  border: 1px solid rgba(#030303, 0.25);
-  box-shadow: 0 4px 30px rgba(#000000, 0.5);
-  background: rgba(#030303, 0.65);
-  backdrop-filter: blur(10px);
-
-  a,
-  button {
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #d2d2d2;
-
+  @media (min-width: 769px) {
     &:hover {
-      background-color: #0b111f;
-      box-shadow: 0 3px 10px -2px rgba(#000000, 0.8);
       transform: translateY(-1px);
-      filter: brightness(2);
-    }
-  }
-
-  .title {
-    padding: 0 1rem;
-    font-size: 150%;
-    color: #ffffff;
-    cursor: pointer;
-
-    &:hover {
-      background-color: transparent;
-      user-select: none;
-      box-shadow: none;
-    }
-  }
-
-  .buttons {
-    .text a {
-      padding: 5px 20px;
     }
   }
 }
 
 .hamburger {
-  aspect-ratio: 1/1;
+  padding: 14px;
+  height: 100%;
+  transition: 0.2s transform ease-in-out;
 
   @media (min-width: 1025px) {
-    display: none !important;
+    display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 769px) {
     &:hover {
-      background-color: transparent !important;
-      transform: none !important;
-      user-select: none;
-      box-shadow: none;
+      transform: translateY(-1px);
     }
   }
 
   div {
-    $height: 3px;
     $width: 1.5rem;
+    $height: 3px;
     $background-color: #ffffff;
     $transition: 0.2s ease-out;
 
-    height: $height;
     width: $width;
+    height: $height;
     background-color: $background-color;
     transition: $transition;
 
@@ -117,8 +109,8 @@
       content: "";
       position: absolute;
 
-      height: $height;
       width: $width;
+      height: $height;
       background-color: $background-color;
       transition: $transition;
     }
@@ -146,48 +138,44 @@
 }
 
 .mobile {
-  visibility: hidden;
+  z-index: -1;
   opacity: 0;
-  backdrop-filter: none;
+  visibility: hidden;
+  transition: 0.2s ease-out;
 
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 200%;
-
+  height: 100vh;
   display: flex;
   justify-content: flex-end;
-  transition: 0.2s ease-out;
+  backdrop-filter: blur(6px);
 
-  @media (max-width: 1024px) {
-    &.active {
+  @media (min-width: 1025px) {
+    display: none;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+
+    .menu {
       visibility: visible;
       opacity: 1;
-      backdrop-filter: blur(6px);
-
-      .menu {
-        visibility: visible;
-        opacity: 1;
-        right: 0;
-      }
+      right: 0;
     }
   }
 }
 
 .menu {
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
+  padding: calc(var(--header-height) + 2rem) 1rem 1rem;
   position: relative;
   right: -100vw;
-
-  padding: calc(var(--header-height) + 1rem) 1rem 1rem 2rem;
-  height: 200%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: bold;
+  color: #ffffff;
   transition: 0.2s ease-out;
-  overflow-y: auto;
 
   $background: rgba(#000000, 0.75);
   background-color: $background;
@@ -196,20 +184,14 @@
   @media (max-width: 425px) {
     width: 100%;
     background-color: #000000;
-  }
 
-  .buttons {
-    opacity: 90%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-
-    @media (max-width: 425px) {
+    .buttons {
       padding: 0 6%;
       gap: 3.2vw;
     }
+  }
 
+  .buttons {
     .text {
       width: 100%;
       display: flex;
@@ -219,7 +201,8 @@
       a {
         padding: min(4vw, 0.8rem) 0;
         min-width: 16rem;
-        font-size: min(5vw, 100%);
+        color: #ffffff;
+        font-size: min(5vw, 110%);
       }
 
       @media (max-width: 425px) {
@@ -229,6 +212,8 @@
           min-width: unset;
           width: 100%;
           font-size: 130%;
+          background-color: transparent;
+          box-shadow: none;
         }
       }
     }

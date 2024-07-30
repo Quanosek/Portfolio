@@ -48,7 +48,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       {process.env.NODE_ENV !== "development" && <Analytics />}
 
       <body className={Nexa.className}>
-        <Header />
+        <header>
+          <Header />
+        </header>
 
         <section>
           <main>{children}</main>

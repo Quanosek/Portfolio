@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 import DynamicTitle from "@/lib/dynamicTitle";
 

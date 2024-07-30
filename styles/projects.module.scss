@@ -203,7 +203,6 @@ $project-bg-color: #0b111f;
 }
 
 .description {
-  z-index: 2;
   height: 100%;
   font-weight: lighter;
 
@@ -222,7 +221,6 @@ $project-bg-color: #0b111f;
 }
 
 .watermark {
-  z-index: 1;
   opacity: 20%;
   position: absolute;
   bottom: 1rem;

@@ -1,22 +1,22 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 import styles from "@/styles/header.module.scss";
 
 export default function HeaderComponent() {
-  const [active, setActive] = useState(false);
+  const [mobileMenu, showMobileMenu] = useState<boolean>(false);
 
   useEffect(() => {
-    if (active) {
-      const TopScroll = document.documentElement.scrollTop;
-      const LeftScroll = document.documentElement.scrollLeft;
+    if (mobileMenu) {
+      const top = document.documentElement.scrollTop;
+      const left = document.documentElement.scrollLeft;
 
-      window.onscroll = () => window.scrollTo(LeftScroll, TopScroll);
+      window.onscroll = () => window.scrollTo(left, top);
     } else window.onscroll = () => {};
-  }, [active]);
+  }, [mobileMenu]);
 
   const Buttons = () => (
     <div className={styles.buttons}>
@@ -81,37 +81,34 @@ export default function HeaderComponent() {
   );
 
   return (
-    <header>
-      <div className={styles.navigation}>
-        <section>
-          <Link
-            className={styles.title}
-            title="Powrót do strony głównej"
-            href="/"
-          >
-            <p>Portfolio</p>
-          </Link>
+    <>
+      <section>
+        <Link
+          href="/"
+          className={styles.title}
+          onClick={() => setTimeout(() => showMobileMenu(false), 200)}
+        >
+          <h1>Portfolio</h1>
+        </Link>
 
-          <Buttons />
+        <Buttons />
 
-          <button
-            title="Menu"
-            className={styles.hamburger}
-            onClick={() => setActive(!active)}
-          >
-            <div className={active ? `${styles.active}` : ""} />
-          </button>
-        </section>
-      </div>
+        <button
+          className={styles.hamburger}
+          onClick={() => showMobileMenu(!mobileMenu)}
+        >
+          <div className={mobileMenu ? `${styles.active}` : ""} />
+        </button>
+      </section>
 
       <div
-        className={`${styles.mobile} ${active ? `${styles.active}` : ""}`}
-        onClick={() => setActive(false)}
+        className={`${styles.mobile} ${mobileMenu ? `${styles.active}` : ""}`}
+        onClick={() => setTimeout(() => showMobileMenu(false), 200)}
       >
         <div className={styles.menu}>
           <Buttons />
         </div>
       </div>
-    </header>
+    </>
   );
 }
