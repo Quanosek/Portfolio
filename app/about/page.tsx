@@ -25,12 +25,16 @@ export default function AboutPage() {
     reset,
   } = useForm<FormInput>();
 
+  const [submitting, setSubmitting] = useState(false); // loading state
+
   const onSubmitHandler: SubmitHandler<FormInput> = (values) => {
+    setSubmitting(true);
+
     if (values.title.trim() === "" || values.message.trim() === "") {
       return alert("Pola nie mogą pozostać puste");
     }
 
-    return axios
+    axios
       .post("/api/email", values)
       .then(() => {
         alert("Wiadomość została wysłana!");
@@ -38,6 +42,10 @@ export default function AboutPage() {
       })
       .catch((err) => {
         console.error(err);
+        alert("Wystąpił błąd podczas wysyłania wiadomości");
+      })
+      .finally(() => {
+        setSubmitting(false);
       });
   };
 
@@ -123,8 +131,8 @@ export default function AboutPage() {
               {errors.message && <span>To pole jest wymagane</span>}
             </label>
 
-            <button type="submit">
-              <p>Wyślij wiadomość</p>
+            <button type="submit" disabled={submitting}>
+              <p>{submitting ? "Ładowanie..." : "Wyślij wiadomość"}</p>
             </button>
           </form>
         </Fade>
