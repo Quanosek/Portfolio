@@ -1,11 +1,11 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
-import DynamicTitle from "@/lib/dynamicTitle";
 
-import styles from "@/styles/projects.module.scss";
+import styles from "./page.module.scss";
 
 interface ProjectProps {
   name: string;
@@ -18,7 +18,7 @@ interface ProjectProps {
 }
 
 export default function ProjectsPage() {
-  DynamicTitle("Projekty - Portfolio / klalo.pl");
+  const router = useRouter();
 
   const Project = ({
     name,
@@ -53,21 +53,19 @@ export default function ProjectsPage() {
       <div className={styles.content}>
         <div className={styles.topDiv}>
           <div className={styles.projectTitle}>
-            <div>
-              <Image
-                src={`/assets/projects/${name}_icon.svg`}
-                alt="watermark"
-                width={200}
-                height={200}
-                draggable={false}
-                style={watermarkStyle}
-              />
-            </div>
+            <Image
+              src={`/assets/projects/${name}_icon.svg`}
+              alt="watermark"
+              width={45}
+              height={45}
+              draggable={false}
+              style={watermarkStyle}
+            />
 
             <h2>{title}</h2>
           </div>
 
-          <Link href={githubLink} legacyBehavior>
+          <button onClick={() => router.push(githubLink)}>
             <div className={styles.githubLink}>
               <Image
                 title="Kod źródłowy Github"
@@ -78,7 +76,7 @@ export default function ProjectsPage() {
                 draggable={false}
               />
             </div>
-          </Link>
+          </button>
         </div>
 
         <p className={styles.description}>{description}</p>
@@ -94,8 +92,8 @@ export default function ProjectsPage() {
         className={styles.watermark}
         src={`/assets/projects/${name}_icon.svg`}
         alt="watermark"
-        width={200}
-        height={200}
+        width={80}
+        height={80}
         draggable={false}
         style={watermarkStyle}
       />
@@ -164,7 +162,7 @@ export default function ProjectsPage() {
             technologies={["Next.js", "React", "TypeScript", "PWA", "Sass"]}
             githubLink="https://github.com/Quanosek/fonetyka"
             websiteLink="https://fonetyka.klalo.pl/"
-            watermarkStyle={{ scale: "0.9" }}
+            watermarkStyle={{ scale: "0.85" }}
           />
 
           <Project
@@ -191,7 +189,7 @@ export default function ProjectsPage() {
             websiteLink="https://metrum.klalo.pl/"
             watermarkStyle={{
               rotate: "-8deg",
-              scale: "0.85",
+              scale: "0.9",
               bottom: "1.5rem",
             }}
           />

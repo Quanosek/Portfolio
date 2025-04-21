@@ -2,8 +2,7 @@
 
 import { GoogleAnalytics } from "nextjs-google-analytics";
 
-export default function AnalyticsComponent() {
-  // https://search.google.com/search-console
+const AnalyticsComponent = () => {
   // https://analytics.google.com/
 
   return (
@@ -12,4 +11,6 @@ export default function AnalyticsComponent() {
       gaMeasurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID as string}
     />
   );
-}
+};
+
+export default AnalyticsComponent;

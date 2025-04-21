@@ -5,9 +5,8 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { Fade } from "react-awesome-reveal";
 import TextareaAutosize from "react-textarea-autosize";
 import axios from "axios";
-import DynamicTitle from "@/lib/dynamicTitle";
 
-import styles from "@/styles/about.module.scss";
+import styles from "./page.module.scss";
 
 interface FormInput {
   email: string;
@@ -16,8 +15,6 @@ interface FormInput {
 }
 
 export default function AboutPage() {
-  DynamicTitle("O mnie - Portfolio / klalo.pl");
-
   const {
     formState: { errors },
     handleSubmit,
@@ -25,7 +22,7 @@ export default function AboutPage() {
     reset,
   } = useForm<FormInput>();
 
-  const [submitting, setSubmitting] = useState(false); // loading state
+  const [submitting, setSubmitting] = useState(false);
 
   const onSubmitHandler: SubmitHandler<FormInput> = (values) => {
     setSubmitting(true);
@@ -71,7 +68,7 @@ export default function AboutPage() {
               <p>Adres e-mail:</p>
 
               <input
-                placeholder="nazwa@mail.com"
+                placeholder="imie.nazwisko@email.com"
                 autoComplete="email"
                 maxLength={320} // RFC 5321
                 {...register("email", {
@@ -90,7 +87,7 @@ export default function AboutPage() {
               <p>Tytuł:</p>
 
               <input
-                placeholder="Ważna sprawa"
+                placeholder="Mam pytanie..."
                 autoComplete="off"
                 maxLength={988} // RFC 5322
                 {...register("title", { required: true })}
@@ -107,7 +104,7 @@ export default function AboutPage() {
 
               <div>
                 <TextareaAutosize
-                  placeholder="Przywitaj się"
+                  placeholder="Przywitaj się!"
                   {...register("message", { required: true })}
                   onChange={(e) => {
                     e.target.value = e.target.value

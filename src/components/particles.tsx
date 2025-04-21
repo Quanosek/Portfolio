@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-export default function App() {
+const ParticlesComponent = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function App() {
   }, []);
 
   const particlesOptions = {
-    fpsLimit: 90,
+    fpsLimit: 60,
     fullScreen: { enable: false },
     interactivity: {
       events: {
@@ -69,4 +69,6 @@ export default function App() {
       <Particles options={particlesOptions} />
     </div>
   );
-}
+};
+
+export default ParticlesComponent;

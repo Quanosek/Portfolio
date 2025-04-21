@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
     service: "gmail",
     auth: {
       user: process.env.EMAIL_ADDRESS,
-      pass: process.env.EMAIL_APP_PASSWORD,
+      pass: process.env.EMAIL_PASSWORD,
     },
   });
 
@@ -21,18 +21,15 @@ export async function POST(req: NextRequest) {
   };
 
   try {
-    await new Promise<string>((resolve, reject) => {
-      transporter.sendMail(mailOptions, (err) => {
-        if (!err) resolve("Wiadomość została wysłana!");
-        else reject(err.message);
-      });
-    });
-
+    const info = await transporter.sendMail(mailOptions);
     return NextResponse.json(
-      { message: "Wiadomość została wysłana" },
+      { success: true, messageId: info.messageId },
       { status: 200 }
     );
-  } catch (error) {
-    return NextResponse.json({ error }, { status: 500 });
+  } catch (error: unknown) {
+    return NextResponse.json(
+      { success: false, error: String(error) },
+      { status: 500 }
+    );
   }
 }

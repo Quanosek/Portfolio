@@ -3,24 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
-import Typewriter from "typewriter-effect";
+import Typewriter from "@/components/typewriter";
 import Wave from "react-wavify";
+
 import Particles from "@/components/particles";
-import DynamicTitle from "@/lib/dynamicTitle";
+import { GentiumPlus } from "@/utils/fonts";
 
-import styles from "@/styles/home.module.scss";
-
-// motto font-face
-import localFont from "next/font/local";
-const GentiumPlus = localFont({
-  src: "../fonts/gentium_plus_bold.woff2",
-  display: "swap",
-});
+import styles from "./page.module.scss";
 
 export default function HomePage() {
-  DynamicTitle("Moje portfolio / klalo.pl");
-
-  // smooth waves animation
   const Waves = () => (
     <div className={styles.wavesHandler}>
       <div className={styles.waves}>
@@ -47,7 +38,6 @@ export default function HomePage() {
     </div>
   );
 
-  // interactive programs icons by names
   const Programs = ({ programs }: { programs: string[] }) => (
     <div className={styles.programs}>
       {programs.map((name: string, index: number) => (
@@ -64,8 +54,17 @@ export default function HomePage() {
     </div>
   );
 
-  // my projects section quick tiles
-  const ProjectTile = ({ link, img, title, description }: any) => (
+  const ProjectTile = ({
+    link,
+    img,
+    title,
+    description,
+  }: {
+    link: string;
+    img: string;
+    title: string;
+    description: string;
+  }) => (
     <Link href={`https://${link}/`} target="_blank">
       <Image
         src={`/assets/projects/${img}_icon.svg`}
@@ -86,7 +85,6 @@ export default function HomePage() {
     </Link>
   );
 
-  // main page
   return (
     <>
       <div className={styles.welcomeHandler}>
@@ -96,19 +94,18 @@ export default function HomePage() {
 
           <div className={styles.typewriter}>
             <Typewriter
-              options={{
-                strings: [
-                  "Witaj na mojej stronie",
-                  'Programowanie to moja <span style="color: #ffffff;">pasja</span>',
-                  "Fullstack Developer",
-                  "Zawsze chętnie służę pomocą",
-                  "Sprawdź wszystkie moje projekty",
-                  "Daj znać jak działa strona",
-                  "Potrzebujesz bota Discord?",
-                ],
-                loop: true,
-                autoStart: true,
-              }}
+              text={[
+                "Witaj na mojej stronie",
+                "Programowanie to moja pasja",
+                "Fullstack Developer",
+                "Zawsze chętnie służę pomocą",
+                "Sprawdź wszystkie moje projekty",
+                "Daj znać jak działa strona",
+                "Potrzebujesz bota Discord?",
+              ]}
+              typingSpeed={65}
+              pauseTime={5_000}
+              loop={true}
             />
           </div>
 

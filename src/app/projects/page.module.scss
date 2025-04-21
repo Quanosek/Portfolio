@@ -139,28 +139,14 @@ $project-bg-color: #0b111f;
   .projectTitle {
     display: flex;
     align-items: center;
-    gap: 2.5vw;
+    gap: 1vw;
 
     @media (max-width: 768px) {
       height: 8vw;
     }
 
-    div {
-      width: 9vw;
-      height: auto;
-      opacity: 90%;
-      display: none;
-      align-items: center;
-
-      @media (max-width: 768px) {
-        display: flex;
-      }
-
-      img {
-        opacity: 100% !important;
-        width: auto;
-        height: auto;
-      }
+    img {
+      opacity: 100% !important;
     }
 
     h2 {

@@ -1,12 +1,12 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
-import styles from "@/styles/header.module.scss";
+import styles from "./header.module.scss";
 
-export default function HeaderComponent() {
+const HeaderComponent = () => {
   const [mobileMenu, showMobileMenu] = useState<boolean>(false);
 
   useEffect(() => {
@@ -111,4 +111,6 @@ export default function HeaderComponent() {
       </div>
     </>
   );
-}
+};
+
+export default HeaderComponent;
