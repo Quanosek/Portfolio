@@ -29,7 +29,7 @@ const HeaderComponent = () => {
           <p>Projekty</p>
         </Link>
 
-        <Link href="https://ko-fi.com/Quanosek/" target="_blank">
+        <Link href="https://buycoffee.to/kubaklalo/" target="_blank">
           <p>Wesprzyj</p>
         </Link>
       </div>

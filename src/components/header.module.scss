@@ -18,10 +18,8 @@
       color: #d2d2d2;
 
       &:hover {
-        background-color: #0b111f;
-        box-shadow: 0 3px 10px -2px rgba(#000000, 0.8);
         transform: translateY(-1px);
-        filter: brightness(2);
+        text-shadow: 0 0 3px #ffffff;
       }
     }
   }
@@ -37,11 +35,16 @@
       padding: 14px;
       aspect-ratio: 1/1;
 
+      &:hover img {
+        filter: drop-shadow(0 0 2px #000000) invert(1);
+      }
+
       img {
         height: 100%;
         width: 100%;
         filter: invert(1);
         user-select: none;
+        transition: 0.2s filter ease-out;
       }
     }
   }
