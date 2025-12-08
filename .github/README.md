@@ -1,4 +1,4 @@
-<h1>Portfolio</h1>
+# Portfolio
 
 <div>
   <img alt="pnpm" src="https://skillicons.dev/icons?i=pnpm" height="45" />
@@ -14,23 +14,45 @@
   <img alt="sass" src="https://skillicons.dev/icons?i=sass" height="45" />
 </div>
 
-<br />
+## 📖 Project Description
 
-<div>
-  <p>Advanced frontend project in Next.js of my personal portfolio website to describe who I am.</p>
+A personal portfolio website for **Jakub Kłało** — a Fullstack Developer with a passion for programming. The website showcases skills, experience, and completed projects, while also providing a direct contact option through a built-in email form.
 
-  <ul>
-    <li>Using <a href="https://nextjs.org/docs">Next.js</a> framework with App Router ( /app )</li>
-    <li>Build by <a href="https://pnpm.io/">pnpm</a> package manager</li>
-  </ul>
-</div>
+### ⚡ Technologies
 
-<br />
+- **Framework:** Next.js 15 with App Router (`/app`) and Turbopack
+- **Package Manager:** pnpm
+- **Language:** TypeScript (full application typing)
+- **Styling:** Sass/SCSS with CSS modules
+- **Animations:** react-awesome-reveal, react-wavify, tsparticles
+- **Forms:** react-hook-form with Nodemailer integration
+- **Analytics:** Google Analytics
 
-<img width="100%" style="max-width: 1440px" src="./screenshot.webp" />
+### 🚀 Features
 
-<h2>Support</h2>
+- 🏠 Interactive landing page with typewriter effect and animated particles
+- 🌊 Animated waves and smooth section transitions
+- 👨‍💻 Skills showcase — websites, applications, Discord bots
+- 📂 Project portfolio with previews, descriptions, and technologies used
+- 📧 Contact form with validation and email sending
+- 📱 Responsive design for all devices
+- 🎨 Modern UI with animations and visual effects
+- 🔗 GitHub integration — links to project repositories
 
-<a href="https://ko-fi.com/quanosek">
-  <img alt="quanosek" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" width="210" height="50" />
+###
+
+<img width="100%" style="max-width: 1440px" src="./screenshot.webp" alt="Screenshot of Portfolio main page" />
+
+## ☕ Project Support
+
+If this project has been helpful to you, you can buy me a coffee as a thank you for the work invested.
+
+<a href="https://buycoffee.to/kubaklalo#gh-dark-mode-only">
+  <img style="margin: 10px 0; filter:invert(1)" alt="quanosek" src="https://storagebuycoffeeprod.blob.core.windows.net/content-files/Logo/0197ef01-04a5-4ce4-a153-b11e060cf1a2.png#gh-dark-mode-only" height="32"  />
 </a>
+
+<a href="https://buycoffee.to/kubaklalo#gh-light-mode-only">
+  <img style="margin: 10px 0" alt="quanosek" src="https://storagebuycoffeeprod.blob.core.windows.net/content-files/Logo/0197ef01-0531-46ad-b782-1ea5a5bca0b7.png#gh-light-mode-only" height="32"  />
+</a>
+
+Thank you for all your support! 🙏
