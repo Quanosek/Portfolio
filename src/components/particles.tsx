@@ -1,17 +1,17 @@
-"use client";
+'use client'
 
-import { useState, useEffect } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
+import { useState, useEffect } from 'react'
+import Particles, { initParticlesEngine } from '@tsparticles/react'
+import { loadSlim } from '@tsparticles/slim'
 
 const ParticlesComponent = () => {
-  const [init, setInit] = useState(false);
+  const [init, setInit] = useState(false)
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => setInit(true));
-  }, []);
+      await loadSlim(engine)
+    }).then(() => setInit(true))
+  }, [])
 
   const particlesOptions = {
     fpsLimit: 60,
@@ -20,21 +20,21 @@ const ParticlesComponent = () => {
       events: {
         onHover: {
           enable: true,
-          mode: "bubble",
+          mode: 'bubble',
         },
       },
       modes: {
         bubble: {
-          color: { value: "#ccd5f9" },
+          color: { value: '#ccd5f9' },
           opacity: 1,
           size: 4,
         },
       },
     },
     particles: {
-      color: { value: "#6e86ef" },
+      color: { value: '#6e86ef' },
       links: {
-        color: { value: "#6e86ef" },
+        color: { value: '#6e86ef' },
         distance: 180,
         enable: true,
       },
@@ -57,18 +57,18 @@ const ParticlesComponent = () => {
         },
       },
     ],
-  };
+  }
 
   return (
     <div
       style={{
         opacity: init ? 1 : 0,
-        transition: "opacity 0.5s ease-in-out",
+        transition: 'opacity 0.5s ease-in-out',
       }}
     >
       <Particles options={particlesOptions} />
     </div>
-  );
-};
+  )
+}
 
-export default ParticlesComponent;
+export default ParticlesComponent

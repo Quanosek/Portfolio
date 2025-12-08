@@ -1,17 +1,17 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { Fade } from "react-awesome-reveal";
-import TextareaAutosize from "react-textarea-autosize";
-import axios from "axios";
+import { useState } from 'react'
+import { useForm, SubmitHandler } from 'react-hook-form'
+import { Fade } from 'react-awesome-reveal'
+import TextareaAutosize from 'react-textarea-autosize'
+import axios from 'axios'
 
-import styles from "./page.module.scss";
+import styles from './page.module.scss'
 
 interface FormInput {
-  email: string;
-  title: string;
-  message: string;
+  email: string
+  title: string
+  message: string
 }
 
 export default function AboutPage() {
@@ -20,34 +20,34 @@ export default function AboutPage() {
     handleSubmit,
     register,
     reset,
-  } = useForm<FormInput>();
+  } = useForm<FormInput>()
 
-  const [submitting, setSubmitting] = useState(false);
+  const [submitting, setSubmitting] = useState(false)
 
   const onSubmitHandler: SubmitHandler<FormInput> = (values) => {
-    setSubmitting(true);
+    setSubmitting(true)
 
-    if (values.title.trim() === "" || values.message.trim() === "") {
-      return alert("Pola nie mogą pozostać puste");
+    if (values.title.trim() === '' || values.message.trim() === '') {
+      return alert('Pola nie mogą pozostać puste')
     }
 
     axios
-      .post("/api/email", values)
+      .post('/api/email', values)
       .then(() => {
-        alert("Wiadomość została wysłana!");
-        reset();
+        alert('Wiadomość została wysłana!')
+        reset()
       })
       .catch((err) => {
-        console.error(err);
-        alert("Wystąpił błąd podczas wysyłania wiadomości");
+        console.error(err)
+        alert('Wystąpił błąd podczas wysyłania wiadomości')
       })
       .finally(() => {
-        setSubmitting(false);
-      });
-  };
+        setSubmitting(false)
+      })
+  }
 
-  const maxMsgLength = 5000;
-  const [messageLength, setMsgLength] = useState(0);
+  const maxMsgLength = 5000
+  const [messageLength, setMsgLength] = useState(0)
 
   return (
     <div className={styles.container}>
@@ -60,25 +60,25 @@ export default function AboutPage() {
           <h2>Skontaktuj się!</h2>
 
           <form
-            id="form"
+            id='form'
             className={styles.contactForm}
             onSubmit={handleSubmit(onSubmitHandler)}
           >
-            <label htmlFor="email">
+            <label htmlFor='email'>
               <p>Adres e-mail:</p>
 
               <input
-                placeholder="imie.nazwisko@email.com"
-                autoComplete="email"
+                placeholder='imie.nazwisko@email.com'
+                autoComplete='email'
                 maxLength={320} // RFC 5321
-                {...register("email", {
+                {...register('email', {
                   required: true,
                   pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,}$/,
                 })}
               />
 
               {errors.email &&
-                ((errors.email.type === "pattern" && (
+                ((errors.email.type === 'pattern' && (
                   <span>Nieprawidłowy adres e-mail</span>
                 )) || <span>To pole jest wymagane</span>)}
             </label>
@@ -87,12 +87,12 @@ export default function AboutPage() {
               <p>Tytuł:</p>
 
               <input
-                placeholder="Mam pytanie..."
-                autoComplete="off"
+                placeholder='Mam pytanie...'
+                autoComplete='off'
                 maxLength={988} // RFC 5322
-                {...register("title", { required: true })}
+                {...register('title', { required: true })}
                 onChange={(e) => {
-                  e.target.value = e.target.value.replace(/\s+/g, " ");
+                  e.target.value = e.target.value.replace(/\s+/g, ' ')
                 }}
               />
 
@@ -104,19 +104,19 @@ export default function AboutPage() {
 
               <div>
                 <TextareaAutosize
-                  placeholder="Przywitaj się!"
-                  {...register("message", { required: true })}
+                  placeholder='Przywitaj się!'
+                  {...register('message', { required: true })}
                   onChange={(e) => {
                     e.target.value = e.target.value
-                      .replace("  ", " ")
-                      .replace(/\n{3,}/g, "\n\n");
-                    setMsgLength(e.currentTarget.value.length);
+                      .replace('  ', ' ')
+                      .replace(/\n{3,}/g, '\n\n')
+                    setMsgLength(e.currentTarget.value.length)
                   }}
                   onInput={(e) => {
                     e.currentTarget.value = e.currentTarget.value.slice(
                       0,
                       maxMsgLength
-                    );
+                    )
                   }}
                 />
 
@@ -128,12 +128,12 @@ export default function AboutPage() {
               {errors.message && <span>To pole jest wymagane</span>}
             </label>
 
-            <button type="submit" disabled={submitting}>
-              <p>{submitting ? "Ładowanie..." : "Wyślij wiadomość"}</p>
+            <button type='submit' disabled={submitting}>
+              <p>{submitting ? 'Ładowanie...' : 'Wyślij wiadomość'}</p>
             </button>
           </form>
         </Fade>
       </div>
     </div>
-  );
+  )
 }

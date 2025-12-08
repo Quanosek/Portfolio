@@ -1,38 +1,42 @@
 {
   "name": "portfolio",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
+  "author": "Jakub Kłało <kubaklalo@gmail.com>",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build --turbopack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint",
+    "prettier": "pnpm exec prettier . --write"
   },
   "dependencies": {
     "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.8.1",
-    "axios": "^1.8.4",
-    "next": "15.3.1",
+    "@tsparticles/slim": "^3.9.1",
+    "axios": "^1.13.2",
+    "next": "~15.5.7",
     "nextjs-google-analytics": "^2.3.7",
-    "nodemailer": "^6.10.1",
-    "react": "^19.1.0",
+    "nodemailer": "~6.10.1",
+    "react": "^19.2.1",
     "react-awesome-reveal": "^4.3.1",
-    "react-dom": "^19.1.0",
-    "react-hook-form": "^7.56.0",
+    "react-dom": "^19.2.1",
+    "react-hook-form": "^7.68.0",
     "react-textarea-autosize": "^8.5.9",
     "react-wavify": "^1.11.1",
     "the-new-css-reset": "^1.11.3",
-    "tsparticles": "^3.8.1"
+    "tsparticles": "^3.9.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
-    "@types/node": "^22.14.1",
-    "@types/nodemailer": "^6.4.17",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "eslint": "^9.25.0",
-    "eslint-config-next": "15.3.1",
-    "sass": "^1.86.3",
-    "typescript": "^5.8.3"
+    "@eslint/eslintrc": "^3.3.3",
+    "@types/node": "~22.19.1",
+    "@types/nodemailer": "~6.4.21",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "~15.5.7",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.7.4",
+    "sass": "^1.95.0",
+    "typescript": "^5.9.3"
   }
 }

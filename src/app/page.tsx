@@ -1,15 +1,15 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import Link from "next/link";
-import { Fade } from "react-awesome-reveal";
-import Typewriter from "@/components/typewriter";
-import Wave from "react-wavify";
+import Image from 'next/image'
+import Link from 'next/link'
+import { Fade } from 'react-awesome-reveal'
+import Typewriter from '@/components/typewriter'
+import Wave from 'react-wavify'
 
-import Particles from "@/components/particles";
-import { GentiumPlus } from "@/utils/fonts";
+import Particles from '@/components/particles'
+import { GentiumPlus } from '@/utils/fonts'
 
-import styles from "./page.module.scss";
+import styles from './page.module.scss'
 
 export default function HomePage() {
   const Waves = () => (
@@ -36,7 +36,7 @@ export default function HomePage() {
         />
       </div>
     </div>
-  );
+  )
 
   const Programs = ({ programs }: { programs: string[] }) => (
     <div className={styles.programs}>
@@ -52,7 +52,7 @@ export default function HomePage() {
         />
       ))}
     </div>
-  );
+  )
 
   const ProjectTile = ({
     link,
@@ -60,12 +60,12 @@ export default function HomePage() {
     title,
     description,
   }: {
-    link: string;
-    img: string;
-    title: string;
-    description: string;
+    link: string
+    img: string
+    title: string
+    description: string
   }) => (
-    <Link href={`https://${link}/`} target="_blank">
+    <Link href={`https://${link}/`} target='_blank'>
       <Image
         src={`/assets/projects/${img}_icon.svg`}
         alt={title}
@@ -83,7 +83,7 @@ export default function HomePage() {
         <p>{description}</p>
       </div>
     </Link>
-  );
+  )
 
   return (
     <>
@@ -95,13 +95,13 @@ export default function HomePage() {
           <div className={styles.typewriter}>
             <Typewriter
               text={[
-                "Witaj na mojej stronie",
-                "Programowanie to moja pasja",
-                "Fullstack Developer",
-                "Zawsze chętnie służę pomocą",
-                "Sprawdź wszystkie moje projekty",
-                "Daj znać jak działa strona",
-                "Potrzebujesz bota Discord?",
+                'Witaj na mojej stronie',
+                'Programowanie to moja pasja',
+                'Fullstack Developer',
+                'Zawsze chętnie służę pomocą',
+                'Sprawdź wszystkie moje projekty',
+                'Daj znać jak działa strona',
+                'Potrzebujesz bota Discord?',
               ]}
               typingSpeed={65}
               pauseTime={5_000}
@@ -112,8 +112,8 @@ export default function HomePage() {
           <button
             className={styles.snipped}
             onClick={() => {
-              const element = document.getElementById("info") as HTMLElement;
-              element.scrollIntoView({ behavior: "smooth" });
+              const element = document.getElementById('info') as HTMLElement
+              element.scrollIntoView({ behavior: 'smooth' })
             }}
           >
             <p>Kliknij, aby zjechać w&nbsp;dół</p>
@@ -127,7 +127,7 @@ export default function HomePage() {
 
       <Waves />
 
-      <div id="info" className={styles.infoHandler}>
+      <div id='info' className={styles.infoHandler}>
         <div className={styles.info}>
           <Fade triggerOnce>
             <div>
@@ -136,14 +136,14 @@ export default function HomePage() {
 
                 <Programs
                   programs={[
-                    "typescript",
-                    "react",
-                    "nextjs",
-                    "prisma",
-                    "sass",
-                    "vue",
-                    "vite",
-                    "figma",
+                    'typescript',
+                    'react',
+                    'nextjs',
+                    'prisma',
+                    'sass',
+                    'vue',
+                    'vite',
+                    'figma',
                   ]}
                 />
 
@@ -153,8 +153,8 @@ export default function HomePage() {
                   i&nbsp;wymagające. Dlatego niezbędne było nauczenie się
                   frameworków i&nbsp;bibliotek. Początkowo <b>Vue</b>,
                   a&nbsp;teraz <b>React</b>, dają mi ogromne możliwości,
-                  a&nbsp;dzięki tym narzędziom mogę w&nbsp;pełni{" "}
-                  <b>uwolnić swoją wyobraźnię</b>. Z&nbsp;pomocą{" "}
+                  a&nbsp;dzięki tym narzędziom mogę w&nbsp;pełni{' '}
+                  <b>uwolnić swoją wyobraźnię</b>. Z&nbsp;pomocą{' '}
                   <b>TypeScript</b> oraz <b>Sass</b> jestem w&nbsp;stanie
                   stworzyć dowolny design.
                 </p>
@@ -162,8 +162,8 @@ export default function HomePage() {
 
               <Image
                 className={styles.image}
-                src="/assets/home/rocket.svg"
-                alt="websites"
+                src='/assets/home/rocket.svg'
+                alt='websites'
                 width={330}
                 height={330}
                 draggable={false}
@@ -173,8 +173,8 @@ export default function HomePage() {
             <div className={styles.reverse}>
               <Image
                 className={styles.image}
-                src="/assets/home/apps.svg"
-                alt="apps"
+                src='/assets/home/apps.svg'
+                alt='apps'
                 width={330}
                 height={330}
                 draggable={false}
@@ -185,22 +185,22 @@ export default function HomePage() {
 
                 <Programs
                   programs={[
-                    "raspberry-pi",
-                    "vs-code",
-                    "node-js",
-                    "npm",
-                    "python",
-                    "github",
-                    "git",
-                    "discord",
+                    'raspberry-pi',
+                    'vs-code',
+                    'node-js',
+                    'npm',
+                    'python',
+                    'github',
+                    'git',
+                    'discord',
                   ]}
                 />
 
                 <p>
-                  Potrafię stworzyć różne aplikacje lub skrypty w&nbsp;językach:{" "}
+                  Potrafię stworzyć różne aplikacje lub skrypty w&nbsp;językach:{' '}
                   <b>JavaScript</b>, <b>Pyton</b> czy nawet <b>bash</b>!
                   Największą szansę na kreatywne wykorzystanie dostępnych
-                  możliwości daje mi programowanie botów na różne serwery{" "}
+                  możliwości daje mi programowanie botów na różne serwery{' '}
                   <b>Discord</b>, a&nbsp;strona, którą teraz przeglądasz została
                   postawiona na moim prywatnym serwerze <b>Raspberry Pi</b>,
                   którego odpowiednie skonfigurowanie wymagało wiedzy
@@ -215,14 +215,14 @@ export default function HomePage() {
 
                 <Programs
                   programs={[
-                    "photoshop",
-                    "lightroom",
-                    "illustrator",
-                    "premiere-pro",
-                    "after-effects",
-                    "audition",
-                    "gimp",
-                    "audacity",
+                    'photoshop',
+                    'lightroom',
+                    'illustrator',
+                    'premiere-pro',
+                    'after-effects',
+                    'audition',
+                    'gimp',
+                    'audacity',
                   ]}
                 />
 
@@ -231,7 +231,7 @@ export default function HomePage() {
                   Za każdym razem gdy gdzieś wyjeżdżam, muszę wziąć ze sobą
                   swoją lustrzankę, bo nigdy nie wiem, co może mnie spotkać! Gdy
                   w moim mieście organizowane są różne wydarzenia, zawsze muszę
-                  tam być i&nbsp;robić serie zdjęć, a&nbsp;dzięki mojemu{" "}
+                  tam być i&nbsp;robić serie zdjęć, a&nbsp;dzięki mojemu{' '}
                   <b>doświadczeniu w&nbsp;obsłudze programów Adobe</b>, dalsza
                   obróbka zdjęć lub montaż filmów nie stanowi żadnego problemu.
                 </p>
@@ -239,16 +239,16 @@ export default function HomePage() {
 
               <Image
                 className={styles.image}
-                src="/assets/home/clips.svg"
-                alt="clips"
+                src='/assets/home/clips.svg'
+                alt='clips'
                 width={330}
                 height={330}
                 draggable={false}
-                style={{ scale: "0.95" }}
+                style={{ scale: '0.95' }}
               />
             </div>
 
-            <Link href="/about" className={styles.moreButton}>
+            <Link href='/about' className={styles.moreButton}>
               <p>Dowiedz się więcej</p>
             </Link>
           </Fade>
@@ -268,7 +268,7 @@ export default function HomePage() {
 
         <div
           className={styles.parallaxBackground}
-          style={{ backgroundImage: "url(/assets/home/panorama.webp)" }}
+          style={{ backgroundImage: 'url(/assets/home/panorama.webp)' }}
         />
       </div>
 
@@ -280,31 +280,31 @@ export default function HomePage() {
             <div className={styles.grid}>
               <Fade cascade damping={0.1} triggerOnce>
                 <ProjectTile
-                  link="spiewniki.klalo.pl"
-                  img="spiewniki"
-                  title="Śpiewniki"
-                  description="Zebrane w&nbsp;jednym miejscu śpiewniki i&nbsp;pieśni religijne"
+                  link='spiewniki.klalo.pl'
+                  img='spiewniki'
+                  title='Śpiewniki'
+                  description='Zebrane w&nbsp;jednym miejscu śpiewniki i&nbsp;pieśni religijne'
                 />
 
                 <ProjectTile
-                  link="metrum.klalo.pl"
-                  img="metrum"
-                  title="Metrum"
-                  description="Zaawansowany bot muzyczny na platformę Discord"
+                  link='metrum.klalo.pl'
+                  img='metrum'
+                  title='Metrum'
+                  description='Zaawansowany bot muzyczny na platformę Discord'
                 />
 
                 <ProjectTile
-                  link="fonetyka.klalo.pl"
-                  img="fonetyka"
-                  title="Fonetyka"
-                  description="Polski generator zapisu fonetycznego"
+                  link='fonetyka.klalo.pl'
+                  img='fonetyka'
+                  title='Fonetyka'
+                  description='Polski generator zapisu fonetycznego'
                 />
 
                 <ProjectTile
-                  link="games.klalo.pl"
-                  img="games"
-                  title="Pokój gier"
-                  description="Przeglądarkowe wersje znanych i&nbsp;lubianych gier"
+                  link='games.klalo.pl'
+                  img='games'
+                  title='Pokój gier'
+                  description='Przeglądarkowe wersje znanych i&nbsp;lubianych gier'
                 />
               </Fade>
             </div>
@@ -314,7 +314,7 @@ export default function HomePage() {
                 Sprawdź więcej moich projektów klikając w&nbsp;ten przycisk:
               </h3>
 
-              <Link href="/projects" className={styles.moreButton}>
+              <Link href='/projects' className={styles.moreButton}>
                 <p>Zobacz moje projekty</p>
               </Link>
             </div>
@@ -336,12 +336,12 @@ export default function HomePage() {
           </div>
 
           <div className={styles.button}>
-            <Link href="/about#form" className={styles.moreButton}>
+            <Link href='/about#form' className={styles.moreButton}>
               <p>Przejdź do formularza</p>
             </Link>
           </div>
         </Fade>
       </div>
     </>
-  );
+  )
 }
