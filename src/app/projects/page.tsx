@@ -111,12 +111,11 @@ export default function ProjectsPage() {
             title='Śpiewniki'
             description={
               <>
-                Niezawodna aplikacja internetowa, działająca również
-                w&nbsp;trybie offline, zawierająca bogatą bazę danych{' '}
-                <b>ponad 1000</b> różnych pieśni. Umożliwia bardzo proste
-                wyszukiwanie pieśni po jej <b>tytule lub treści tekstu</b>,
-                następnie np. wyświetlenie jej wraz <b>z&nbsp;akordami</b>{' '}
-                w&nbsp;formie prezentacji jako pojedyncze zwrotki.
+                Niezawodna aplikacja internetowa, działająca również w&nbsp;trybie offline,
+                zawierająca bogatą bazę danych <b>ponad 1000</b> różnych pieśni. Umożliwia bardzo
+                proste wyszukiwanie pieśni po jej <b>tytule lub treści tekstu</b>, następnie np.
+                wyświetlenie jej wraz <b>z&nbsp;akordami</b> w&nbsp;formie prezentacji jako
+                pojedyncze zwrotki.
               </>
             }
             technologies={['Next.js', 'React', 'TypeScript', 'PWA', 'Sass']}
@@ -133,12 +132,11 @@ export default function ProjectsPage() {
             title='Pokój gier'
             description={
               <>
-                Platforma zawierająca <b>wiele prostych gier</b> do
-                samodzielnego <b>uzupełnienia</b> o&nbsp;pytania lub hasła,
-                możliwe później do wyświetlenia na <b>zewnętrznym ekranie</b>{' '}
-                np. rzutniku. Strona oferuje nie tylko gry typu <b>quiz</b>, ale
-                również dokładnie odwzorowane kopie znanych i&nbsp;lubianych
-                przez wszystkich <b>teleturniejów</b>.
+                Platforma zawierająca <b>wiele prostych gier</b> do samodzielnego{' '}
+                <b>uzupełnienia</b> o&nbsp;pytania lub hasła, możliwe później do wyświetlenia na{' '}
+                <b>zewnętrznym ekranie</b> np. rzutniku. Strona oferuje nie tylko gry typu{' '}
+                <b>quiz</b>, ale również dokładnie odwzorowane kopie znanych i&nbsp;lubianych przez
+                wszystkich <b>teleturniejów</b>.
               </>
             }
             technologies={['Next.js', 'React', 'TypeScript', 'Sass']}
@@ -151,12 +149,11 @@ export default function ProjectsPage() {
             title='Fonetyka'
             description={
               <>
-                Aplikacja internetowa o&nbsp;bardzo prostym i&nbsp;intuicyjnym
-                interfejsie, służąca do <b>konwersji dowolnych słów</b>{' '}
-                w&nbsp;języku polskim na dwa rodzaje zapisu fonetycznego -{' '}
-                <b>AS</b> i&nbsp;<b>IPA</b>. Aplikacja posiada również{' '}
-                <b>wbudowaną historię</b> wcześniej wpisach słów wraz z&nbsp;ich
-                wygenerowanym zapisem fonetycznym.
+                Aplikacja internetowa o&nbsp;bardzo prostym i&nbsp;intuicyjnym interfejsie, służąca
+                do <b>konwersji dowolnych słów</b> w&nbsp;języku polskim na dwa rodzaje zapisu
+                fonetycznego - <b>AS</b> i&nbsp;<b>IPA</b>. Aplikacja posiada również{' '}
+                <b>wbudowaną historię</b> wcześniej wpisach słów wraz z&nbsp;ich wygenerowanym
+                zapisem fonetycznym.
               </>
             }
             technologies={['Next.js', 'React', 'TypeScript', 'PWA', 'Sass']}
@@ -170,21 +167,13 @@ export default function ProjectsPage() {
             title='Metrum'
             description={
               <>
-                Zaawansowany bot muzyczny na platformie Discord, umożliwiający
-                odtwarzanie dowolnych materiałów z&nbsp;<b>YouTube, Spotify</b>{' '}
-                i&nbsp;wielu innych popularnych serwisów. Posiada{' '}
-                <b>rozbudowany system komend</b>, dzięki którym możliwe jest
-                m.in.: <b>zarządzanie kolejką</b> czy <b>wyświetlanie tekstu</b>{' '}
-                obecnie granego utworu.
+                Zaawansowany bot muzyczny na platformie Discord, umożliwiający odtwarzanie dowolnych
+                materiałów z&nbsp;<b>YouTube, Spotify</b> i&nbsp;wielu innych popularnych serwisów.
+                Posiada <b>rozbudowany system komend</b>, dzięki którym możliwe jest m.in.:{' '}
+                <b>zarządzanie kolejką</b> czy <b>wyświetlanie tekstu</b> obecnie granego utworu.
               </>
             }
-            technologies={[
-              'Node.js',
-              'Discord.js',
-              'Distube',
-              'JavaScript',
-              'Vue',
-            ]}
+            technologies={['Node.js', 'Discord.js', 'Distube', 'JavaScript', 'Vue']}
             githubLink='https://github.com/Quanosek/Metrum.js'
             websiteLink='https://metrum.klalo.pl/'
             watermarkStyle={{
@@ -199,11 +188,10 @@ export default function ProjectsPage() {
             title='Pogoda'
             description={
               <>
-                Prosta aplikacja pogodowa, wykorzystująca darmowe <b>API</b> do
-                wyświetlania aktualnej pogody <b>w&nbsp;dowolnym miejscu</b> na
-                świecie na podstawie <b>dynamicznego wyszukiwania</b> lub{' '}
-                <b>obecnej lokalizacji</b>. Aplikacja pokazuje również mapę
-                pogodową dla wybranego obszaru oraz prognozę na najbliższe dni.
+                Prosta aplikacja pogodowa, wykorzystująca darmowe <b>API</b> do wyświetlania
+                aktualnej pogody <b>w&nbsp;dowolnym miejscu</b> na świecie na podstawie{' '}
+                <b>dynamicznego wyszukiwania</b> lub <b>obecnej lokalizacji</b>. Aplikacja pokazuje
+                również mapę pogodową dla wybranego obszaru oraz prognozę na najbliższe dni.
               </>
             }
             technologies={['Next.js', 'React', 'API', 'TypeScript', 'Sass']}

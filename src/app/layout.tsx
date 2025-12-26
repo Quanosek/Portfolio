@@ -45,8 +45,7 @@ export default function RootLayout({
         <footer>
           <section>
             <p>
-              Jakub Kłało &#169; {new Date().getFullYear()} klalo.pl. Wszelkie
-              prawa zastrzeżone.
+              Jakub Kłało &#169; {new Date().getFullYear()} klalo.pl. Wszelkie prawa zastrzeżone.
             </p>
           </section>
         </footer>

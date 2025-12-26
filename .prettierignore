@@ -1,5 +1,8 @@
 .next/
 node_modules/
+
 LICENSE
 next-env.d.ts
-pnpm-lock.yaml
+
+*.yaml
+*.yml

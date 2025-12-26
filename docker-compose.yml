@@ -1,0 +1,17 @@
+services:
+  portfolio:
+    image: quanosek/portfolio:latest
+    container_name: portfolio
+    restart: always
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${HOST_PORT}:3000"
+    volumes:
+      - data:/app/node_modules
+
+volumes:
+  data:

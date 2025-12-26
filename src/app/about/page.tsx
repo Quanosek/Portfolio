@@ -59,11 +59,7 @@ export default function AboutPage() {
         <Fade triggerOnce>
           <h2>Skontaktuj się!</h2>
 
-          <form
-            id='form'
-            className={styles.contactForm}
-            onSubmit={handleSubmit(onSubmitHandler)}
-          >
+          <form id='form' className={styles.contactForm} onSubmit={handleSubmit(onSubmitHandler)}>
             <label htmlFor='email'>
               <p>Adres e-mail:</p>
 
@@ -78,9 +74,9 @@ export default function AboutPage() {
               />
 
               {errors.email &&
-                ((errors.email.type === 'pattern' && (
-                  <span>Nieprawidłowy adres e-mail</span>
-                )) || <span>To pole jest wymagane</span>)}
+                ((errors.email.type === 'pattern' && <span>Nieprawidłowy adres e-mail</span>) || (
+                  <span>To pole jest wymagane</span>
+                ))}
             </label>
 
             <label>
@@ -107,16 +103,11 @@ export default function AboutPage() {
                   placeholder='Przywitaj się!'
                   {...register('message', { required: true })}
                   onChange={(e) => {
-                    e.target.value = e.target.value
-                      .replace('  ', ' ')
-                      .replace(/\n{3,}/g, '\n\n')
+                    e.target.value = e.target.value.replace('  ', ' ').replace(/\n{3,}/g, '\n\n')
                     setMsgLength(e.currentTarget.value.length)
                   }}
                   onInput={(e) => {
-                    e.currentTarget.value = e.currentTarget.value.slice(
-                      0,
-                      maxMsgLength
-                    )
+                    e.currentTarget.value = e.currentTarget.value.slice(0, maxMsgLength)
                   }}
                 />
 

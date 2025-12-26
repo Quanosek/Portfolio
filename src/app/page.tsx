@@ -148,15 +148,12 @@ export default function HomePage() {
                 />
 
                 <p>
-                  Zaczynałem od bardzo prostych stron dla znajomych, ale
-                  z&nbsp;czasem stawały się one coraz bardziej skomplikowane
-                  i&nbsp;wymagające. Dlatego niezbędne było nauczenie się
-                  frameworków i&nbsp;bibliotek. Początkowo <b>Vue</b>,
-                  a&nbsp;teraz <b>React</b>, dają mi ogromne możliwości,
-                  a&nbsp;dzięki tym narzędziom mogę w&nbsp;pełni{' '}
-                  <b>uwolnić swoją wyobraźnię</b>. Z&nbsp;pomocą{' '}
-                  <b>TypeScript</b> oraz <b>Sass</b> jestem w&nbsp;stanie
-                  stworzyć dowolny design.
+                  Zaczynałem od bardzo prostych stron dla znajomych, ale z&nbsp;czasem stawały się
+                  one coraz bardziej skomplikowane i&nbsp;wymagające. Dlatego niezbędne było
+                  nauczenie się frameworków i&nbsp;bibliotek. Początkowo <b>Vue</b>, a&nbsp;teraz{' '}
+                  <b>React</b>, dają mi ogromne możliwości, a&nbsp;dzięki tym narzędziom mogę
+                  w&nbsp;pełni <b>uwolnić swoją wyobraźnię</b>. Z&nbsp;pomocą <b>TypeScript</b> oraz{' '}
+                  <b>Sass</b> jestem w&nbsp;stanie stworzyć dowolny design.
                 </p>
               </div>
 
@@ -197,13 +194,11 @@ export default function HomePage() {
                 />
 
                 <p>
-                  Potrafię stworzyć różne aplikacje lub skrypty w&nbsp;językach:{' '}
-                  <b>JavaScript</b>, <b>Pyton</b> czy nawet <b>bash</b>!
-                  Największą szansę na kreatywne wykorzystanie dostępnych
-                  możliwości daje mi programowanie botów na różne serwery{' '}
-                  <b>Discord</b>, a&nbsp;strona, którą teraz przeglądasz została
-                  postawiona na moim prywatnym serwerze <b>Raspberry Pi</b>,
-                  którego odpowiednie skonfigurowanie wymagało wiedzy
+                  Potrafię stworzyć różne aplikacje lub skrypty w&nbsp;językach: <b>JavaScript</b>,{' '}
+                  <b>Pyton</b> czy nawet <b>bash</b>! Największą szansę na kreatywne wykorzystanie
+                  dostępnych możliwości daje mi programowanie botów na różne serwery <b>Discord</b>,
+                  a&nbsp;strona, którą teraz przeglądasz została postawiona na moim prywatnym
+                  serwerze <b>Raspberry Pi</b>, którego odpowiednie skonfigurowanie wymagało wiedzy
                   w&nbsp;poruszaniu się po terminalu Linuxa.
                 </p>
               </div>
@@ -227,13 +222,12 @@ export default function HomePage() {
                 />
 
                 <p>
-                  Hobbystycznie zajmuje się fotografią i&nbsp;montażem filmów.
-                  Za każdym razem gdy gdzieś wyjeżdżam, muszę wziąć ze sobą
-                  swoją lustrzankę, bo nigdy nie wiem, co może mnie spotkać! Gdy
-                  w moim mieście organizowane są różne wydarzenia, zawsze muszę
+                  Hobbystycznie zajmuje się fotografią i&nbsp;montażem filmów. Za każdym razem gdy
+                  gdzieś wyjeżdżam, muszę wziąć ze sobą swoją lustrzankę, bo nigdy nie wiem, co może
+                  mnie spotkać! Gdy w moim mieście organizowane są różne wydarzenia, zawsze muszę
                   tam być i&nbsp;robić serie zdjęć, a&nbsp;dzięki mojemu{' '}
-                  <b>doświadczeniu w&nbsp;obsłudze programów Adobe</b>, dalsza
-                  obróbka zdjęć lub montaż filmów nie stanowi żadnego problemu.
+                  <b>doświadczeniu w&nbsp;obsłudze programów Adobe</b>, dalsza obróbka zdjęć lub
+                  montaż filmów nie stanowi żadnego problemu.
                 </p>
               </div>
 
@@ -310,9 +304,7 @@ export default function HomePage() {
             </div>
 
             <div className={styles.more}>
-              <h3>
-                Sprawdź więcej moich projektów klikając w&nbsp;ten przycisk:
-              </h3>
+              <h3>Sprawdź więcej moich projektów klikając w&nbsp;ten przycisk:</h3>
 
               <Link href='/projects' className={styles.moreButton}>
                 <p>Zobacz moje projekty</p>
@@ -330,8 +322,8 @@ export default function HomePage() {
             <h2>Masz jakieś pytanie?</h2>
 
             <p>
-              Chętnie odpowiem na każde z&nbsp;nich, a&nbsp;jeżeli potrzebujesz
-              pomocy, to jestem do Twojej dyspozycji.
+              Chętnie odpowiem na każde z&nbsp;nich, a&nbsp;jeżeli potrzebujesz pomocy, to jestem do
+              Twojej dyspozycji.
             </p>
           </div>
 

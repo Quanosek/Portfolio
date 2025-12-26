@@ -35,39 +35,15 @@ const HeaderComponent = () => {
       </div>
 
       <div className={styles.icons}>
-        <Link
-          title='Github'
-          href='https://github.com/Quanosek/'
-          target='_blank'
-        >
-          <Image
-            src='/icons/github.svg'
-            alt='github'
-            width={25}
-            height={25}
-            draggable={false}
-          />
+        <Link title='Github' href='https://github.com/Quanosek/' target='_blank'>
+          <Image src='/icons/github.svg' alt='github' width={25} height={25} draggable={false} />
         </Link>
 
-        <Link
-          title='LinkedIn'
-          href='https://linkedin.com/in/Quanosek/'
-          target='_blank'
-        >
-          <Image
-            src='/icons/linkedin.svg'
-            alt='email'
-            width={25}
-            height={25}
-            draggable={false}
-          />
+        <Link title='LinkedIn' href='https://linkedin.com/in/Quanosek/' target='_blank'>
+          <Image src='/icons/linkedin.svg' alt='email' width={25} height={25} draggable={false} />
         </Link>
 
-        <Link
-          title='Facebook'
-          href='https://facebook.com/Quanosek/'
-          target='_blank'
-        >
+        <Link title='Facebook' href='https://facebook.com/Quanosek/' target='_blank'>
           <Image
             src='/icons/facebook.svg'
             alt='facebook'
@@ -93,10 +69,7 @@ const HeaderComponent = () => {
 
         <Buttons />
 
-        <button
-          className={styles.hamburger}
-          onClick={() => showMobileMenu(!mobileMenu)}
-        >
+        <button className={styles.hamburger} onClick={() => showMobileMenu(!mobileMenu)}>
           <div className={mobileMenu ? `${styles.active}` : ''} />
         </button>
       </section>

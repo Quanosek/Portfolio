@@ -22,14 +22,8 @@ export async function POST(req: NextRequest) {
 
   try {
     const info = await transporter.sendMail(mailOptions)
-    return NextResponse.json(
-      { success: true, messageId: info.messageId },
-      { status: 200 }
-    )
+    return NextResponse.json({ success: true, messageId: info.messageId }, { status: 200 })
   } catch (error: unknown) {
-    return NextResponse.json(
-      { success: false, error: String(error) },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: String(error) }, { status: 500 })
   }
 }
