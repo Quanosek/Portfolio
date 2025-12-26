@@ -1,19 +1,5 @@
 # Portfolio
 
-<div>
-  <img alt="pnpm" src="https://skillicons.dev/icons?i=pnpm" height="45" />
-  <img width="10" />
-  <img alt="nodejs" src="https://skillicons.dev/icons?i=nodejs" height="45" />
-  <img width="10" />
-  <img alt="react" src="https://skillicons.dev/icons?i=react" height="45" />
-  <img width="10" />
-  <img alt="nextjs" src="https://skillicons.dev/icons?i=nextjs" height="45" />
-  <img width="10" />
-  <img alt="typescript" src="https://skillicons.dev/icons?i=ts" height="45" />
-  <img width="10" />
-  <img alt="sass" src="https://skillicons.dev/icons?i=sass" height="45" />
-</div>
-
 <img alt="pnpm" src="https://skillicons.dev/icons?i=pnpm" height="40" /> <img alt="nodejs" src="https://skillicons.dev/icons?i=nodejs" height="40" /> <img alt="react" src="https://skillicons.dev/icons?i=react" height="40" /> <img alt="nextjs" src="https://skillicons.dev/icons?i=nextjs" height="40" /> <img alt="typescript" src="https://skillicons.dev/icons?i=ts" height="40" /> <img alt="sass" src="https://skillicons.dev/icons?i=sass" height="40" />
 
 ## 📖 Project Description
