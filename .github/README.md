@@ -8,13 +8,12 @@ A personal portfolio website for **Jakub Kłało** — a Fullstack Developer wit
 
 ### ⚡ Technologies
 
-- **Framework:** Next.js 15 with App Router (`/app`) and Turbopack
-- **Package Manager:** pnpm
-- **Language:** TypeScript (full application typing)
+- **Framework:** [Next.js](https://nextjs.org/docs) with App Router (`/app`)
+- **Package Manager:** [pnpm](https://pnpm.io/)
 - **Styling:** Sass/SCSS with CSS modules
+- **TypeScript:** Full application typing
 - **Animations:** react-awesome-reveal, react-wavify, tsparticles
 - **Forms:** react-hook-form with Nodemailer integration
-- **Analytics:** Google Analytics
 
 ### 🚀 Features
 
