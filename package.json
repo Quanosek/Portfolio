@@ -20,7 +20,7 @@
     "axios": "^1.13.2",
     "next": "~15.5.9",
     "nextjs-google-analytics": "^2.3.7",
-    "nodemailer": "~6.10.1",
+    "nodemailer": "~8.0.5",
     "react": "~19.2.3",
     "react-awesome-reveal": "^4.3.1",
     "react-dom": "~19.2.3",
