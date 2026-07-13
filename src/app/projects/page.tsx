@@ -102,7 +102,7 @@ export default function ProjectsPage() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Wszystkie moje projekty</h1>
+      <h1 className={styles.title}>Moje projekty</h1>
 
       <div className={styles.projectsList}>
         <Fade triggerOnce className={styles.centerDiv}>
@@ -112,7 +112,7 @@ export default function ProjectsPage() {
             description={
               <>
                 Niezawodna aplikacja internetowa, działająca również w&nbsp;trybie offline,
-                zawierająca bogatą bazę danych <b>ponad 1000</b> różnych pieśni. Umożliwia bardzo
+                zawierająca bogatą bazę danych <b>ponad 1500</b> różnych pieśni. Umożliwia bardzo
                 proste wyszukiwanie pieśni po jej <b>tytule lub treści tekstu</b>, następnie np.
                 wyświetlenie jej wraz <b>z&nbsp;akordami</b> w&nbsp;formie prezentacji jako
                 pojedyncze zwrotki.
@@ -132,7 +132,7 @@ export default function ProjectsPage() {
             title='Pokój gier'
             description={
               <>
-                Platforma zawierająca <b>wiele prostych gier</b> do samodzielnego{' '}
+                Platforma zawierająca <b>kilka prostych gier</b> do samodzielnego{' '}
                 <b>uzupełnienia</b> o&nbsp;pytania lub hasła, możliwe później do wyświetlenia na{' '}
                 <b>zewnętrznym ekranie</b> np. rzutniku. Strona oferuje nie tylko gry typu{' '}
                 <b>quiz</b>, ale również dokładnie odwzorowane kopie znanych i&nbsp;lubianych przez
@@ -162,7 +162,7 @@ export default function ProjectsPage() {
             watermarkStyle={{ scale: '0.85' }}
           />
 
-          <Project
+          {/* <Project
             name='metrum'
             title='Metrum'
             description={
@@ -181,7 +181,7 @@ export default function ProjectsPage() {
               scale: '0.9',
               bottom: '1.5rem',
             }}
-          />
+          /> */}
 
           <Project
             name='weather'
@@ -198,6 +198,14 @@ export default function ProjectsPage() {
             githubLink='https://github.com/Quanosek/weather'
             websiteLink='https://weather.klalo.pl/'
           />
+
+          <div className={styles.moreProjects}>
+            <h3>Sprawdź pozostałe repozytoria na moim profilu GitHub</h3>
+
+            <button onClick={() => router.push('https://github.com/Quanosek?tab=repositories')}>
+              Zobacz więcej
+            </button>
+          </div>
         </Fade>
       </div>
     </div>

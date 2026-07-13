@@ -65,7 +65,7 @@ export default function HomePage() {
     title: string
     description: string
   }) => (
-    <Link href={`https://${link}/`} target='_blank'>
+    <Link href={link} target='_blank'>
       <Image
         src={`/assets/projects/${img}_icon.svg`}
         alt={title}
@@ -274,31 +274,31 @@ export default function HomePage() {
             <div className={styles.grid}>
               <Fade cascade damping={0.1} triggerOnce>
                 <ProjectTile
-                  link='spiewniki.klalo.pl'
-                  img='spiewniki'
-                  title='Śpiewniki'
-                  description='Zebrane w&nbsp;jednym miejscu śpiewniki i&nbsp;pieśni religijne'
-                />
-
-                <ProjectTile
-                  link='metrum.klalo.pl'
-                  img='metrum'
-                  title='Metrum'
-                  description='Zaawansowany bot muzyczny na platformę Discord'
-                />
-
-                <ProjectTile
-                  link='fonetyka.klalo.pl'
+                  link='https://fonetyka.klalo.pl'
                   img='fonetyka'
                   title='Fonetyka'
                   description='Polski generator zapisu fonetycznego'
                 />
 
                 <ProjectTile
-                  link='games.klalo.pl'
+                  link='https://games.klalo.pl'
                   img='games'
                   title='Pokój gier'
                   description='Przeglądarkowe wersje znanych i&nbsp;lubianych gier'
+                />
+
+                <ProjectTile
+                  link='https://spiewniki.klalo.pl'
+                  img='spiewniki'
+                  title='Śpiewniki'
+                  description='Zebrane w&nbsp;jednym miejscu śpiewniki i&nbsp;pieśni religijne'
+                />
+
+                <ProjectTile
+                  link='https://github.com/Quanosek/Metrum.js'
+                  img='metrum'
+                  title='Metrum'
+                  description='Zaawansowany bot muzyczny na platformę Discord'
                 />
               </Fade>
             </div>

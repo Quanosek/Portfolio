@@ -25,14 +25,22 @@ export default function AboutPage() {
   const [submitting, setSubmitting] = useState(false)
 
   const onSubmitHandler: SubmitHandler<FormInput> = (values) => {
+    const title = values.title.trim()
+    const message = values.message.trim()
+
     setSubmitting(true)
 
-    if (values.title.trim() === '' || values.message.trim() === '') {
+    if (title === '' || message === '') {
+      setSubmitting(false)
       return alert('Pola nie mogą pozostać puste')
     }
 
     axios
-      .post('/api/email', values)
+      .post('/api/email', {
+        ...values,
+        title,
+        message,
+      })
       .then(() => {
         alert('Wiadomość została wysłana!')
         reset()
