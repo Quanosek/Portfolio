@@ -1,12 +1,14 @@
-FROM node:22-alpine
+FROM node:24-alpine
 
 WORKDIR /app
+
+RUN apk add --no-cache libc6-compat
 
 COPY package.json pnpm-lock.yaml ./
 
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
-RUN pnpm install
+RUN pnpm install --frozen-lockfile
 
 COPY . .
 

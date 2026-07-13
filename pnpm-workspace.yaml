@@ -1,5 +1,14 @@
+packages:
+  - "*"
+
 allowBuilds:
   '@parcel/watcher': true
   '@tsparticles/engine': true
-  sharp: true
-  unrs-resolver: true
+  'sharp': true
+  'unrs-resolver': true
+
+onlyBuiltDependencies:
+  - "sharp"
+  - "@parcel/watcher"
+  - "@tsparticles/engine"
+  - "unrs-resolver"
