@@ -4,9 +4,9 @@ WORKDIR /app
 
 RUN apk add --no-cache libc6-compat
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN corepack enable && corepack prepare pnpm@11 --activate
 
 RUN pnpm install --frozen-lockfile
 
@@ -15,5 +15,4 @@ COPY . .
 RUN pnpm build
 
 EXPOSE 3000
-
 CMD ["pnpm", "start"]
